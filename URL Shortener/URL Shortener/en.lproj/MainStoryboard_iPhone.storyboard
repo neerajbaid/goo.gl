@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Shortener View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="URLShortenerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-jM-rzc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="6qT-2E-8uz"/>
+                                    <constraint firstAttribute="width" constant="97" id="f9C-AJ-1cS"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="put link here" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cYc-nr-oku">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="97t-ZZ-eBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qib-K4-B8O">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="X6b-0J-Ff4"/>
+                                    <constraint firstAttribute="width" constant="176" id="a9r-Cc-6Tw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyToPasteboard:" destination="2" eventType="touchUpInside" id="a1S-G8-QjQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t61-lF-Qnb">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-AU-Dmm">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="ab9-Rc-KIw"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Link has been shortened and copied to the clipboard." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" translatesAutoresizingMaskIntoConstraints="NO" id="axN-e3-86S">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="81y-ay-T5N"/>
+                                    <constraint firstAttribute="height" constant="94" id="iey-KP-uVt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8N-6d-RUx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="lOY-YC-wMP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4ZE-le-bhz"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="Qib-K4-B8O" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="57s-1I-i3x"/>
+                            <constraint firstItem="4ZE-le-bhz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="243" id="8lg-ef-h3z"/>
+                            <constraint firstItem="p8N-6d-RUx" firstAttribute="leading" secondItem="Qib-K4-B8O" secondAttribute="leading" type="default" id="AVI-ah-YEX"/>
+                            <constraint firstItem="axN-e3-86S" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="143" id="D7z-7H-WyR"/>
+                            <constraint firstItem="p8N-6d-RUx" firstAttribute="trailing" secondItem="Qib-K4-B8O" secondAttribute="trailing" type="default" id="GjB-wD-vIy"/>
+                            <constraint firstItem="cYc-nr-oku" firstAttribute="top" secondItem="3" secondAttribute="top" constant="133" id="H20-BQ-Yrk"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="top" secondItem="Mhs-AU-Dmm" secondAttribute="bottom" type="default" id="Jlf-Eg-Wys"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="KH8-bk-OCQ"/>
+                            <constraint firstItem="Qib-K4-B8O" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="QzD-ZQ-gV5"/>
+                            <constraint firstItem="Mhs-AU-Dmm" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="T7U-gy-MMe"/>
+                            <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="cYc-nr-oku" secondAttribute="centerX" type="default" id="VNt-ac-Di8"/>
+                            <constraint firstItem="4ZE-le-bhz" firstAttribute="centerY" secondItem="BHe-jM-rzc" secondAttribute="centerY" type="default" id="W7e-1M-F6L"/>
+                            <constraint firstItem="Mhs-AU-Dmm" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="X0q-dn-kNW"/>
+                            <constraint firstItem="Qib-K4-B8O" firstAttribute="centerY" secondItem="t61-lF-Qnb" secondAttribute="centerY" type="default" id="cgT-07-mP6"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="eOa-r3-Qbp"/>
+                            <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="g9K-yg-1dJ"/>
+                            <constraint firstItem="BHe-jM-rzc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="82" id="iSm-jw-kSq"/>
+                            <constraint firstItem="axN-e3-86S" firstAttribute="top" secondItem="3" secondAttribute="top" constant="200" id="kEL-Qb-wmI"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="mKZ-ms-qXN"/>
+                            <constraint firstAttribute="bottom" secondItem="p8N-6d-RUx" secondAttribute="bottom" constant="148" id="qwh-gk-XF8"/>
+                            <constraint firstItem="Mhs-AU-Dmm" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="sPH-4x-pKJ"/>
+                            <constraint firstItem="cYc-nr-oku" firstAttribute="centerX" secondItem="Mhs-AU-Dmm" secondAttribute="centerX" type="default" id="t1p-JV-mNo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arrow" destination="BHe-jM-rzc" id="V0z-Rn-xkk"/>
+                        <outlet property="background" destination="GNE-Nf-SEN" id="pr9-1g-MxT"/>
+                        <outlet property="navigationBar" destination="Mhs-AU-Dmm" id="GH0-5b-Fiz"/>
+                        <outlet property="shortenedURL" destination="t61-lF-Qnb" id="Y7e-vk-yAZ"/>
+                        <outlet property="shortenedURLLabel" destination="t61-lF-Qnb" id="ub3-Ry-yE4"/>
+                        <outlet property="spinner" destination="4ZE-le-bhz" id="uUl-xv-O5p"/>
+                        <outlet property="textField" destination="cYc-nr-oku" id="FDz-YZ-OEl"/>
+                        <outlet property="urlDisplayUnderShortenedURL" destination="p8N-6d-RUx" id="gU3-Bx-zO8"/>
+                        <outlet property="urlHasBeenShortened" destination="axN-e3-86S" id="uk1-oS-ZeL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="206"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
