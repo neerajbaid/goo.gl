@@ -180,7 +180,7 @@
 
 - (void)appear
 {
-    [UIView animateWithDuration:.6 animations:^(void)
+    [UIView animateWithDuration:.4 animations:^(void)
      {
          [_arrow setAlpha:1];
          [_urlHasBeenShortened setAlpha:1];
