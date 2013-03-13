@@ -74,7 +74,8 @@
 - (void)shortenURL:(NSString *)url
 {
     BOOL doesNotContainSpace = [url rangeOfString:@" "].location == NSNotFound;
-    if (![url isEqualToString:@""] && doesNotContainSpace)
+    BOOL doesNotContainGoogle = [url rangeOfString:@"goo.gl"].location == NSNotFound;
+    if (![url isEqualToString:@""] && doesNotContainSpace && doesNotContainGoogle)
     {
         [[self connection] shortenURL:url];
         _url = url;
