@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *shortenedURLLabel;
 @property (weak, nonatomic) IBOutlet UILabel *urlHasBeenShortened;
 @property (weak, nonatomic) IBOutlet UILabel *urlDisplayUnderShortenedURL;
+@property (weak, nonatomic) IBOutlet UILabel *shortenedLinkHasBeenCopiedToTheClipboard;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
 @property NSString *url;
@@ -100,6 +101,10 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    [UIView animateWithDuration:.2 animations:^(void)
+     {
+         [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
+     }];
     [self shortenURL:textField.text];
     return NO;
 }
@@ -204,6 +209,13 @@
 {
     if (!_shortenedURL)
         [[UIPasteboard generalPasteboard] setString:_shortenedURL];
+    if (_arrow.alpha == 0 && _spinner.alpha == 0 && _urlHasBeenShortened.alpha == 0 && ![_shortenedURLLabel.text isEqualToString:@" "])
+    {
+        [UIView animateWithDuration:.2 animations:^(void)
+         {
+             [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:1];
+         }];
+    }
 }
 
 - (void)viewDidLoad
@@ -217,6 +229,7 @@
     [_spinner setAlpha:0];
     [_urlHasBeenShortened setAlpha:0];
     [_urlDisplayUnderShortenedURL setAlpha:0];
+    [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
     /*
     [self validateUrl:@"aaa"];

@@ -22,7 +22,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>goa.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.neerajbaid.googleURLShortener</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
