@@ -213,7 +213,6 @@
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tapGR];
 	[_navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
-    [_arrow setImage:[UIImage imageNamed:@"arrow @2x.jpg"]];
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];
     [_urlHasBeenShortened setAlpha:0];

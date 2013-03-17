@@ -12,8 +12,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-jM-rzc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background5 @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-jM-rzc">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="6qT-2E-8uz"/>
                                     <constraint firstAttribute="width" constant="97" id="f9C-AJ-1cS"/>
@@ -50,8 +50,17 @@
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-AU-Dmm">
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Nc3-pA-t2E"/>
+                                </constraints>
                                 <items>
-                                    <navigationItem id="ab9-Rc-KIw"/>
+                                    <navigationItem id="ab9-Rc-KIw">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="J1L-r6-z6d">
+                                            <connections>
+                                                <segue destination="f4d-Cg-prt" kind="modal" id="yy0-wj-FXB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Link has been shortened and copied to the clipboard." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" translatesAutoresizingMaskIntoConstraints="NO" id="axN-e3-86S">
@@ -116,7 +125,143 @@
             </objects>
             <point key="canvasLocation" x="-49" y="206"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="dhg-Zz-Llq">
+            <objects>
+                <viewController id="f4d-Cg-prt" customClass="SignInViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eV4-l4-MaI">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFE-zb-oQ9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9aT-th-ftd"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="GbN-Hu-xc0"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Sign In Background small.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-8m-kSz"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Google logo small.png" translatesAutoresizingMaskIntoConstraints="NO" id="XIf-82-DcO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="ULH-vX-1dn"/>
+                                    <constraint firstAttribute="height" constant="47" id="sRL-YN-QZm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWL-yv-16l">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="gyY-rg-Jta"/>
+                                    <constraint firstAttribute="height" constant="26" id="ygQ-uF-N5I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-LD-2VH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="yGS-DU-REK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8E-2P-u1u">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78H-ts-zDW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="1ir-Y5-2iP"/>
+                                    <constraint firstAttribute="height" constant="41" id="Saq-n0-Iee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign In" backgroundImage="test no border.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sign in to view your shortened link history and analytics on http://goo.gl." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="zog-9A-GZt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="YNT-uR-0a4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7zc-8m-kSz" firstAttribute="top" secondItem="bFE-zb-oQ9" secondAttribute="bottom" type="default" id="5jF-fB-cdr"/>
+                            <constraint firstItem="WWL-yv-16l" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="113" id="6Hv-ac-FsW"/>
+                            <constraint firstAttribute="trailing" secondItem="zog-9A-GZt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Ai-Xq-3xz"/>
+                            <constraint firstAttribute="bottom" secondItem="zog-9A-GZt" secondAttribute="bottom" constant="214" id="9q6-t2-P9K"/>
+                            <constraint firstItem="j8E-2P-u1u" firstAttribute="top" secondItem="gJD-LD-2VH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="I62-Uy-XL5"/>
+                            <constraint firstItem="gJD-LD-2VH" firstAttribute="centerX" secondItem="WWL-yv-16l" secondAttribute="centerX" type="default" id="Mdt-0O-DEi"/>
+                            <constraint firstItem="7zc-8m-kSz" firstAttribute="bottom" secondItem="eV4-l4-MaI" secondAttribute="bottom" type="default" id="NyB-f7-mMZ"/>
+                            <constraint firstItem="bFE-zb-oQ9" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" type="default" id="Pba-Vl-Xr1"/>
+                            <constraint firstItem="gJD-LD-2VH" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="157" id="SgY-Dq-jVf"/>
+                            <constraint firstItem="7zc-8m-kSz" firstAttribute="leading" secondItem="eV4-l4-MaI" secondAttribute="leading" type="default" id="Tij-Ll-0jN"/>
+                            <constraint firstItem="j8E-2P-u1u" firstAttribute="trailing" secondItem="gJD-LD-2VH" secondAttribute="trailing" type="default" id="VD9-9f-gEV"/>
+                            <constraint firstItem="78H-ts-zDW" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="255" id="XoH-2N-QGS"/>
+                            <constraint firstItem="bFE-zb-oQ9" firstAttribute="leading" secondItem="eV4-l4-MaI" secondAttribute="leading" type="default" id="b8i-gv-P2F"/>
+                            <constraint firstItem="78H-ts-zDW" firstAttribute="centerX" secondItem="j8E-2P-u1u" secondAttribute="centerX" type="default" id="ccY-CF-faI"/>
+                            <constraint firstItem="bFE-zb-oQ9" firstAttribute="trailing" secondItem="eV4-l4-MaI" secondAttribute="trailing" type="default" id="d7r-qZ-LGg"/>
+                            <constraint firstItem="XIf-82-DcO" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="65" id="dOU-8W-aP1"/>
+                            <constraint firstItem="WWL-yv-16l" firstAttribute="centerX" secondItem="XIf-82-DcO" secondAttribute="centerX" type="default" id="fQg-8G-Kml"/>
+                            <constraint firstItem="zog-9A-GZt" firstAttribute="leading" secondItem="eV4-l4-MaI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jdA-78-n9v"/>
+                            <constraint firstItem="78H-ts-zDW" firstAttribute="centerX" secondItem="zog-9A-GZt" secondAttribute="centerX" type="default" id="oTC-6K-Cm0"/>
+                            <constraint firstItem="gJD-LD-2VH" firstAttribute="leading" secondItem="j8E-2P-u1u" secondAttribute="leading" type="default" id="rRu-v8-v6e"/>
+                            <constraint firstItem="7zc-8m-kSz" firstAttribute="trailing" secondItem="eV4-l4-MaI" secondAttribute="trailing" type="default" id="rhZ-tP-Ndd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="7zc-8m-kSz" id="oNn-Ab-5gK"/>
+                        <outlet property="googleLogo" destination="XIf-82-DcO" id="Xhd-mx-GAM"/>
+                        <outlet property="navigationBar" destination="bFE-zb-oQ9" id="pxr-aO-Vyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kh-99-VNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="206"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Google logo small.png" width="274" height="94"/>
+        <image name="Sign In Background small.jpg" width="49" height="49"/>
+        <image name="arrow @2x.jpg" width="192" height="344"/>
+        <image name="background5 @2x.jpg" width="640" height="1005"/>
+        <image name="test no border.png" width="546" height="82"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SignInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="googleLogo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="signInTextFieldsBackground" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="URLShortenerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/URLShortenerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="copyToPasteboard:"/>
+                <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="shortenedURLLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="urlDisplayUnderShortenedURL" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="urlHasBeenShortened" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

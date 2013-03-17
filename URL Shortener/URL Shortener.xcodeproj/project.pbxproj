@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		070DE83C16EF827000E36C88 /* background4 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070DE83B16EF827000E36C88 /* background4 @2x.jpg */; };
 		070DE83E16EF841A00E36C88 /* background5 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070DE83D16EF841A00E36C88 /* background5 @2x.jpg */; };
+		071AEDAB16F5441A00E864FA /* test no border.png in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAA16F5441A00E864FA /* test no border.png */; };
+		071AEDAD16F54EE600E864FA /* Sign In Background small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */; };
 		0728E34916D7DFBE00B1A45F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0728E34816D7DFBE00B1A45F /* Icon@2x.png */; };
 		0728E34B16D7DFC100B1A45F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0728E34A16D7DFC100B1A45F /* Icon.png */; };
 		0728E34F16DCB6E300B1A45F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0728E34E16DCB6E300B1A45F /* background.jpg */; };
@@ -22,6 +24,10 @@
 		07900D4D16CF0DF1002B14CB /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4B16CF0DF1002B14CB /* top bar.png */; };
 		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
 		0799919716ECF279003FCE1C /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799919616ECF279003FCE1C /* APIConnection.m */; };
+		07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B6113916F0E8DD00D16115 /* SignInViewController.m */; };
+		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
+		07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D44E16F5149D00A5C5A3 /* Google logo small.png */; };
+		07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */; };
 		07EF517116CC514900178D1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517016CC514900178D1E /* UIKit.framework */; };
 		07EF517316CC514900178D1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517216CC514900178D1E /* Foundation.framework */; };
 		07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517416CC514900178D1E /* CoreGraphics.framework */; };
@@ -51,6 +57,8 @@
 /* Begin PBXFileReference section */
 		070DE83B16EF827000E36C88 /* background4 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background4 @2x.jpg"; sourceTree = "<group>"; };
 		070DE83D16EF841A00E36C88 /* background5 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background5 @2x.jpg"; sourceTree = "<group>"; };
+		071AEDAA16F5441A00E864FA /* test no border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test no border.png"; sourceTree = "<group>"; };
+		071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sign In Background small.jpg"; sourceTree = "<group>"; };
 		0728E34816D7DFBE00B1A45F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0728E34A16D7DFC100B1A45F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0728E34E16DCB6E300B1A45F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -65,6 +73,11 @@
 		07900D4C16CF0DF1002B14CB /* top bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar@2x.png"; sourceTree = "<group>"; };
 		0799919516ECF279003FCE1C /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		0799919616ECF279003FCE1C /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
+		07B6113816F0E8DD00D16115 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		07B6113916F0E8DD00D16115 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		07B6113B16F0E9D400D16115 /* Google logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo.png"; sourceTree = "<group>"; };
+		07E0D44E16F5149D00A5C5A3 /* Google logo small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo small.png"; sourceTree = "<group>"; };
+		07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sign In Background.jpg"; sourceTree = "<group>"; };
 		07EF516D16CC514900178D1E /* URL Shortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URL Shortener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EF517016CC514900178D1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07EF517216CC514900178D1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +124,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E0D45216F53AD100A5C5A3 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0728E34E16DCB6E300B1A45F /* background.jpg */,
+				078F020616E6580700A39D8C /* background2 @2x.jpg */,
+				074EA2E316E7C96D00FADD1C /* background3 @2x.jpg */,
+				070DE83B16EF827000E36C88 /* background4 @2x.jpg */,
+				070DE83D16EF841A00E36C88 /* background5 @2x.jpg */,
+				078F020A16E66F9000A39D8C /* arrow @2x.jpg */,
+			);
+			name = "Main Screen";
+			sourceTree = "<group>";
+		};
+		07E0D45316F53B0400A5C5A3 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				07B6113B16F0E9D400D16115 /* Google logo.png */,
+				07E0D44E16F5149D00A5C5A3 /* Google logo small.png */,
+				07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */,
+				071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */,
+				071AEDAA16F5441A00E864FA /* test no border.png */,
+			);
+			name = "Sign In";
+			sourceTree = "<group>";
+		};
+		07E0D45416F53B0F00A5C5A3 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				0728E34A16D7DFC100B1A45F /* Icon.png */,
+				0728E34816D7DFBE00B1A45F /* Icon@2x.png */,
+				076C57F316D6E400003E8944 /* Default.png */,
+				076C57F116D6E3F7003E8944 /* Default@2x.png */,
+				076C57EF16D6E35A003E8944 /* Default-568h@2x.png */,
+				076C57EC16D6E240003E8944 /* Splash Page@2x 4 inch.PNG */,
+				07900D4B16CF0DF1002B14CB /* top bar.png */,
+				07900D4C16CF0DF1002B14CB /* top bar@2x.png */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
 		07EF516416CC514900178D1E = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +205,8 @@
 				07EF518F16CC514900178D1E /* URLShortenerViewController.m */,
 				0799919516ECF279003FCE1C /* APIConnection.h */,
 				0799919616ECF279003FCE1C /* APIConnection.m */,
+				07B6113816F0E8DD00D16115 /* SignInViewController.h */,
+				07B6113916F0E8DD00D16115 /* SignInViewController.m */,
 				07EF517716CC514900178D1E /* Supporting Files */,
 			);
 			path = "URL Shortener";
@@ -160,20 +215,9 @@
 		07EF517716CC514900178D1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0728E34A16D7DFC100B1A45F /* Icon.png */,
-				0728E34816D7DFBE00B1A45F /* Icon@2x.png */,
-				076C57F316D6E400003E8944 /* Default.png */,
-				076C57F116D6E3F7003E8944 /* Default@2x.png */,
-				076C57EF16D6E35A003E8944 /* Default-568h@2x.png */,
-				076C57EC16D6E240003E8944 /* Splash Page@2x 4 inch.PNG */,
-				07900D4B16CF0DF1002B14CB /* top bar.png */,
-				07900D4C16CF0DF1002B14CB /* top bar@2x.png */,
-				0728E34E16DCB6E300B1A45F /* background.jpg */,
-				078F020616E6580700A39D8C /* background2 @2x.jpg */,
-				074EA2E316E7C96D00FADD1C /* background3 @2x.jpg */,
-				070DE83B16EF827000E36C88 /* background4 @2x.jpg */,
-				070DE83D16EF841A00E36C88 /* background5 @2x.jpg */,
-				078F020A16E66F9000A39D8C /* arrow @2x.jpg */,
+				07E0D45416F53B0F00A5C5A3 /* General */,
+				07E0D45216F53AD100A5C5A3 /* Main Screen */,
+				07E0D45316F53B0400A5C5A3 /* Sign In */,
 				07EF517816CC514900178D1E /* URL Shortener-Info.plist */,
 				07EF517916CC514900178D1E /* InfoPlist.strings */,
 				07EF517C16CC514900178D1E /* main.m */,
@@ -290,6 +334,11 @@
 				074EA2E416E7C96D00FADD1C /* background3 @2x.jpg in Resources */,
 				070DE83C16EF827000E36C88 /* background4 @2x.jpg in Resources */,
 				070DE83E16EF841A00E36C88 /* background5 @2x.jpg in Resources */,
+				07B6113C16F0E9D400D16115 /* Google logo.png in Resources */,
+				07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */,
+				07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */,
+				071AEDAB16F5441A00E864FA /* test no border.png in Resources */,
+				071AEDAD16F54EE600E864FA /* Sign In Background small.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +377,7 @@
 				07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */,
 				07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */,
 				0799919716ECF279003FCE1C /* APIConnection.m in Sources */,
+				07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
