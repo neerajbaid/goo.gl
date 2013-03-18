@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) APIConnection *connection;
 
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
+
 //@property (nonatomic) int test; //switcher variable
 
 @end
@@ -192,6 +194,7 @@
          [_urlHasBeenShortened setAlpha:1];
          [_urlDisplayUnderShortenedURL setAlpha:1];
          [_urlDisplayUnderShortenedURL setBackgroundColor:[UIColor whiteColor]];
+         [_testButton setAlpha:1];
      }];
 }
 
@@ -231,6 +234,7 @@
     [_urlDisplayUnderShortenedURL setAlpha:0];
     [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
+    [_testButton setAlpha:0];
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];
