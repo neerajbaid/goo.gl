@@ -89,15 +89,20 @@
 
 - (void)recieveShortenedURL:(NSString *)shortenedURL
 {
-    NSString *display = @" ";
-    self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:_url];
-    [_spinner stopAnimating];
-    [self fadeOutSpinner];
-    [self appear];
-    _shortenedURL = shortenedURL;
-    if (_shortenedURL)
-        [[UIPasteboard generalPasteboard] setString:_shortenedURL];
-    self.shortenedURLLabel.text = _shortenedURL;
+    if (shortenedURL != NULL)
+    {
+        NSString *display = @" ";
+        self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:_url];
+        [_spinner stopAnimating];
+        [self fadeOutSpinner];
+        [self appear];
+        _shortenedURL = shortenedURL;
+        if (_shortenedURL)
+            [[UIPasteboard generalPasteboard] setString:_shortenedURL];
+        self.shortenedURLLabel.text = _shortenedURL;
+    }
+    else
+        [self fadeOutSpinner];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -210,7 +215,7 @@
 
 - (IBAction)copyToPasteboard:(id)sender
 {
-    if (!_shortenedURL)
+    if (_shortenedURL != NULL)
         [[UIPasteboard generalPasteboard] setString:_shortenedURL];
     if (_arrow.alpha == 0 && _spinner.alpha == 0 && _urlHasBeenShortened.alpha == 0 && ![_shortenedURLLabel.text isEqualToString:@" "])
     {

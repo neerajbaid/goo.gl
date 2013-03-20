@@ -146,7 +146,9 @@
                                     <constraint firstAttribute="height" constant="44" id="9aT-th-ftd"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem id="GbN-Hu-xc0"/>
+                                    <navigationItem id="GbN-Hu-xc0">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj3-lu-0PF"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Sign In Background small.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-8m-kSz"/>
@@ -192,7 +194,7 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sign in to view your shortened link history with analytics on http://goo.gl." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="zog-9A-GZt">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="YNT-uR-0a4"/>
+                                    <constraint firstAttribute="height" constant="31" type="user" id="YNT-uR-0a4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -204,8 +206,9 @@
                             <constraint firstItem="7zc-8m-kSz" firstAttribute="top" secondItem="bFE-zb-oQ9" secondAttribute="bottom" type="default" id="5jF-fB-cdr"/>
                             <constraint firstItem="WWL-yv-16l" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="113" id="6Hv-ac-FsW"/>
                             <constraint firstAttribute="trailing" secondItem="zog-9A-GZt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Ai-Xq-3xz"/>
-                            <constraint firstAttribute="bottom" secondItem="zog-9A-GZt" secondAttribute="bottom" constant="214" id="9q6-t2-P9K"/>
+                            <constraint firstAttribute="bottom" secondItem="zog-9A-GZt" secondAttribute="bottom" constant="214" type="user" id="9q6-t2-P9K"/>
                             <constraint firstItem="j8E-2P-u1u" firstAttribute="top" secondItem="gJD-LD-2VH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="I62-Uy-XL5"/>
+                            <constraint firstItem="78H-ts-zDW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eV4-l4-MaI" secondAttribute="top" constant="255" type="user" id="MaQ-Yu-JmL"/>
                             <constraint firstItem="gJD-LD-2VH" firstAttribute="centerX" secondItem="WWL-yv-16l" secondAttribute="centerX" type="default" id="Mdt-0O-DEi"/>
                             <constraint firstItem="7zc-8m-kSz" firstAttribute="bottom" secondItem="eV4-l4-MaI" secondAttribute="bottom" type="default" id="NyB-f7-mMZ"/>
                             <constraint firstItem="bFE-zb-oQ9" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" type="default" id="Pba-Vl-Xr1"/>
@@ -222,8 +225,10 @@
                             <constraint firstItem="78H-ts-zDW" firstAttribute="centerX" secondItem="zog-9A-GZt" secondAttribute="centerX" type="default" id="oTC-6K-Cm0"/>
                             <constraint firstItem="gJD-LD-2VH" firstAttribute="leading" secondItem="j8E-2P-u1u" secondAttribute="leading" type="default" id="rRu-v8-v6e"/>
                             <constraint firstItem="7zc-8m-kSz" firstAttribute="trailing" secondItem="eV4-l4-MaI" secondAttribute="trailing" type="default" id="rhZ-tP-Ndd"/>
+                            <constraint firstItem="zog-9A-GZt" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="303" type="user" id="ygV-Ak-PgL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xwq-Tc-r2E"/>
                     <connections>
                         <outlet property="background" destination="7zc-8m-kSz" id="oNn-Ab-5gK"/>
                         <outlet property="googleLogo" destination="XIf-82-DcO" id="Xhd-mx-GAM"/>
