@@ -26,6 +26,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
 
+
+
+
 //@property (nonatomic) int test; //switcher variable
 
 @end
@@ -226,13 +229,24 @@
     }
 }
 
+- (void)openWebView
+{
+        [self performSegueWithIdentifier:@"showWebView" sender:self];
+}
+
+
 - (void)viewDidLoad
-{    
+{
     [super viewDidLoad];
     self.textField.delegate = self;
+    
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tapGR];
-	[_navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView)];
+    [self.testButton addGestureRecognizer:longPressGR];
+    
+	//[_navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];
     [_urlHasBeenShortened setAlpha:0];

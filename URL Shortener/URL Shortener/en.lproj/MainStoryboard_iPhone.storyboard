@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wcm-Ze-Bs0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,10 +9,14 @@
             <objects>
                 <viewController id="2" customClass="URLShortenerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background5 @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background5 @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="ye0-7Z-sYp"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-jM-rzc">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="6qT-2E-8uz"/>
@@ -48,15 +52,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhs-AU-Dmm">
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Nc3-pA-t2E"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem id="ab9-Rc-KIw"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Link has been shortened and copied to the clipboard." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="121" translatesAutoresizingMaskIntoConstraints="NO" id="axN-e3-86S">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -91,15 +86,11 @@
                         <constraints>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="centerX" secondItem="4ZE-le-bhz" secondAttribute="centerX" type="default" id="16G-QV-V0w"/>
                             <constraint firstItem="cYc-nr-oku" firstAttribute="top" secondItem="3" secondAttribute="top" constant="133" id="H20-BQ-Yrk"/>
-                            <constraint firstItem="iek-eI-6e0" firstAttribute="centerX" secondItem="Mhs-AU-Dmm" secondAttribute="centerX" type="default" id="IUD-Z5-YPp"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="IbT-NB-ogt"/>
                             <constraint firstItem="iek-eI-6e0" firstAttribute="centerY" secondItem="t61-lF-Qnb" secondAttribute="centerY" type="default" id="IcL-Pd-07i"/>
-                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="top" secondItem="Mhs-AU-Dmm" secondAttribute="bottom" type="default" id="Jlf-Eg-Wys"/>
-                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="KH8-bk-OCQ"/>
-                            <constraint firstItem="Mhs-AU-Dmm" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="T7U-gy-MMe"/>
                             <constraint firstItem="iek-eI-6e0" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="Tgj-3x-MVX"/>
                             <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="cYc-nr-oku" secondAttribute="centerX" type="default" id="VNt-ac-Di8"/>
                             <constraint firstItem="4ZE-le-bhz" firstAttribute="centerY" secondItem="BHe-jM-rzc" secondAttribute="centerY" type="default" id="W7e-1M-F6L"/>
-                            <constraint firstItem="Mhs-AU-Dmm" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="X0q-dn-kNW"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="iek-eI-6e0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aNv-Ob-Rih"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="bottom" secondItem="BHe-jM-rzc" secondAttribute="bottom" type="default" id="ckI-Qc-qa2"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="eOa-r3-Qbp"/>
@@ -108,17 +99,16 @@
                             <constraint firstItem="axN-e3-86S" firstAttribute="top" secondItem="3" secondAttribute="top" constant="200" id="mK9-wB-Vks"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="mKZ-ms-qXN"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="qKZ-FD-abW"/>
-                            <constraint firstAttribute="bottom" secondItem="p8N-6d-RUx" secondAttribute="bottom" constant="148" type="user" id="qwh-gk-XF8"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="centerX" secondItem="akN-Xp-6Rx" secondAttribute="centerX" type="default" id="ruo-ku-t9U"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="s0A-81-gt7"/>
-                            <constraint firstItem="Mhs-AU-Dmm" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="sPH-4x-pKJ"/>
                             <constraint firstItem="BHe-jM-rzc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="167" id="wFt-pT-mca"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="383" type="user" id="xPx-6F-leO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="asz-6X-9vm"/>
                     <connections>
                         <outlet property="arrow" destination="BHe-jM-rzc" id="V0z-Rn-xkk"/>
                         <outlet property="background" destination="GNE-Nf-SEN" id="pr9-1g-MxT"/>
-                        <outlet property="navigationBar" destination="Mhs-AU-Dmm" id="GH0-5b-Fiz"/>
                         <outlet property="shortenedLinkHasBeenCopiedToTheClipboard" destination="akN-Xp-6Rx" id="My1-2u-qbo"/>
                         <outlet property="shortenedURL" destination="t61-lF-Qnb" id="Y7e-vk-yAZ"/>
                         <outlet property="shortenedURLLabel" destination="t61-lF-Qnb" id="ub3-Ry-yE4"/>
@@ -127,11 +117,41 @@
                         <outlet property="textField" destination="cYc-nr-oku" id="FDz-YZ-OEl"/>
                         <outlet property="urlDisplayUnderShortenedURL" destination="p8N-6d-RUx" id="gU3-Bx-zO8"/>
                         <outlet property="urlHasBeenShortened" destination="axN-e3-86S" id="uk1-oS-ZeL"/>
+                        <segue destination="kf2-Sa-6wS" kind="push" identifier="showWebView" id="6b8-jY-fH4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49" y="206"/>
+            <point key="canvasLocation" x="403" y="172"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Gqy-eS-Aln">
+            <objects>
+                <viewController id="kf2-Sa-6wS" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Tu-fy-aF4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l83-D4-G1w">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l83-D4-G1w" firstAttribute="leading" secondItem="7Tu-fy-aF4" secondAttribute="leading" type="default" id="DF5-9m-4vG"/>
+                            <constraint firstItem="l83-D4-G1w" firstAttribute="trailing" secondItem="7Tu-fy-aF4" secondAttribute="trailing" type="default" id="ZQU-Fr-VvI"/>
+                            <constraint firstItem="l83-D4-G1w" firstAttribute="bottom" secondItem="7Tu-fy-aF4" secondAttribute="bottom" type="default" id="mrv-dd-8qT"/>
+                            <constraint firstItem="l83-D4-G1w" firstAttribute="top" secondItem="7Tu-fy-aF4" secondAttribute="top" type="default" id="ssa-cJ-5Ij"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rEN-iO-isv"/>
+                    <connections>
+                        <outlet property="webView" destination="l83-D4-G1w" id="M5w-SZ-y1r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pQ-wz-tia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="172"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="dhg-Zz-Llq">
@@ -237,7 +257,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kh-99-VNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="206"/>
+            <point key="canvasLocation" x="1031" y="1188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OjE-PJ-p4C">
+            <objects>
+                <navigationController id="Wcm-Ze-Bs0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dpq-v8-HtC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="YSX-W7-fLY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRC-35-Huf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="172"/>
         </scene>
     </scenes>
     <resources>
@@ -274,6 +312,12 @@
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="urlDisplayUnderShortenedURL" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="urlHasBeenShortened" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>

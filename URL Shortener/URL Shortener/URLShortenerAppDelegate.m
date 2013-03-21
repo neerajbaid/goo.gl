@@ -37,6 +37,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     id URLsvc = _window.rootViewController;
+    URLsvc = [URLsvc topViewController];
     [URLsvc disappear];
     if ([URLsvc handlePasteboardString])
         [URLsvc shortenURL:[UIPasteboard generalPasteboard].string];

@@ -43,6 +43,7 @@
 		07EF519A16CC514900178D1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517216CC514900178D1E /* Foundation.framework */; };
 		07EF51A216CC514900178D1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EF51A016CC514900178D1E /* InfoPlist.strings */; };
 		07EF51A516CC514A00178D1E /* URL_ShortenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */; };
+		169485B716FA22A5002E0D30 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169485B616FA22A5002E0D30 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		07EF51A116CC514900178D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EF51A316CC514A00178D1E /* URL_ShortenerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL_ShortenerTests.h; sourceTree = "<group>"; };
 		07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URL_ShortenerTests.m; sourceTree = "<group>"; };
+		169485B516FA22A5002E0D30 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		169485B616FA22A5002E0D30 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 				0799919616ECF279003FCE1C /* APIConnection.m */,
 				07B6113816F0E8DD00D16115 /* SignInViewController.h */,
 				07B6113916F0E8DD00D16115 /* SignInViewController.m */,
+				169485B516FA22A5002E0D30 /* WebViewController.h */,
+				169485B616FA22A5002E0D30 /* WebViewController.m */,
 				07EF517716CC514900178D1E /* Supporting Files */,
 			);
 			path = "URL Shortener";
@@ -382,6 +387,7 @@
 				07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */,
 				0799919716ECF279003FCE1C /* APIConnection.m in Sources */,
 				07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */,
+				169485B716FA22A5002E0D30 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
