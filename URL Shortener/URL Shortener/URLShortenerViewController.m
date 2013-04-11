@@ -8,6 +8,7 @@
 
 #import "URLShortenerViewController.h"
 #import "APIConnection.h"
+#import "WebViewController.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate>
 
@@ -229,8 +230,9 @@
     }
 }
 
-- (void)openWebView
+- (void)openWebView:(UIGestureRecognizer *)gestureRecognizer
 {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
         [self performSegueWithIdentifier:@"showWebView" sender:self];
 }
 
@@ -243,7 +245,7 @@
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tapGR];
     
-    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView)];
+    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
     
 	//[_navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
