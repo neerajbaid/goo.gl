@@ -11,11 +11,25 @@
 
 @interface WebViewController ()
 
-@property NSString *url;
-
 @end
 
 @implementation WebViewController
+
+- (UIWebView *)webView
+{
+    if (!_webView)
+        _webView = [[UIWebView alloc] init];
+    return _webView;
+}
+
+/*
+- (NSString *)convertToURLFormat:(NSString *)str
+{
+    if ([str rangeOfString:@"http://"].location == NSNotFound)
+        str = [@"http://" stringByAppendingString:str];
+    return str;
+}
+ */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,13 +44,11 @@
 {
     [super viewDidLoad];
     
-//    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:_url]];
+    [self.navigationController.navigationItem.backBarButtonItem setBackButtonBackgroundImage:[UIImage imageNamed:@"black-square.jpg"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     
-    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:@"www.google.com"]];
-    
-    [webView loadRequest:requestURL];
-
-    
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:_URLToLoad]];
+//    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]];
+    [_webView loadRequest:requestURL];
 }
 
 - (void)didReceiveMemoryWarning

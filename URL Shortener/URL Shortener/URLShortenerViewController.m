@@ -236,6 +236,12 @@
         [self performSegueWithIdentifier:@"showWebView" sender:self];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showWebView"])
+        [segue.destinationViewController setURLToLoad:_shortenedURL];
+}
+
 
 - (void)viewDidLoad
 {
@@ -248,6 +254,7 @@
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
     
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
 	//[_navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];

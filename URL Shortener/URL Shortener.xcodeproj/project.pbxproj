@@ -26,6 +26,7 @@
 		07900D4D16CF0DF1002B14CB /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4B16CF0DF1002B14CB /* top bar.png */; };
 		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
 		0799919716ECF279003FCE1C /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799919616ECF279003FCE1C /* APIConnection.m */; };
+		07B3817F171799B50038E097 /* black-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07B3817E171799B50038E097 /* black-square.jpg */; };
 		07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B6113916F0E8DD00D16115 /* SignInViewController.m */; };
 		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
 		07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D44E16F5149D00A5C5A3 /* Google logo small.png */; };
@@ -77,6 +78,7 @@
 		07900D4C16CF0DF1002B14CB /* top bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar@2x.png"; sourceTree = "<group>"; };
 		0799919516ECF279003FCE1C /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		0799919616ECF279003FCE1C /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
+		07B3817E171799B50038E097 /* black-square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-square.jpg"; sourceTree = "<group>"; };
 		07B6113816F0E8DD00D16115 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		07B6113916F0E8DD00D16115 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		07B6113B16F0E9D400D16115 /* Google logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo.png"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		07E0D45416F53B0F00A5C5A3 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				07B3817E171799B50038E097 /* black-square.jpg */,
 				0746462316FA4CEC00A224C1 /* iPad @2x.png */,
 				0746462116FA4CE900A224C1 /* iPad.png */,
 				0746461F16FA4CE300A224C1 /* Icon@2x.png */,
@@ -348,6 +351,7 @@
 				0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */,
 				0746462216FA4CE900A224C1 /* iPad.png in Resources */,
 				0746462416FA4CEC00A224C1 /* iPad @2x.png in Resources */,
+				07B3817F171799B50038E097 /* black-square.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

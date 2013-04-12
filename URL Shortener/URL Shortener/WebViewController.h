@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WebViewController : UIViewController
-{
-    IBOutlet UIWebView *webView;
-}
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property NSString *URLToLoad;
 
 @end
