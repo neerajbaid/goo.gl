@@ -2,7 +2,7 @@
 //  WebViewController.m
 //  URL Shortener
 //
-//  Created by Neel Bhoopalam on 3/20/13.
+//  Created by Neel Bhoopalam and Neeraj Baid on 3/20/13.
 //  Copyright (c) 2013 Neeraj Baid. All rights reserved.
 //
 
@@ -44,10 +44,24 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController.navigationItem.backBarButtonItem setBackButtonBackgroundImage:[UIImage imageNamed:@"black-square.jpg"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    /*
+    if(self.navigationController.viewControllers.count > 1)
+    {
+        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [backButton setTitle:@"Back" forState:UIControlStateNormal];
+        [backButton addTarget:self action:@selector(didTapBackButton:) forControlEvents:UIControlEventTouchUpInside];
+        backButton.frame = CGRectMake(0.0f, 0.0f, 64.0f, 41.0f);
+        [backButton setBackgroundImage:[UIImage imageNamed:@"black-square.jpg"] forState:UIControlStateNormal];
+        UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+        
+        self.navigationItem.backBarButtonItem = backButtonItem;
+    }
+     */
+    
+//    [self.navigationController.navigationItem.backBarButtonItem setBackButtonBackgroundImage:[UIImage imageNamed:@"black-square.jpg"] forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:_URLToLoad]];
-//    NSURLRequest *requestURL = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]];
     [_webView loadRequest:requestURL];
 }
 

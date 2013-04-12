@@ -27,9 +27,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
 
-
-
-
 //@property (nonatomic) int test; //switcher variable
 
 @end
@@ -255,7 +252,6 @@
     [self.testButton addGestureRecognizer:longPressGR];
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
-	//[_navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];
     [_urlHasBeenShortened setAlpha:0];
@@ -263,6 +259,19 @@
     [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
     [_testButton setAlpha:0];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIColor blackColor], UITextAttributeTextColor,
+                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                                          nil]
+                                                forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIColor blackColor], UITextAttributeTextColor,
+                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                                          nil]
+                                                forState:UIControlStateHighlighted];
+    
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];
