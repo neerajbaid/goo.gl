@@ -105,7 +105,13 @@
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="383" type="user" id="xPx-6F-leO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="asz-6X-9vm"/>
+                    <navigationItem key="navigationItem" id="asz-6X-9vm">
+                        <barButtonItem key="rightBarButtonItem" title="Sign In" id="vPa-EG-V72">
+                            <connections>
+                                <segue destination="f4d-Cg-prt" kind="modal" id="83k-0X-rl8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="arrow" destination="BHe-jM-rzc" id="V0z-Rn-xkk"/>
                         <outlet property="background" destination="GNE-Nf-SEN" id="pr9-1g-MxT"/>
@@ -167,7 +173,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="GbN-Hu-xc0">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj3-lu-0PF"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj3-lu-0PF">
+                                            <connections>
+                                                <action selector="cancel:" destination="f4d-Cg-prt" id="h9G-Jx-WvT"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -196,7 +206,7 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8E-2P-u1u">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78H-ts-zDW">
                                 <constraints>
@@ -253,11 +263,13 @@
                         <outlet property="background" destination="7zc-8m-kSz" id="oNn-Ab-5gK"/>
                         <outlet property="googleLogo" destination="XIf-82-DcO" id="Xhd-mx-GAM"/>
                         <outlet property="navigationBar" destination="bFE-zb-oQ9" id="pxr-aO-Vyf"/>
+                        <outlet property="passwordTextField" destination="j8E-2P-u1u" id="djc-56-Dgz"/>
+                        <outlet property="usernameTextField" destination="gJD-LD-2VH" id="YX0-2g-asx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kh-99-VNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="172"/>
+            <point key="canvasLocation" x="924" y="-499"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OjE-PJ-p4C">
@@ -292,10 +304,13 @@
         <class className="SignInViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SignInViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancel:"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="googleLogo" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="signInTextFieldsBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="URLShortenerViewController" superclassName="UIViewController">
@@ -317,7 +332,6 @@
         <class className="WebViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
             <relationships>
-                <relationship kind="action" name="test:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

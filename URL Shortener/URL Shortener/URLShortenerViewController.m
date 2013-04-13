@@ -267,7 +267,7 @@
                                                           nil]
                                                 forState:UIControlStateNormal];
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          [UIColor blackColor], UITextAttributeTextColor,
+                                                          [UIColor grayColor], UITextAttributeTextColor,
                                                           [UIColor whiteColor], UITextAttributeTextShadowColor,
                                                           nil]
                                                 forState:UIControlStateHighlighted];
