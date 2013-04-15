@@ -301,7 +301,6 @@
         <class className="URLShortenerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/URLShortenerViewController.h"/>
             <relationships>
-                <relationship kind="action" name="copyToPasteboard:"/>
                 <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
