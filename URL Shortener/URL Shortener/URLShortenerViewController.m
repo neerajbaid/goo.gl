@@ -9,6 +9,8 @@
 #import "URLShortenerViewController.h"
 #import "APIConnection.h"
 #import "WebViewController.h"
+#import "SignInViewController.h"
+#import "Mixpanel.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate>
 
@@ -24,8 +26,8 @@
 @property NSString *shortenedURL;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) APIConnection *connection;
-
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
+@property (nonatomic) BOOL isSignedIn;
 
 //@property (nonatomic) int test; //switcher variable
 
@@ -69,6 +71,9 @@
     NSString *string = [UIPasteboard generalPasteboard].string;
     if ([self validateUrl:string])
     {
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
+        [mixpanel track:@"Automatically Copy URL"];
+        
         [_textField setText:string];
         return YES;
     }
@@ -230,7 +235,20 @@
 - (void)openWebView:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
+    {
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
+        [mixpanel track:@"WebView Preview Button Pressed"];
         [self performSegueWithIdentifier:@"showWebView" sender:self];
+    }
+}
+
+- (IBAction)doneSignIn:(UIStoryboardSegue *)segue
+{
+    if ([[segue identifier] isEqualToString:@"PassSignInCredentialsSegue"])
+    {
+        SignInViewController *sVC = [segue sourceViewController];
+        _isSignedIn = [sVC isSignedIn];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -239,10 +257,14 @@
         [segue.destinationViewController setURLToLoad:_shortenedURL];
 }
 
-
 - (void)viewDidLoad
 {
+    //[self setBarButtonAppearance];
     [super viewDidLoad];
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Opened App"];
+    
     self.textField.delegate = self;
     
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
@@ -259,19 +281,6 @@
     [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
     [_testButton setAlpha:0];
-    
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          [UIColor blackColor], UITextAttributeTextColor,
-                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
-                                                          nil]
-                                                forState:UIControlStateNormal];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          [UIColor grayColor], UITextAttributeTextColor,
-                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
-                                                          nil]
-                                                forState:UIControlStateHighlighted];
-    
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];

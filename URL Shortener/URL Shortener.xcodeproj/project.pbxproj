@@ -29,6 +29,13 @@
 		07B3817F171799B50038E097 /* black-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07B3817E171799B50038E097 /* black-square.jpg */; };
 		07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B6113916F0E8DD00D16115 /* SignInViewController.m */; };
 		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
+		07BFD4E4171C582A00600512 /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07BFD4E5171C582A00600512 /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4E1171C582A00600512 /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4E3171C582A00600512 /* Mixpanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4E9171C585100600512 /* SystemConfiguration.framework */; };
+		07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4EB171C585B00600512 /* CoreTelephony.framework */; };
 		07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D44E16F5149D00A5C5A3 /* Google logo small.png */; };
 		07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */; };
 		07EF517116CC514900178D1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517016CC514900178D1E /* UIKit.framework */; };
@@ -82,6 +89,18 @@
 		07B6113816F0E8DD00D16115 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		07B6113916F0E8DD00D16115 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		07B6113B16F0E9D400D16115 /* Google logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo.png"; sourceTree = "<group>"; };
+		07BFD4D9171C582A00600512 /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
+		07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
+		07BFD4DB171C582A00600512 /* MPCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONSerializer.h; sourceTree = "<group>"; };
+		07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONSerializer.m; sourceTree = "<group>"; };
+		07BFD4DD171C582A00600512 /* MPCSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCSerializedJSONData.h; sourceTree = "<group>"; };
+		07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCSerializedJSONData.m; sourceTree = "<group>"; };
+		07BFD4E0171C582A00600512 /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
+		07BFD4E1171C582A00600512 /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
+		07BFD4E2171C582A00600512 /* Mixpanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mixpanel.h; sourceTree = "<group>"; };
+		07BFD4E3171C582A00600512 /* Mixpanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mixpanel.m; sourceTree = "<group>"; };
+		07BFD4E9171C585100600512 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		07BFD4EB171C585B00600512 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		07E0D44E16F5149D00A5C5A3 /* Google logo small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo small.png"; sourceTree = "<group>"; };
 		07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sign In Background.jpg"; sourceTree = "<group>"; };
 		07EF516D16CC514900178D1E /* URL Shortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URL Shortener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */,
+				07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */,
 				07EF517116CC514900178D1E /* UIKit.framework in Frameworks */,
 				07EF517316CC514900178D1E /* Foundation.framework in Frameworks */,
 				07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */,
@@ -131,6 +152,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07BFD4D6171C582A00600512 /* Mixpanel */ = {
+			isa = PBXGroup;
+			children = (
+				07BFD4D7171C582A00600512 /* Library */,
+				07BFD4E2171C582A00600512 /* Mixpanel.h */,
+				07BFD4E3171C582A00600512 /* Mixpanel.m */,
+			);
+			path = Mixpanel;
+			sourceTree = "<group>";
+		};
+		07BFD4D7171C582A00600512 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				07BFD4D8171C582A00600512 /* JSON */,
+				07BFD4DF171C582A00600512 /* NSData_Base64 */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		07BFD4D8171C582A00600512 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				07BFD4D9171C582A00600512 /* MPCJSONDataSerializer.h */,
+				07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */,
+				07BFD4DB171C582A00600512 /* MPCJSONSerializer.h */,
+				07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */,
+				07BFD4DD171C582A00600512 /* MPCSerializedJSONData.h */,
+				07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		07BFD4DF171C582A00600512 /* NSData_Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				07BFD4E0171C582A00600512 /* NSData+MPBase64.h */,
+				07BFD4E1171C582A00600512 /* NSData+MPBase64.m */,
+			);
+			path = NSData_Base64;
+			sourceTree = "<group>";
+		};
 		07E0D45216F53AD100A5C5A3 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,10 +239,13 @@
 		07EF516416CC514900178D1E = {
 			isa = PBXGroup;
 			children = (
+				07BFD4EB171C585B00600512 /* CoreTelephony.framework */,
+				07BFD4E9171C585100600512 /* SystemConfiguration.framework */,
 				07EF517616CC514900178D1E /* URL Shortener */,
 				07EF519D16CC514900178D1E /* URL ShortenerTests */,
 				07EF516F16CC514900178D1E /* Frameworks */,
 				07EF516E16CC514900178D1E /* Products */,
+				07BFD4D6171C582A00600512 /* Mixpanel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -392,6 +457,11 @@
 				0799919716ECF279003FCE1C /* APIConnection.m in Sources */,
 				07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */,
 				169485B716FA22A5002E0D30 /* WebViewController.m in Sources */,
+				07BFD4E4171C582A00600512 /* MPCJSONDataSerializer.m in Sources */,
+				07BFD4E5171C582A00600512 /* MPCJSONSerializer.m in Sources */,
+				07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */,
+				07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */,
+				07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +545,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -564,6 +638,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -576,6 +654,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = NO;

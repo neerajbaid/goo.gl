@@ -8,12 +8,16 @@
 
 #import "URLShortenerAppDelegate.h"
 #import "URLShortenerViewController.h"
+#import "Mixpanel.h"
 
 @implementation URLShortenerAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self setBarButtonAppearance];
+    [Mixpanel sharedInstanceWithToken:@"90698dd2657dcc2427c6cde3172c148a"];
+    
     return YES;
 }
 							
@@ -47,6 +51,21 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setBarButtonAppearance
+{
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIColor blackColor], UITextAttributeTextColor,
+                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                                          nil]
+                                                forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                          [UIColor grayColor], UITextAttributeTextColor,
+                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                                          nil]
+                                                forState:UIControlStateHighlighted];
 }
 
 @end

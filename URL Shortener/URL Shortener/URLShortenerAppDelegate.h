@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreTelephony/CoreTelephonyDefines.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 #import "URLShortenerViewController.h"
 
 @interface URLShortenerAppDelegate : UIResponder <UIApplicationDelegate>

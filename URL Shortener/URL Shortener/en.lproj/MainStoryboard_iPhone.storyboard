@@ -173,9 +173,9 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="GbN-Hu-xc0">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hj3-lu-0PF">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="swd-ma-OwR">
                                             <connections>
-                                                <action selector="cancel:" destination="f4d-Cg-prt" id="h9G-Jx-WvT"/>
+                                                <segue destination="KeJ-SA-JSL" kind="unwind" identifier="PassSignInCredentialsSegue" unwindAction="doneSignIn:" id="akk-8g-07F"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -197,21 +197,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-LD-2VH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-LD-2VH">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="yGS-DU-REK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8E-2P-u1u">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="j8E-2P-u1u">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78H-ts-zDW">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="1ir-Y5-2iP"/>
-                                    <constraint firstAttribute="height" constant="41" id="Saq-n0-Iee"/>
+                                    <constraint firstAttribute="height" constant="41" id="mjI-DE-HLl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign In" backgroundImage="test no border.png">
@@ -221,6 +221,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIn:" destination="f4d-Cg-prt" eventType="touchUpInside" id="qfj-1j-Pck"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sign in to view your shortened link history with analytics on http://goo.gl." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="zog-9A-GZt">
                                 <constraints>
@@ -236,16 +239,14 @@
                             <constraint firstItem="7zc-8m-kSz" firstAttribute="top" secondItem="bFE-zb-oQ9" secondAttribute="bottom" type="default" id="5jF-fB-cdr"/>
                             <constraint firstItem="WWL-yv-16l" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="113" id="6Hv-ac-FsW"/>
                             <constraint firstAttribute="trailing" secondItem="zog-9A-GZt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7Ai-Xq-3xz"/>
-                            <constraint firstAttribute="bottom" secondItem="zog-9A-GZt" secondAttribute="bottom" constant="214" type="user" id="9q6-t2-P9K"/>
                             <constraint firstItem="j8E-2P-u1u" firstAttribute="top" secondItem="gJD-LD-2VH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="I62-Uy-XL5"/>
-                            <constraint firstItem="78H-ts-zDW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eV4-l4-MaI" secondAttribute="top" constant="255" type="user" id="MaQ-Yu-JmL"/>
                             <constraint firstItem="gJD-LD-2VH" firstAttribute="centerX" secondItem="WWL-yv-16l" secondAttribute="centerX" type="default" id="Mdt-0O-DEi"/>
                             <constraint firstItem="7zc-8m-kSz" firstAttribute="bottom" secondItem="eV4-l4-MaI" secondAttribute="bottom" type="default" id="NyB-f7-mMZ"/>
                             <constraint firstItem="bFE-zb-oQ9" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" type="default" id="Pba-Vl-Xr1"/>
                             <constraint firstItem="gJD-LD-2VH" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="157" id="SgY-Dq-jVf"/>
                             <constraint firstItem="7zc-8m-kSz" firstAttribute="leading" secondItem="eV4-l4-MaI" secondAttribute="leading" type="default" id="Tij-Ll-0jN"/>
                             <constraint firstItem="j8E-2P-u1u" firstAttribute="trailing" secondItem="gJD-LD-2VH" secondAttribute="trailing" type="default" id="VD9-9f-gEV"/>
-                            <constraint firstItem="78H-ts-zDW" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="255" id="XoH-2N-QGS"/>
+                            <constraint firstItem="78H-ts-zDW" firstAttribute="top" secondItem="eV4-l4-MaI" secondAttribute="top" constant="255" id="Zuz-Nb-y8k"/>
                             <constraint firstItem="bFE-zb-oQ9" firstAttribute="leading" secondItem="eV4-l4-MaI" secondAttribute="leading" type="default" id="b8i-gv-P2F"/>
                             <constraint firstItem="78H-ts-zDW" firstAttribute="centerX" secondItem="j8E-2P-u1u" secondAttribute="centerX" type="default" id="ccY-CF-faI"/>
                             <constraint firstItem="bFE-zb-oQ9" firstAttribute="trailing" secondItem="eV4-l4-MaI" secondAttribute="trailing" type="default" id="d7r-qZ-LGg"/>
@@ -268,6 +269,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kh-99-VNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="KeJ-SA-JSL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="924" y="-499"/>
         </scene>
@@ -304,7 +306,7 @@
         <class className="SignInViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SignInViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="signIn:"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="googleLogo" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
@@ -313,10 +315,14 @@
                 <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
         <class className="URLShortenerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/URLShortenerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="copyToPasteboard:"/>
+                <relationship kind="action" name="doneSignIn:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>

@@ -10,4 +10,6 @@
 
 @interface SignInViewController : UIViewController
 
+@property BOOL isSignedIn;
+
 @end

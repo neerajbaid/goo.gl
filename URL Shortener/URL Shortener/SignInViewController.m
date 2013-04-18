@@ -27,9 +27,15 @@
     [_passwordTextField resignFirstResponder];
 }
 
-- (IBAction)cancel:(id)sender
+- (IBAction)signIn:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    NSString *username = _usernameTextField.text;
+    NSString *password = _passwordTextField.text;
+    //if signed in
+    {
+        _isSignedIn = TRUE;
+    }
+    //authenticate signIn
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
