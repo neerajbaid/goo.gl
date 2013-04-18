@@ -29,8 +29,8 @@
 
 - (IBAction)signIn:(id)sender
 {
-    NSString *username = _usernameTextField.text;
-    NSString *password = _passwordTextField.text;
+//    NSString *username = _usernameTextField.text;
+//    NSString *password = _passwordTextField.text;
     //if signed in
     {
         _isSignedIn = TRUE;

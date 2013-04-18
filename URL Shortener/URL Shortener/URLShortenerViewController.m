@@ -29,6 +29,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
 @property (nonatomic) BOOL isSignedIn;
 
+@property (weak, nonatomic) IBOutlet UIButton *facebookShareButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterShareButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+
 //@property (nonatomic) int test; //switcher variable
 
 @end
@@ -248,7 +252,50 @@
     {
         SignInViewController *sVC = [segue sourceViewController];
         _isSignedIn = [sVC isSignedIn];
+        //do a bunch of changes in the api calling in APIConnection
     }
+}
+
+- (IBAction)shareButton:(id)sender
+{
+    if (_twitterShareButton.alpha == 0)
+    {
+        [_shareButton setBackgroundImage:[UIImage imageNamed:@"Close Share Button.png"] forState:UIControlStateNormal];
+        [self appearShareButtons];
+    }
+    else if (_twitterShareButton.alpha == 1)
+    {
+        [_shareButton setBackgroundImage:[UIImage imageNamed:@"Share Button.png"] forState:UIControlStateNormal];
+        [self disappearShareButtons];
+    }
+}
+
+- (void)appearShareButtons
+{
+    [UIView animateWithDuration:.2 animations:^(void)
+     {
+         [_twitterShareButton setAlpha:1];
+         [_facebookShareButton setAlpha:1];
+     }];
+}
+
+- (void)disappearShareButtons
+{
+    [UIView animateWithDuration:.2 animations:^(void)
+     {
+         [_twitterShareButton setAlpha:0];
+         [_facebookShareButton setAlpha:0];
+     }];
+}
+
+- (IBAction)shareToTwitter:(id)sender
+{
+    
+}
+
+- (IBAction)shareToFacebook:(id)sender
+{
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -281,6 +328,8 @@
     [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
     [_testButton setAlpha:0];
+    [_facebookShareButton setAlpha:0];
+    [_twitterShareButton setAlpha:0];
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];

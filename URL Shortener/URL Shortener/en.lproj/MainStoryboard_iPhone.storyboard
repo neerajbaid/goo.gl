@@ -12,11 +12,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background5 @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="504" id="ye0-7Z-sYp"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background5 @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GNE-Nf-SEN"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow @2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-jM-rzc">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="6qT-2E-8uz"/>
@@ -32,8 +28,8 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iek-eI-6e0">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="0Xl-ZC-J27"/>
                                     <constraint firstAttribute="height" constant="33" id="Eur-qw-3by"/>
-                                    <constraint firstAttribute="width" constant="176" id="oQB-iX-cyz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -64,7 +60,6 @@
                             </label>
                             <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8N-6d-RUx">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="162" id="QH4-nc-TYB"/>
                                     <constraint firstAttribute="height" constant="17" type="user" id="lOY-YC-wMP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -81,46 +76,102 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZ9-27-atA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="NoL-7a-Vgu"/>
+                                    <constraint firstAttribute="height" constant="45" id="VTX-Af-w4i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="Share Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton:" destination="2" eventType="touchUpInside" id="RDi-ba-lcx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW8-k7-7Nq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="fI2-UC-H4b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="Twitter Share Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareToTwitter:" destination="2" eventType="touchUpInside" id="tCC-nK-JRt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-pM-K66">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="nTN-tB-XBQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="Facebook Share Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareToFacebook:" destination="2" eventType="touchUpInside" id="yZL-Is-wer"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="centerX" secondItem="4ZE-le-bhz" secondAttribute="centerX" type="default" id="16G-QV-V0w"/>
+                            <constraint firstItem="jW8-k7-7Nq" firstAttribute="leading" secondItem="p8N-6d-RUx" secondAttribute="leading" type="default" id="4fj-eb-F8Y"/>
+                            <constraint firstItem="qFk-pM-K66" firstAttribute="top" secondItem="jW8-k7-7Nq" secondAttribute="top" type="default" id="70x-9C-Vv9"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Dd5-1F-0p7"/>
                             <constraint firstItem="cYc-nr-oku" firstAttribute="top" secondItem="3" secondAttribute="top" constant="133" id="H20-BQ-Yrk"/>
+                            <constraint firstItem="jW8-k7-7Nq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="79" id="HTZ-2A-v1f"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="IbT-NB-ogt"/>
                             <constraint firstItem="iek-eI-6e0" firstAttribute="centerY" secondItem="t61-lF-Qnb" secondAttribute="centerY" type="default" id="IcL-Pd-07i"/>
+                            <constraint firstItem="qFk-pM-K66" firstAttribute="centerX" secondItem="GNE-Nf-SEN" secondAttribute="centerX" type="default" id="Jl2-sV-ygl"/>
                             <constraint firstItem="iek-eI-6e0" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="Tgj-3x-MVX"/>
                             <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="cYc-nr-oku" secondAttribute="centerX" type="default" id="VNt-ac-Di8"/>
+                            <constraint firstAttribute="bottom" secondItem="RZ9-27-atA" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Vau-Zl-eNU"/>
                             <constraint firstItem="4ZE-le-bhz" firstAttribute="centerY" secondItem="BHe-jM-rzc" secondAttribute="centerY" type="default" id="W7e-1M-F6L"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="iek-eI-6e0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aNv-Ob-Rih"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="bottom" secondItem="BHe-jM-rzc" secondAttribute="bottom" type="default" id="ckI-Qc-qa2"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="eOa-r3-Qbp"/>
+                            <constraint firstItem="qFk-pM-K66" firstAttribute="centerX" secondItem="p8N-6d-RUx" secondAttribute="centerX" type="default" id="f4L-on-l0j"/>
+                            <constraint firstAttribute="bottom" secondItem="qFk-pM-K66" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="faU-Cb-yPr"/>
+                            <constraint firstAttribute="bottom" secondItem="jW8-k7-7Nq" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="h71-YH-KTu"/>
+                            <constraint firstItem="RZ9-27-atA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hJe-dg-9Uu"/>
                             <constraint firstItem="axN-e3-86S" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="143" id="iP6-cj-HWh"/>
                             <constraint firstItem="BHe-jM-rzc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="82" id="iSm-jw-kSq"/>
                             <constraint firstItem="axN-e3-86S" firstAttribute="top" secondItem="3" secondAttribute="top" constant="200" id="mK9-wB-Vks"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="mKZ-ms-qXN"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="qKZ-FD-abW"/>
-                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="centerX" secondItem="akN-Xp-6Rx" secondAttribute="centerX" type="default" id="ruo-ku-t9U"/>
+                            <constraint firstItem="jW8-k7-7Nq" firstAttribute="top" secondItem="RZ9-27-atA" secondAttribute="top" type="default" id="qnB-kE-zjW"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="s0A-81-gt7"/>
                             <constraint firstItem="BHe-jM-rzc" firstAttribute="top" secondItem="3" secondAttribute="top" constant="167" id="wFt-pT-mca"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="383" type="user" id="xPx-6F-leO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="asz-6X-9vm">
-                        <barButtonItem key="rightBarButtonItem" title="Sign In" id="vPa-EG-V72">
-                            <connections>
-                                <segue destination="f4d-Cg-prt" kind="modal" id="83k-0X-rl8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="asz-6X-9vm"/>
                     <connections>
                         <outlet property="arrow" destination="BHe-jM-rzc" id="V0z-Rn-xkk"/>
                         <outlet property="background" destination="GNE-Nf-SEN" id="pr9-1g-MxT"/>
+                        <outlet property="facebookShareButton" destination="jW8-k7-7Nq" id="Keq-Xg-ASg"/>
+                        <outlet property="shareButton" destination="RZ9-27-atA" id="fdm-Gu-pzu"/>
                         <outlet property="shortenedLinkHasBeenCopiedToTheClipboard" destination="akN-Xp-6Rx" id="My1-2u-qbo"/>
                         <outlet property="shortenedURL" destination="t61-lF-Qnb" id="Y7e-vk-yAZ"/>
                         <outlet property="shortenedURLLabel" destination="t61-lF-Qnb" id="ub3-Ry-yE4"/>
                         <outlet property="spinner" destination="4ZE-le-bhz" id="uUl-xv-O5p"/>
                         <outlet property="testButton" destination="iek-eI-6e0" id="CPr-m9-kI2"/>
                         <outlet property="textField" destination="cYc-nr-oku" id="FDz-YZ-OEl"/>
+                        <outlet property="twitterShareButton" destination="qFk-pM-K66" id="CgV-16-zIZ"/>
                         <outlet property="urlDisplayUnderShortenedURL" destination="p8N-6d-RUx" id="gU3-Bx-zO8"/>
                         <outlet property="urlHasBeenShortened" destination="axN-e3-86S" id="uk1-oS-ZeL"/>
                         <segue destination="kf2-Sa-6wS" kind="push" identifier="showWebView" id="6b8-jY-fH4"/>
@@ -293,8 +344,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Facebook Share Button.png" width="90" height="90"/>
         <image name="Google logo small.png" width="274" height="94"/>
+        <image name="Share Button.png" width="90" height="90"/>
         <image name="Sign In Background small.jpg" width="49" height="49"/>
+        <image name="Twitter Share Button.png" width="90" height="90"/>
         <image name="arrow @2x.jpg" width="192" height="344"/>
         <image name="background5 @2x.jpg" width="640" height="1005"/>
         <image name="test no border.png" width="546" height="82"/>
@@ -323,14 +377,20 @@
             <relationships>
                 <relationship kind="action" name="copyToPasteboard:"/>
                 <relationship kind="action" name="doneSignIn:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="shareButton:"/>
+                <relationship kind="action" name="shareToFacebook:"/>
+                <relationship kind="action" name="shareToTwitter:"/>
                 <relationship kind="outlet" name="arrow" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="facebookShareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="shortenedLinkHasBeenCopiedToTheClipboard" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shortenedURLLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="testButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="twitterShareButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="urlDisplayUnderShortenedURL" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="urlHasBeenShortened" candidateClass="UILabel"/>
             </relationships>

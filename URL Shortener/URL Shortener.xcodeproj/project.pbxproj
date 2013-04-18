@@ -12,6 +12,10 @@
 		071AEDAB16F5441A00E864FA /* test no border.png in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAA16F5441A00E864FA /* test no border.png */; };
 		071AEDAD16F54EE600E864FA /* Sign In Background small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */; };
 		0728E34F16DCB6E300B1A45F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0728E34E16DCB6E300B1A45F /* background.jpg */; };
+		073C22D917204A700061A9DC /* Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22D817204A700061A9DC /* Share Button.png */; };
+		073C22DB17204DB80061A9DC /* Close Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DA17204DB80061A9DC /* Close Share Button.png */; };
+		073C22DD172051540061A9DC /* Twitter Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DC172051540061A9DC /* Twitter Share Button.png */; };
+		073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DE172052620061A9DC /* Facebook Share Button.png */; };
 		0746461E16FA4CE000A224C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461D16FA4CE000A224C1 /* Icon.png */; };
 		0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461F16FA4CE300A224C1 /* Icon@2x.png */; };
 		0746462216FA4CE900A224C1 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746462116FA4CE900A224C1 /* iPad.png */; };
@@ -70,6 +74,10 @@
 		071AEDAA16F5441A00E864FA /* test no border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test no border.png"; sourceTree = "<group>"; };
 		071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sign In Background small.jpg"; sourceTree = "<group>"; };
 		0728E34E16DCB6E300B1A45F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		073C22D817204A700061A9DC /* Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Share Button.png"; sourceTree = "<group>"; };
+		073C22DA17204DB80061A9DC /* Close Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Share Button.png"; sourceTree = "<group>"; };
+		073C22DC172051540061A9DC /* Twitter Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter Share Button.png"; sourceTree = "<group>"; };
+		073C22DE172052620061A9DC /* Facebook Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Share Button.png"; sourceTree = "<group>"; };
 		0746461D16FA4CE000A224C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0746461F16FA4CE300A224C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0746462116FA4CE900A224C1 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
@@ -291,6 +299,10 @@
 		07EF517716CC514900178D1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				073C22D817204A700061A9DC /* Share Button.png */,
+				073C22DA17204DB80061A9DC /* Close Share Button.png */,
+				073C22DC172051540061A9DC /* Twitter Share Button.png */,
+				073C22DE172052620061A9DC /* Facebook Share Button.png */,
 				07E0D45416F53B0F00A5C5A3 /* General */,
 				07E0D45216F53AD100A5C5A3 /* Main Screen */,
 				07E0D45316F53B0400A5C5A3 /* Sign In */,
@@ -417,6 +429,10 @@
 				0746462216FA4CE900A224C1 /* iPad.png in Resources */,
 				0746462416FA4CEC00A224C1 /* iPad @2x.png in Resources */,
 				07B3817F171799B50038E097 /* black-square.jpg in Resources */,
+				073C22D917204A700061A9DC /* Share Button.png in Resources */,
+				073C22DB17204DB80061A9DC /* Close Share Button.png in Resources */,
+				073C22DD172051540061A9DC /* Twitter Share Button.png in Resources */,
+				073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
