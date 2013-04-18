@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "APIConnection.h"
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface URLShortenerViewController : UIViewController <URLRecipient>
 
@@ -15,5 +17,8 @@
 - (BOOL)handlePasteboardString;
 - (void)shortenURL:(NSString *)url;
 - (void)disappear;
+
+@property (nonatomic) SLComposeViewController *mySLComposerSheet;
+
 
 @end

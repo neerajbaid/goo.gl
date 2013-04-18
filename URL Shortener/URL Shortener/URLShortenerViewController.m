@@ -210,6 +210,7 @@
          [_urlDisplayUnderShortenedURL setAlpha:1];
          [_urlDisplayUnderShortenedURL setBackgroundColor:[UIColor whiteColor]];
          [_testButton setAlpha:1];
+         [_shareButton setAlpha:1];
      }];
 }
 
@@ -271,7 +272,7 @@
 }
 
 - (void)appearShareButtons
-{
+{ 
     [UIView animateWithDuration:.2 animations:^(void)
      {
          [_twitterShareButton setAlpha:1];
@@ -289,13 +290,56 @@
 }
 
 - (IBAction)shareToTwitter:(id)sender
-{
-    
+{ 
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
+        [mySLComposerSheet setInitialText:initialText];
+        [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result)
+         {
+             switch (result)
+             {
+                 case SLComposeViewControllerResultCancelled:
+                     break;
+                 case SLComposeViewControllerResultDone:
+                 {
+                     [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Twitter"];
+                     break;
+                 }
+                 default:
+                     break;
+             }
+         }];
+        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
+    }
+
 }
 
 - (IBAction)shareToFacebook:(id)sender
-{
-    
+{ 
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
+        [mySLComposerSheet setInitialText:initialText];
+        [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result)
+         {
+             switch (result) {
+                 case SLComposeViewControllerResultCancelled:
+                     break;
+                 case SLComposeViewControllerResultDone:
+                 {
+                     [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Facebook"];
+                     break;
+                 }
+                 default:
+                     break;
+             }
+         }];
+        
+        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -328,6 +372,7 @@
     [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
     [_testButton setAlpha:0];
+    [_shareButton setAlpha:0];
     [_facebookShareButton setAlpha:0];
     [_twitterShareButton setAlpha:0];
     /*

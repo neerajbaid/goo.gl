@@ -16,6 +16,8 @@
 		073C22DB17204DB80061A9DC /* Close Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DA17204DB80061A9DC /* Close Share Button.png */; };
 		073C22DD172051540061A9DC /* Twitter Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DC172051540061A9DC /* Twitter Share Button.png */; };
 		073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DE172052620061A9DC /* Facebook Share Button.png */; };
+		073C22E11720835A0061A9DC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E01720835A0061A9DC /* Social.framework */; };
+		073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E21720835F0061A9DC /* Accounts.framework */; };
 		0746461E16FA4CE000A224C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461D16FA4CE000A224C1 /* Icon.png */; };
 		0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461F16FA4CE300A224C1 /* Icon@2x.png */; };
 		0746462216FA4CE900A224C1 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746462116FA4CE900A224C1 /* iPad.png */; };
@@ -78,6 +80,8 @@
 		073C22DA17204DB80061A9DC /* Close Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Share Button.png"; sourceTree = "<group>"; };
 		073C22DC172051540061A9DC /* Twitter Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter Share Button.png"; sourceTree = "<group>"; };
 		073C22DE172052620061A9DC /* Facebook Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Share Button.png"; sourceTree = "<group>"; };
+		073C22E01720835A0061A9DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		073C22E21720835F0061A9DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		0746461D16FA4CE000A224C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0746461F16FA4CE300A224C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0746462116FA4CE900A224C1 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */,
+				073C22E11720835A0061A9DC /* Social.framework in Frameworks */,
 				07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */,
 				07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */,
 				07EF517116CC514900178D1E /* UIKit.framework in Frameworks */,
@@ -247,6 +253,8 @@
 		07EF516416CC514900178D1E = {
 			isa = PBXGroup;
 			children = (
+				073C22E21720835F0061A9DC /* Accounts.framework */,
+				073C22E01720835A0061A9DC /* Social.framework */,
 				07BFD4EB171C585B00600512 /* CoreTelephony.framework */,
 				07BFD4E9171C585100600512 /* SystemConfiguration.framework */,
 				07EF517616CC514900178D1E /* URL Shortener */,
