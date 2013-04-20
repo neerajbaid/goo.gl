@@ -10,6 +10,7 @@
 #import "APIConnection.h"
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import <MessageUI/MessageUI.h>
 
 @interface URLShortenerViewController : UIViewController <URLRecipient>
 

@@ -12,7 +12,7 @@
 #import "SignInViewController.h"
 #import "Mixpanel.h"
 
-@interface URLShortenerViewController () <UITextFieldDelegate>
+@interface URLShortenerViewController () <UITextFieldDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -31,7 +31,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *facebookShareButton;
 @property (weak, nonatomic) IBOutlet UIButton *twitterShareButton;
+@property (weak, nonatomic) IBOutlet UIButton *messagesShareButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *mailShareButton;
 
 //@property (nonatomic) int test; //switcher variable
 
@@ -272,20 +274,24 @@
 }
 
 - (void)appearShareButtons
-{ 
+{    
     [UIView animateWithDuration:.2 animations:^(void)
      {
          [_twitterShareButton setAlpha:1];
          [_facebookShareButton setAlpha:1];
+         [_messagesShareButton setAlpha:1];
+         [_mailShareButton setAlpha:1];
      }];
 }
 
 - (void)disappearShareButtons
-{
+{   
     [UIView animateWithDuration:.2 animations:^(void)
      {
          [_twitterShareButton setAlpha:0];
          [_facebookShareButton setAlpha:0];
+         [_messagesShareButton setAlpha:0];
+         [_mailShareButton setAlpha:0];
      }];
 }
 
@@ -317,7 +323,7 @@
 }
 
 - (IBAction)shareToFacebook:(id)sender
-{ 
+{    
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
@@ -339,6 +345,81 @@
          }];
         
         [self presentViewController:mySLComposerSheet animated:YES completion:nil];
+    }
+}
+
+- (IBAction)shareToMessages:(id)sender
+{
+    [self sendMessage];
+}
+
+- (IBAction)shareToMail:(id)sender
+{
+    [self sendMail];
+}
+
+- (void)sendMessage
+{
+    if ([MFMessageComposeViewController canSendText])
+    {
+        MFMessageComposeViewController *myMFMessageController = [[MFMessageComposeViewController alloc] init];
+        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
+        myMFMessageController.body = initialText;
+        myMFMessageController.messageComposeDelegate = self;
+        [self presentViewController:myMFMessageController animated:YES completion:nil];
+    }
+}
+
+- (void)sendMail
+{
+    if ([MFMailComposeViewController canSendMail])
+    {
+        MFMailComposeViewController *myMFMailController = [[MFMailComposeViewController alloc] init];
+        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
+        [myMFMailController setMessageBody:initialText isHTML:FALSE];
+        [myMFMailController setSubject:@"Check it out!"];
+        myMFMailController.mailComposeDelegate = self;
+        [self presentViewController:myMFMailController animated:YES completion:nil];
+    }
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    switch (result)
+    {
+        case MessageComposeResultCancelled:
+            break;
+        case MessageComposeResultFailed:
+            break;
+        case MessageComposeResultSent:
+        {
+            [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Messages"];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            break;
+        case MFMailComposeResultFailed:
+            break;
+        case MFMailComposeResultSaved:
+            break;
+        case MFMailComposeResultSent:
+        {
+            break;
+            [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Mail"];
+        }
+        default:
+            break;
     }
 }
 
@@ -375,6 +456,8 @@
     [_shareButton setAlpha:0];
     [_facebookShareButton setAlpha:0];
     [_twitterShareButton setAlpha:0];
+    [_messagesShareButton setAlpha:0];
+    [_mailShareButton setAlpha:0];
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];

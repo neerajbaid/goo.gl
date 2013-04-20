@@ -18,6 +18,9 @@
 		073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DE172052620061A9DC /* Facebook Share Button.png */; };
 		073C22E11720835A0061A9DC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E01720835A0061A9DC /* Social.framework */; };
 		073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E21720835F0061A9DC /* Accounts.framework */; };
+		073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E41720CAEF0061A9DC /* MessageUI.framework */; };
+		073C22EA17219E7C0061A9DC /* Messages Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22E917219E7C0061A9DC /* Messages Share Button.png */; };
+		073C22EC172303730061A9DC /* Mail Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22EB172303730061A9DC /* Mail Share Button.png */; };
 		0746461E16FA4CE000A224C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461D16FA4CE000A224C1 /* Icon.png */; };
 		0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461F16FA4CE300A224C1 /* Icon@2x.png */; };
 		0746462216FA4CE900A224C1 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746462116FA4CE900A224C1 /* iPad.png */; };
@@ -82,6 +85,9 @@
 		073C22DE172052620061A9DC /* Facebook Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Share Button.png"; sourceTree = "<group>"; };
 		073C22E01720835A0061A9DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		073C22E21720835F0061A9DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		073C22E41720CAEF0061A9DC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		073C22E917219E7C0061A9DC /* Messages Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Messages Share Button.png"; sourceTree = "<group>"; };
+		073C22EB172303730061A9DC /* Mail Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mail Share Button.png"; sourceTree = "<group>"; };
 		0746461D16FA4CE000A224C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0746461F16FA4CE300A224C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0746462116FA4CE900A224C1 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */,
 				073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */,
 				073C22E11720835A0061A9DC /* Social.framework in Frameworks */,
 				07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */,
@@ -253,15 +260,16 @@
 		07EF516416CC514900178D1E = {
 			isa = PBXGroup;
 			children = (
-				073C22E21720835F0061A9DC /* Accounts.framework */,
-				073C22E01720835A0061A9DC /* Social.framework */,
-				07BFD4EB171C585B00600512 /* CoreTelephony.framework */,
-				07BFD4E9171C585100600512 /* SystemConfiguration.framework */,
 				07EF517616CC514900178D1E /* URL Shortener */,
 				07EF519D16CC514900178D1E /* URL ShortenerTests */,
 				07EF516F16CC514900178D1E /* Frameworks */,
 				07EF516E16CC514900178D1E /* Products */,
 				07BFD4D6171C582A00600512 /* Mixpanel */,
+				073C22E41720CAEF0061A9DC /* MessageUI.framework */,
+				073C22E21720835F0061A9DC /* Accounts.framework */,
+				073C22E01720835A0061A9DC /* Social.framework */,
+				07BFD4EB171C585B00600512 /* CoreTelephony.framework */,
+				07BFD4E9171C585100600512 /* SystemConfiguration.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,6 +319,8 @@
 				073C22DA17204DB80061A9DC /* Close Share Button.png */,
 				073C22DC172051540061A9DC /* Twitter Share Button.png */,
 				073C22DE172052620061A9DC /* Facebook Share Button.png */,
+				073C22E917219E7C0061A9DC /* Messages Share Button.png */,
+				073C22EB172303730061A9DC /* Mail Share Button.png */,
 				07E0D45416F53B0F00A5C5A3 /* General */,
 				07E0D45216F53AD100A5C5A3 /* Main Screen */,
 				07E0D45316F53B0400A5C5A3 /* Sign In */,
@@ -441,6 +451,8 @@
 				073C22DB17204DB80061A9DC /* Close Share Button.png in Resources */,
 				073C22DD172051540061A9DC /* Twitter Share Button.png in Resources */,
 				073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */,
+				073C22EA17219E7C0061A9DC /* Messages Share Button.png in Resources */,
+				073C22EC172303730061A9DC /* Mail Share Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +581,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -662,6 +675,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -678,6 +692,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
