@@ -21,6 +21,8 @@
 		073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E41720CAEF0061A9DC /* MessageUI.framework */; };
 		073C22EA17219E7C0061A9DC /* Messages Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22E917219E7C0061A9DC /* Messages Share Button.png */; };
 		073C22EC172303730061A9DC /* Mail Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22EB172303730061A9DC /* Mail Share Button.png */; };
+		073C22F017233FC40061A9DC /* Text Field Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22EF17233FC40061A9DC /* Text Field Background.png */; };
+		073C22F4172341510061A9DC /* Button Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22F3172341510061A9DC /* Button Background.png */; };
 		0746461E16FA4CE000A224C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461D16FA4CE000A224C1 /* Icon.png */; };
 		0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461F16FA4CE300A224C1 /* Icon@2x.png */; };
 		0746462216FA4CE900A224C1 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746462116FA4CE900A224C1 /* iPad.png */; };
@@ -88,6 +90,8 @@
 		073C22E41720CAEF0061A9DC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		073C22E917219E7C0061A9DC /* Messages Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Messages Share Button.png"; sourceTree = "<group>"; };
 		073C22EB172303730061A9DC /* Mail Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mail Share Button.png"; sourceTree = "<group>"; };
+		073C22EF17233FC40061A9DC /* Text Field Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Text Field Background.png"; sourceTree = "<group>"; };
+		073C22F3172341510061A9DC /* Button Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Background.png"; sourceTree = "<group>"; };
 		0746461D16FA4CE000A224C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		0746461F16FA4CE300A224C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		0746462116FA4CE900A224C1 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
@@ -173,6 +177,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073C22F2172340910061A9DC /* Share Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				073C22D817204A700061A9DC /* Share Button.png */,
+				073C22DA17204DB80061A9DC /* Close Share Button.png */,
+				073C22DC172051540061A9DC /* Twitter Share Button.png */,
+				073C22DE172052620061A9DC /* Facebook Share Button.png */,
+				073C22E917219E7C0061A9DC /* Messages Share Button.png */,
+				073C22EB172303730061A9DC /* Mail Share Button.png */,
+			);
+			name = "Share Buttons";
+			sourceTree = "<group>";
+		};
 		07BFD4D6171C582A00600512 /* Mixpanel */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,12 +332,9 @@
 		07EF517716CC514900178D1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				073C22D817204A700061A9DC /* Share Button.png */,
-				073C22DA17204DB80061A9DC /* Close Share Button.png */,
-				073C22DC172051540061A9DC /* Twitter Share Button.png */,
-				073C22DE172052620061A9DC /* Facebook Share Button.png */,
-				073C22E917219E7C0061A9DC /* Messages Share Button.png */,
-				073C22EB172303730061A9DC /* Mail Share Button.png */,
+				073C22EF17233FC40061A9DC /* Text Field Background.png */,
+				073C22F3172341510061A9DC /* Button Background.png */,
+				073C22F2172340910061A9DC /* Share Buttons */,
 				07E0D45416F53B0F00A5C5A3 /* General */,
 				07E0D45216F53AD100A5C5A3 /* Main Screen */,
 				07E0D45316F53B0400A5C5A3 /* Sign In */,
@@ -453,6 +467,8 @@
 				073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */,
 				073C22EA17219E7C0061A9DC /* Messages Share Button.png in Resources */,
 				073C22EC172303730061A9DC /* Mail Share Button.png in Resources */,
+				073C22F017233FC40061A9DC /* Text Field Background.png in Resources */,
+				073C22F4172341510061A9DC /* Button Background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

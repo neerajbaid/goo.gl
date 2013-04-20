@@ -458,6 +458,7 @@
     [_twitterShareButton setAlpha:0];
     [_messagesShareButton setAlpha:0];
     [_mailShareButton setAlpha:0];
+    
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];
