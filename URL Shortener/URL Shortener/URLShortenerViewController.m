@@ -110,7 +110,10 @@
         [self appear];
         _shortenedURL = shortenedURL;
         if (_shortenedURL)
+        {
             [[UIPasteboard generalPasteboard] setString:_shortenedURL];
+            [[Mixpanel sharedInstance] track:@"URL Shortened"];
+        }
         self.shortenedURLLabel.text = _shortenedURL;
     }
     else
