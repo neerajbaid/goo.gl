@@ -11,6 +11,8 @@
 #import "WebViewController.h"
 #import "SignInViewController.h"
 #import "Mixpanel.h"
+#import "GTMOAuth2ViewControllerTouch.h"
+#import "GTMHTTPFetcher.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
@@ -35,11 +37,96 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *mailShareButton;
 
+@property (strong, nonatomic) NSString *kKeychainItemName;
+@property (strong, nonatomic) NSString *kMyClientID;
+@property (strong, nonatomic) NSString *kMyClientSecret;
+@property (strong, nonatomic) GTMHTTPFetcher *fetcher;
+@property (strong, nonatomic) GTMOAuth2Authentication *auth;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *signInBarButtonItem;
+
 //@property (nonatomic) int test; //switcher variable
 
 @end
 
 @implementation URLShortenerViewController
+
+- (GTMHTTPFetcher *)fetcher
+{
+    if (!_fetcher)
+        _fetcher = [[GTMHTTPFetcher alloc] init];
+    return _fetcher;
+}
+
+- (GTMOAuth2Authentication *)auth
+{
+    if (!_auth)
+        _auth = [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:_kKeychainItemName
+                                                                      clientID:_kMyClientID
+                                                                  clientSecret:_kMyClientSecret];
+    return _auth;
+}
+
+- (IBAction)signInOrOut:(id)sender
+{
+    if ([_signInBarButtonItem.title isEqualToString:@"Sign In"])
+        [self signIn];
+    else if ([_signInBarButtonItem.title isEqualToString:@"Sign Out"])
+        [self signOut];
+}
+
+- (void)signIn
+{
+    NSString *scope = @"https://www.googleapis.com/auth/plus.me"; // scope for Google+ API
+    
+    GTMOAuth2ViewControllerTouch *viewController;
+    viewController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:scope
+                                                                 clientID:_kMyClientID
+                                                             clientSecret:_kMyClientSecret
+                                                         keychainItemName:_kKeychainItemName
+                                                                 delegate:self
+                                                         finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+    
+    [[self navigationController] pushViewController:viewController
+                                           animated:YES];
+}
+
+- (void)signOut
+{
+    [GTMOAuth2ViewControllerTouch removeAuthFromKeychainForName:_kKeychainItemName];
+    [GTMOAuth2ViewControllerTouch revokeTokenForGoogleAuthentication:_auth];
+    [_signInBarButtonItem setTitle:@"Sign In"];
+    [[Mixpanel sharedInstance] track:@"Signed Out"];
+    _isSignedIn = NO;
+}
+
+- (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error {
+    if (error != nil)
+    {
+        // Authentication failed
+    }
+    else
+    {
+        [_signInBarButtonItem setTitle:@"Sign Out"];
+        _isSignedIn = YES;
+        [[Mixpanel sharedInstance] track:@"Signed In"];
+        [_fetcher setAuthorizer:auth];
+        [self setAuth:auth];
+        NSMutableURLRequest *myURLRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"test"]];
+        [auth authorizeRequest:myURLRequest delegate:self didFinishSelector:@selector(authentication:request:finishedWithError:)];
+    }
+}
+
+- (void)authentication:(GTMOAuth2Authentication *)auth request:(NSMutableURLRequest *)request finishedWithError:(NSError *)error
+{
+    if (error != nil)
+    {
+        // Authorization failed
+    }
+    else
+    {
+        // Authorization succeeded
+    }
+}
 
 - (APIConnection *)connection
 {
@@ -80,7 +167,10 @@
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"Automatically Copy URL"];
         
-        [_textField setText:string];
+        NSString *text = @"  ";
+        text = [text stringByAppendingString:string];
+        
+        [_textField setText:text];
         return YES;
     }
     return NO;
@@ -288,7 +378,7 @@
 }
 
 - (void)disappearShareButtons
-{   
+{    
     [UIView animateWithDuration:.2 animations:^(void)
      {
          [_twitterShareButton setAlpha:0];
@@ -299,7 +389,7 @@
 }
 
 - (IBAction)shareToTwitter:(id)sender
-{ 
+{  
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
@@ -387,7 +477,7 @@
 }
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-{
+{  
     [self dismissViewControllerAnimated:YES completion:nil];
     switch (result)
     {
@@ -437,9 +527,6 @@
     //[self setBarButtonAppearance];
     [super viewDidLoad];
     
-    Mixpanel *mixpanel = [Mixpanel sharedInstance];
-    [mixpanel track:@"Opened App"];
-    
     self.textField.delegate = self;
     
     UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
@@ -461,7 +548,9 @@
     [_twitterShareButton setAlpha:0];
     [_messagesShareButton setAlpha:0];
     [_mailShareButton setAlpha:0];
-    
+    _kKeychainItemName = @"OAuth2 Sample: Google+";
+    _kMyClientID = @"87616694201-13uct6p1sdqf8juh97cnu0900bf1ip7n.apps.googleusercontent.com";  // pre-assigned by service
+    _kMyClientSecret = @"dMAzn0VNV9G2a7LCgKQ-hoN7";                                             // pre-assigned by service
     /*
     [self validateUrl:@"aaa"];
     [self validateUrl:@"google.com"];
@@ -472,6 +561,16 @@
      */
     if ([self handlePasteboardString])
         [self shortenURL:[UIPasteboard generalPasteboard].string];
+}
+
+- (void)awakeFromNib
+{
+    // Get the saved authentication, if any, from the keychain.
+    // Retain the authentication object, which holds the auth tokens
+    //
+    // We can determine later if the auth object contains an access token
+    // by calling its -canAuthorize method
+    [self setAuth:_auth];
 }
 
 - (void)didReceiveMemoryWarning

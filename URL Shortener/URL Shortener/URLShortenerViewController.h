@@ -11,6 +11,8 @@
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
 #import <MessageUI/MessageUI.h>
+#import <Security/Security.h>
+#import <SystemConfiguration/SystemConfiguration.h>
 
 @interface URLShortenerViewController : UIViewController <URLRecipient>
 

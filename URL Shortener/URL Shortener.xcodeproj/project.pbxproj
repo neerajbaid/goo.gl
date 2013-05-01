@@ -32,6 +32,21 @@
 		076C57F016D6E35A003E8944 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57EF16D6E35A003E8944 /* Default-568h@2x.png */; };
 		076C57F216D6E3F7003E8944 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57F116D6E3F7003E8944 /* Default@2x.png */; };
 		076C57F416D6E400003E8944 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57F316D6E400003E8944 /* Default.png */; };
+		076E5B20173038190038F216 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076E5B1F173038190038F216 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		076E5B22173038480038F216 /* GTMOAuth2ViewControllerTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B17173037FE0038F216 /* GTMOAuth2ViewControllerTouch.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B24173038480038F216 /* GTMOAuth2SignIn.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B19173037FE0038F216 /* GTMOAuth2SignIn.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B25173038480038F216 /* GTMOAuth2Authentication.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B1A173037FE0038F216 /* GTMOAuth2Authentication.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B2817303A6F0038F216 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */; };
+		076E5B2C1730CA060038F216 /* GTMHTTPFetcher.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2917303E1C0038F216 /* GTMHTTPFetcher.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B311730CCD20038F216 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */; };
+		076E5B321730CCD20038F216 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */; };
+		076E5B331730CCD20038F216 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */; };
+		076E5B341730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */; };
+		076E5B351730CCE40038F216 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B361730CCE40038F216 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B371730CCE40038F216 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B381730CCE40038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		076E5B391730CD980038F216 /* GTMOAuth2ViewTouch.xib in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */; };
 		078F020716E6580700A39D8C /* background2 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078F020616E6580700A39D8C /* background2 @2x.jpg */; };
 		078F020B16E66F9000A39D8C /* arrow @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078F020A16E66F9000A39D8C /* arrow @2x.jpg */; };
 		07900D4D16CF0DF1002B14CB /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4B16CF0DF1002B14CB /* top bar.png */; };
@@ -45,7 +60,7 @@
 		07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4E1171C582A00600512 /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4E3171C582A00600512 /* Mixpanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4E9171C585100600512 /* SystemConfiguration.framework */; };
+		07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4E9171C585100600512 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4EB171C585B00600512 /* CoreTelephony.framework */; };
 		07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D44E16F5149D00A5C5A3 /* Google logo small.png */; };
 		07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */; };
@@ -101,6 +116,16 @@
 		076C57EF16D6E35A003E8944 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		076C57F116D6E3F7003E8944 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		076C57F316D6E400003E8944 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		076E5B17173037FE0038F216 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		076E5B19173037FE0038F216 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		076E5B1A173037FE0038F216 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		076E5B1F173038190038F216 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		076E5B2917303E1C0038F216 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
 		078F020616E6580700A39D8C /* background2 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2 @2x.jpg"; sourceTree = "<group>"; };
 		078F020A16E66F9000A39D8C /* arrow @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arrow @2x.jpg"; sourceTree = "<group>"; };
 		07900D4B16CF0DF1002B14CB /* top bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar.png"; sourceTree = "<group>"; };
@@ -153,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076E5B20173038190038F216 /* Security.framework in Frameworks */,
 				073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */,
 				073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */,
 				073C22E11720835A0061A9DC /* Social.framework in Frameworks */,
@@ -188,6 +214,25 @@
 				073C22EB172303730061A9DC /* Mail Share Button.png */,
 			);
 			name = "Share Buttons";
+			sourceTree = "<group>";
+		};
+		0766FA401727022400C544B3 /* Google Auth */ = {
+			isa = PBXGroup;
+			children = (
+				07B6113816F0E8DD00D16115 /* SignInViewController.h */,
+				07B6113916F0E8DD00D16115 /* SignInViewController.m */,
+				076E5B17173037FE0038F216 /* GTMOAuth2ViewControllerTouch.h */,
+				076E5B19173037FE0038F216 /* GTMOAuth2SignIn.h */,
+				076E5B1A173037FE0038F216 /* GTMOAuth2Authentication.h */,
+				076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */,
+				076E5B2917303E1C0038F216 /* GTMHTTPFetcher.h */,
+				076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */,
+				076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */,
+				076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */,
+				076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */,
+			);
+			name = "Google Auth";
+			path = "URL Shortener";
 			sourceTree = "<group>";
 		};
 		07BFD4D6171C582A00600512 /* Mixpanel */ = {
@@ -277,16 +322,12 @@
 		07EF516416CC514900178D1E = {
 			isa = PBXGroup;
 			children = (
+				0766FA401727022400C544B3 /* Google Auth */,
 				07EF517616CC514900178D1E /* URL Shortener */,
 				07EF519D16CC514900178D1E /* URL ShortenerTests */,
 				07EF516F16CC514900178D1E /* Frameworks */,
 				07EF516E16CC514900178D1E /* Products */,
 				07BFD4D6171C582A00600512 /* Mixpanel */,
-				073C22E41720CAEF0061A9DC /* MessageUI.framework */,
-				073C22E21720835F0061A9DC /* Accounts.framework */,
-				073C22E01720835A0061A9DC /* Social.framework */,
-				07BFD4EB171C585B00600512 /* CoreTelephony.framework */,
-				07BFD4E9171C585100600512 /* SystemConfiguration.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,6 +343,12 @@
 		07EF516F16CC514900178D1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				073C22E41720CAEF0061A9DC /* MessageUI.framework */,
+				073C22E21720835F0061A9DC /* Accounts.framework */,
+				073C22E01720835A0061A9DC /* Social.framework */,
+				07BFD4EB171C585B00600512 /* CoreTelephony.framework */,
+				07BFD4E9171C585100600512 /* SystemConfiguration.framework */,
+				076E5B1F173038190038F216 /* Security.framework */,
 				07EF517016CC514900178D1E /* UIKit.framework */,
 				07EF517216CC514900178D1E /* Foundation.framework */,
 				07EF517416CC514900178D1E /* CoreGraphics.framework */,
@@ -320,8 +367,6 @@
 				07EF518F16CC514900178D1E /* URLShortenerViewController.m */,
 				0799919516ECF279003FCE1C /* APIConnection.h */,
 				0799919616ECF279003FCE1C /* APIConnection.m */,
-				07B6113816F0E8DD00D16115 /* SignInViewController.h */,
-				07B6113916F0E8DD00D16115 /* SignInViewController.m */,
 				169485B516FA22A5002E0D30 /* WebViewController.h */,
 				169485B616FA22A5002E0D30 /* WebViewController.m */,
 				07EF517716CC514900178D1E /* Supporting Files */,
@@ -477,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EF51A216CC514900178D1E /* InfoPlist.strings in Resources */,
+				076E5B2817303A6F0038F216 /* GTMOAuth2ViewTouch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +560,15 @@
 				07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */,
 				07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */,
 				07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */,
+				076E5B2C1730CA060038F216 /* GTMHTTPFetcher.h in Sources */,
+				076E5B22173038480038F216 /* GTMOAuth2ViewControllerTouch.h in Sources */,
+				076E5B24173038480038F216 /* GTMOAuth2SignIn.h in Sources */,
+				076E5B25173038480038F216 /* GTMOAuth2Authentication.h in Sources */,
+				076E5B351730CCE40038F216 /* GTMHTTPFetcher.m in Sources */,
+				076E5B361730CCE40038F216 /* GTMOAuth2Authentication.m in Sources */,
+				076E5B371730CCE40038F216 /* GTMOAuth2SignIn.m in Sources */,
+				076E5B381730CCE40038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */,
+				076E5B391730CD980038F216 /* GTMOAuth2ViewTouch.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +577,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EF51A516CC514A00178D1E /* URL_ShortenerTests.m in Sources */,
+				076E5B311730CCD20038F216 /* GTMHTTPFetcher.m in Sources */,
+				076E5B321730CCD20038F216 /* GTMOAuth2Authentication.m in Sources */,
+				076E5B331730CCD20038F216 /* GTMOAuth2SignIn.m in Sources */,
+				076E5B341730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +660,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/URL Shortener/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -695,6 +755,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/URL Shortener/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -712,6 +773,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
+					"\"$(SRCROOT)/URL Shortener/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
