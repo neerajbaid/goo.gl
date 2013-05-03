@@ -29,7 +29,6 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) APIConnection *connection;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
-@property (nonatomic) BOOL isSignedIn;
 
 @property (weak, nonatomic) IBOutlet UIButton *facebookShareButton;
 @property (weak, nonatomic) IBOutlet UIButton *twitterShareButton;
@@ -41,7 +40,6 @@
 @property (strong, nonatomic) NSString *kMyClientID;
 @property (strong, nonatomic) NSString *kMyClientSecret;
 @property (strong, nonatomic) GTMHTTPFetcher *fetcher;
-@property (strong, nonatomic) GTMOAuth2Authentication *auth;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *signInBarButtonItem;
 
 //@property (nonatomic) int test; //switcher variable
@@ -76,7 +74,7 @@
 
 - (void)signIn
 {
-    NSString *scope = @"https://www.googleapis.com/auth/plus.me"; // scope for Google+ API
+    NSString *scope = @"https://www.googleapis.com/auth/urlshortener"; // scope for url shortener
     
     GTMOAuth2ViewControllerTouch *viewController;
     viewController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:scope

@@ -40,11 +40,16 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    id URLsvc = _window.rootViewController;
-    URLsvc = [URLsvc topViewController];
-    [URLsvc disappear];
-    if ([URLsvc handlePasteboardString])
-        [URLsvc shortenURL:[UIPasteboard generalPasteboard].string];
+    //fix this
+    UINavigationController *UInc = (UINavigationController *)_window.rootViewController;
+    UIViewController *UIvc = UInc.topViewController;
+    if ([UIvc respondsToSelector:@selector(disappear)])
+    {
+        URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;
+        [URLsvc disappear];
+        if ([URLsvc handlePasteboardString])
+            [URLsvc shortenURL:[UIPasteboard generalPasteboard].string];
+    }
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GTMOAuth2Authentication.h"
 
 @protocol URLRecipient <NSObject>
 
 - (void)recieveShortenedURL:(NSString *)shortenedURL;
+- (BOOL)isSignedIn;
+- (GTMOAuth2Authentication *)auth;
 
 @end
 

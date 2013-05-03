@@ -22,6 +22,7 @@
 - (void)disappear;
 
 @property (nonatomic) SLComposeViewController *mySLComposerSheet;
-
+@property (nonatomic) GTMOAuth2Authentication *auth;
+@property (nonatomic) BOOL isSignedIn;
 
 @end
