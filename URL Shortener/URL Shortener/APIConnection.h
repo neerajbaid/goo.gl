@@ -22,5 +22,6 @@
 -(void)shortenURL:(NSString*)originalURL;
 
 @property (nonatomic, weak) id <URLRecipient> delegate;
+@property (nonatomic, strong) NSString *longURL;
 
 @end

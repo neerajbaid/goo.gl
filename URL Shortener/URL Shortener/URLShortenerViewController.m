@@ -107,7 +107,6 @@
         [_signInBarButtonItem setTitle:@"Sign Out"];
         _isSignedIn = YES;
         [[Mixpanel sharedInstance] track:@"Signed In"];
-        [_fetcher setAuthorizer:auth];
         [self setAuth:auth];
         NSMutableURLRequest *myURLRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"test"]];
         [auth authorizeRequest:myURLRequest delegate:self didFinishSelector:@selector(authentication:request:finishedWithError:)];
@@ -115,9 +114,10 @@
 }
 
 - (void)authentication:(GTMOAuth2Authentication *)auth request:(NSMutableURLRequest *)request finishedWithError:(NSError *)error
-{
+{ 
     if (error != nil)
     {
+        NSLog(@"auth failed");
         // Authorization failed
     }
     else
