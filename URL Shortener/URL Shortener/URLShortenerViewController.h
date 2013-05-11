@@ -24,5 +24,6 @@
 @property (nonatomic) SLComposeViewController *mySLComposerSheet;
 @property (nonatomic) GTMOAuth2Authentication *auth;
 @property (nonatomic) BOOL isSignedIn;
+@property (weak, nonatomic) IBOutlet UIImageView *signInReminder;
 
 @end

@@ -40,9 +40,25 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    //fix this
     UINavigationController *UInc = (UINavigationController *)_window.rootViewController;
     UIViewController *UIvc = UInc.topViewController;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([UIvc respondsToSelector:@selector(signInReminder)])
+    {
+        URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;
+        URLsvc.signInReminder.alpha = 0;
+    }
+    if ([userDefaults boolForKey:@"hasSignedIn"] && [UIvc respondsToSelector:@selector(auth)])
+    {
+        NSLog(@"test1");
+        URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;
+        if (!URLsvc.isSignedIn)
+        {
+            URLsvc.signInReminder.alpha = 1;
+            NSLog(@"test2");
+        }
+        
+    }
     if ([UIvc respondsToSelector:@selector(disappear)])
     {
         URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;

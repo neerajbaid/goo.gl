@@ -104,6 +104,11 @@
     }
     else
     {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setBool:YES forKey:@"hasSignedIn"];
+        [UIView animateWithDuration:.2 animations:^void{ _signInReminder.alpha = 0; }];
+        [self handlePasteboardString];
+        [self shortenURL:[UIPasteboard generalPasteboard].string];
         [_signInBarButtonItem setTitle:@"Sign Out"];
         _isSignedIn = YES;
         [[Mixpanel sharedInstance] track:@"Signed In"];
@@ -160,7 +165,7 @@
 - (BOOL)handlePasteboardString
 {
     NSString *string = [UIPasteboard generalPasteboard].string;
-    if ([self validateUrl:string])
+    if (_signInReminder.alpha == 0 && [self validateUrl:string])
     {
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"Automatically Copy URL"];
@@ -222,6 +227,16 @@
 - (void)dismissKeyboard
 {
     [_textField resignFirstResponder];
+}
+
+- (void)dismissImage
+{
+    [UIView animateWithDuration:0.2 animations:^void
+    {
+        self.signInReminder.alpha = 0;
+    }];
+    [self handlePasteboardString];
+    [self shortenURL:[UIPasteboard generalPasteboard].string];
 }
 
 //sizeOfString
@@ -522,6 +537,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"test3");
     //[self setBarButtonAppearance];
     [super viewDidLoad];
     
@@ -532,6 +548,17 @@
     
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
+    
+    UITapGestureRecognizer *UItgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissImage)];
+    [self.signInReminder addGestureRecognizer:UItgr];
+    
+    if (self.view.bounds.size.height == 548)
+        [_signInReminder setImage:[UIImage imageNamed:@"Sign In Reminder Overlay.png"]];
+    else if (self.view.bounds.size.height == 460)
+        [_signInReminder setImage:[UIImage imageNamed:@"Sign In Reminder Overlay iPhone 4.png"]];
+    
+    NSLog(@"%f", self.view.bounds.size.height);
+    
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
     [_arrow setAlpha:0];

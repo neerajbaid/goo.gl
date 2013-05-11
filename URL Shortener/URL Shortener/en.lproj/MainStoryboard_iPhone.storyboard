@@ -75,7 +75,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Shortened link has been copied to the clipboard!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akN-Xp-6Rx">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Hp5-oe-R0A"/>
-                                    <constraint firstAttribute="width" constant="288" id="KLu-5n-oo8"/>
+                                    <constraint firstAttribute="width" constant="288" id="XFq-C2-mNH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -163,30 +163,34 @@
                                     <action selector="shareToMail:" destination="2" eventType="touchUpInside" id="RjP-In-xCv"/>
                                 </connections>
                             </button>
+                            <imageView contentMode="scaleToFill" image="Sign In Reminder Overlay.png" translatesAutoresizingMaskIntoConstraints="NO" id="lHn-dH-U13"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="GNE-Nf-SEN" secondAttribute="centerX" type="default" id="0vD-sB-Ytx"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="centerX" secondItem="4ZE-le-bhz" secondAttribute="centerX" type="default" id="16G-QV-V0w"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvw-fQ-Tlk" secondAttribute="trailing" constant="74" id="17X-O3-mtj"/>
+                            <constraint firstItem="lHn-dH-U13" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="1QC-bD-iwg"/>
                             <constraint firstItem="qFk-pM-K66" firstAttribute="top" secondItem="jW8-k7-7Nq" secondAttribute="top" type="default" id="70x-9C-Vv9"/>
+                            <constraint firstItem="lHn-dH-U13" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="7bT-Zm-VBf"/>
                             <constraint firstAttribute="bottom" secondItem="cYc-nr-oku" secondAttribute="bottom" constant="341" type="user" id="8GO-T8-Yfx"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Dd5-1F-0p7"/>
                             <constraint firstItem="jW8-k7-7Nq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="80" id="EfE-PL-dmi"/>
                             <constraint firstItem="cYc-nr-oku" firstAttribute="top" secondItem="3" secondAttribute="top" priority="1" constant="133" type="user" id="H20-BQ-Yrk"/>
-                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="IbT-NB-ogt"/>
                             <constraint firstItem="iek-eI-6e0" firstAttribute="centerY" secondItem="t61-lF-Qnb" secondAttribute="centerY" type="default" id="IcL-Pd-07i"/>
                             <constraint firstItem="qFk-pM-K66" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="140" id="L9W-PA-LYV"/>
                             <constraint firstItem="Xvw-fQ-Tlk" firstAttribute="centerY" secondItem="vsE-u0-rWM" secondAttribute="centerY" type="user" id="LIh-Ej-Itw"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xvw-fQ-Tlk" secondAttribute="bottom" constant="19" type="user" id="Npo-VH-X8M"/>
+                            <constraint firstItem="lHn-dH-U13" firstAttribute="centerX" secondItem="iek-eI-6e0" secondAttribute="centerX" type="default" id="Nrf-Jh-0we"/>
                             <constraint firstAttribute="bottom" secondItem="BHe-jM-rzc" secondAttribute="bottom" constant="165" type="user" id="Olt-MH-AOa"/>
                             <constraint firstAttribute="bottom" secondItem="akN-Xp-6Rx" secondAttribute="bottom" constant="165" type="user" id="QEF-mS-3ig"/>
                             <constraint firstAttribute="bottom" secondItem="axN-e3-86S" secondAttribute="bottom" constant="210" type="user" id="Qsg-Qt-6IJ"/>
+                            <constraint firstItem="GNE-Nf-SEN" firstAttribute="centerX" secondItem="akN-Xp-6Rx" secondAttribute="centerX" type="default" id="TFP-kr-H2c"/>
+                            <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="cYc-nr-oku" secondAttribute="centerX" type="default" id="TaZ-yd-pYu"/>
                             <constraint firstItem="iek-eI-6e0" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="Tgj-3x-MVX"/>
-                            <constraint firstAttribute="trailing" secondItem="Xvw-fQ-Tlk" secondAttribute="trailing" constant="75" id="VKP-4w-Nw3"/>
-                            <constraint firstItem="4ZE-le-bhz" firstAttribute="centerX" secondItem="cYc-nr-oku" secondAttribute="centerX" type="default" id="VNt-ac-Di8"/>
                             <constraint firstAttribute="bottom" secondItem="4ZE-le-bhz" secondAttribute="bottom" constant="241" type="user" id="Vxm-eO-pAH"/>
                             <constraint firstItem="4ZE-le-bhz" firstAttribute="centerY" secondItem="BHe-jM-rzc" secondAttribute="centerY" type="user" id="W7e-1M-F6L"/>
                             <constraint firstAttribute="bottom" secondItem="RZ9-27-atA" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="YbY-JO-34e"/>
+                            <constraint firstItem="p8N-6d-RUx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="aCu-yd-4VS"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="iek-eI-6e0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aNv-Ob-Rih"/>
                             <constraint firstAttribute="bottom" secondItem="p8N-6d-RUx" secondAttribute="bottom" constant="104" type="user" id="aaM-Ra-Cp8"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="bottom" secondItem="BHe-jM-rzc" secondAttribute="bottom" type="user" id="ckI-Qc-qa2"/>
@@ -195,6 +199,7 @@
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="eOa-r3-Qbp"/>
                             <constraint firstItem="vsE-u0-rWM" firstAttribute="top" secondItem="Xvw-fQ-Tlk" secondAttribute="top" type="user" id="efw-et-WTw"/>
                             <constraint firstAttribute="bottom" secondItem="qFk-pM-K66" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="faU-Cb-yPr"/>
+                            <constraint firstItem="lHn-dH-U13" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="fjJ-II-HyD"/>
                             <constraint firstAttribute="bottom" secondItem="jW8-k7-7Nq" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="h71-YH-KTu"/>
                             <constraint firstItem="RZ9-27-atA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hJe-dg-9Uu"/>
                             <constraint firstItem="vsE-u0-rWM" firstAttribute="trailing" secondItem="akN-Xp-6Rx" secondAttribute="trailing" type="default" id="hVR-qI-BwJ"/>
@@ -202,10 +207,10 @@
                             <constraint firstItem="BHe-jM-rzc" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="82" id="iSm-jw-kSq"/>
                             <constraint firstItem="axN-e3-86S" firstAttribute="top" secondItem="3" secondAttribute="top" priority="1" constant="200" type="user" id="mK9-wB-Vks"/>
                             <constraint firstItem="GNE-Nf-SEN" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="mKZ-ms-qXN"/>
+                            <constraint firstItem="lHn-dH-U13" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="mvK-x6-1z1"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RZ9-27-atA" secondAttribute="bottom" constant="20" type="user" id="psE-LQ-D1T"/>
                             <constraint firstItem="akN-Xp-6Rx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="qKZ-FD-abW"/>
                             <constraint firstItem="jW8-k7-7Nq" firstAttribute="top" secondItem="RZ9-27-atA" secondAttribute="top" type="default" id="qnB-kE-zjW"/>
-                            <constraint firstItem="p8N-6d-RUx" firstAttribute="centerX" secondItem="t61-lF-Qnb" secondAttribute="centerX" type="default" id="s0A-81-gt7"/>
                             <constraint firstItem="BHe-jM-rzc" firstAttribute="top" secondItem="3" secondAttribute="top" priority="1" constant="167" type="user" id="wFt-pT-mca"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jW8-k7-7Nq" secondAttribute="bottom" constant="20" type="user" id="wGy-91-umN"/>
                             <constraint firstItem="p8N-6d-RUx" firstAttribute="top" secondItem="3" secondAttribute="top" priority="1" constant="383" type="user" id="xPx-6F-leO"/>
@@ -230,6 +235,7 @@
                         <outlet property="shortenedURL" destination="t61-lF-Qnb" id="Y7e-vk-yAZ"/>
                         <outlet property="shortenedURLLabel" destination="t61-lF-Qnb" id="ub3-Ry-yE4"/>
                         <outlet property="signInBarButtonItem" destination="K6b-O8-X3d" id="l2z-eV-L6o"/>
+                        <outlet property="signInReminder" destination="lHn-dH-U13" id="g1a-Wy-Wlg"/>
                         <outlet property="spinner" destination="4ZE-le-bhz" id="uUl-xv-O5p"/>
                         <outlet property="testButton" destination="iek-eI-6e0" id="CPr-m9-kI2"/>
                         <outlet property="textField" destination="cYc-nr-oku" id="FDz-YZ-OEl"/>
@@ -413,6 +419,7 @@
         <image name="Messages Share Button.png" width="90" height="90"/>
         <image name="Share Button.png" width="90" height="90"/>
         <image name="Sign In Background small.jpg" width="49" height="49"/>
+        <image name="Sign In Reminder Overlay.png" width="640" height="970"/>
         <image name="Text Field Background.png" width="538" height="70"/>
         <image name="Twitter Share Button.png" width="90" height="90"/>
         <image name="arrow @2x.jpg" width="192" height="344"/>
@@ -426,6 +433,7 @@
         <class className="SignInViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SignInViewController.h"/>
             <relationships>
+                <relationship kind="action" name="signIn:"/>
                 <relationship kind="outlet" name="background" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="googleLogo" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
@@ -458,6 +466,7 @@
                 <relationship kind="outlet" name="shortenedLinkHasBeenCopiedToTheClipboard" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="shortenedURLLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="signInBarButtonItem" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="signInReminder" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="testButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
