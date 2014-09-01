@@ -42,8 +42,6 @@
 @property (strong, nonatomic) GTMHTTPFetcher *fetcher;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *signInBarButtonItem;
 
-//@property (nonatomic) int test; //switcher variable
-
 @end
 
 @implementation URLShortenerViewController
@@ -106,7 +104,6 @@
     {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setBool:YES forKey:@"hasSignedIn"];
-        [UIView animateWithDuration:.2 animations:^void{ _signInReminder.alpha = 0; }];
         [self handlePasteboardString];
         [self shortenURL:[UIPasteboard generalPasteboard].string];
         [_signInBarButtonItem setTitle:@"Sign Out"];
@@ -165,7 +162,7 @@
 - (BOOL)handlePasteboardString
 {
     NSString *string = [UIPasteboard generalPasteboard].string;
-    if (_signInReminder.alpha == 0 && [self validateUrl:string])
+    if ([self validateUrl:string])
     {
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"Automatically Copy URL"];
@@ -228,70 +225,6 @@
 {
     [_textField resignFirstResponder];
 }
-
-- (void)dismissImage
-{
-    [UIView animateWithDuration:0.2 animations:^void
-    {
-        self.signInReminder.alpha = 0;
-    }];
-    [self handlePasteboardString];
-    [self shortenURL:[UIPasteboard generalPasteboard].string];
-}
-
-//sizeOfString
-/*
-- (CGRect)sizeOfString:(NSString *)string
-{
-    NSLog(@"sOS");
-//    CGFloat width = [[UIScreen mainScreen] bounds].size.width;
-//    CGFloat scale = [UIScreen mainScreen].scale;
-    CGRect rect;
-//    CGFloat height = self.view.frame.size.height;
-//    if (scale == 1)
-    {
-        CGSize maximumSize = CGSizeMake(264, 21);
-        UIFont *font = [UIFont fontWithName:@"Helvetica" size:10];
-        CGSize size = [string sizeWithFont:font
-                         constrainedToSize:maximumSize
-                             lineBreakMode:self.urlDisplayUnderShortenedURL.lineBreakMode];
-        CGFloat x = (320 - size.width)/2;
-        rect = CGRectMake(x, 383, size.width, size.height);
-    }
-    else
-    {
-        NSLog(@"retina");
-        CGSize maximumSize = CGSizeMake(528, 42);
-        UIFont *font = [UIFont fontWithName:@"Helvetica" size:10];
-        CGSize size = [string sizeWithFont:font
-                         constrainedToSize:maximumSize
-                             lineBreakMode:self.urlDisplayUnderShortenedURL.lineBreakMode];
-        CGFloat x = (640 - size.width)/2;
-        rect = CGRectMake(x, 766, size.width, size.height);
-    }
-//    NSLog(@"%f", rect.size.width);
-//    NSLog(@"%f", rect.size.height);
-    return rect;
-}
- */
-
-//switcher method
-/*
-- (IBAction)switch:(id)sender
-{
-    if (_test == 0)
-    {
-        [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
-        _test = 1;
-    }
-    else
-    {
-        [_background setImage:[UIImage imageNamed:@"background4 @2x.jpg"]];
-        _test = 0;
-    }
-}
- */
-
 
 - (void)fadeInSpinner
 {
@@ -549,17 +482,6 @@
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
     
-    UITapGestureRecognizer *UItgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissImage)];
-    [self.signInReminder addGestureRecognizer:UItgr];
-    
-    if (self.view.bounds.size.height == 548)
-        [_signInReminder setImage:[UIImage imageNamed:@"Sign In Reminder Overlay.png"]];
-    else if (self.view.bounds.size.height == 460)
-        [_signInReminder setImage:[UIImage imageNamed:@"Sign In Reminder Overlay iPhone 4.png"]];
-    
-    NSLog(@"%f", self.view.bounds.size.height);
-    
-    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];
@@ -576,14 +498,6 @@
     _kKeychainItemName = @"OAuth2 Sample: Google+";
     _kMyClientID = @"87616694201-13uct6p1sdqf8juh97cnu0900bf1ip7n.apps.googleusercontent.com";  // pre-assigned by service
     _kMyClientSecret = @"dMAzn0VNV9G2a7LCgKQ-hoN7";                                             // pre-assigned by service
-    /*
-    [self validateUrl:@"aaa"];
-    [self validateUrl:@"google.com"];
-    [self validateUrl:@"www.google.com"];
-    [self validateUrl:@"http://google.com"];
-    [self validateUrl:@"http://www.google.com"];
-    [_textField setText:[UIPasteboard generalPasteboard].string];
-     */
     if ([self handlePasteboardString])
         [self shortenURL:[UIPasteboard generalPasteboard].string];
 }
@@ -596,12 +510,6 @@
     // We can determine later if the auth object contains an access token
     // by calling its -canAuthorize method
     [self setAuth:_auth];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

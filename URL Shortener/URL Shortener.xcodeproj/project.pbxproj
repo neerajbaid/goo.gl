@@ -54,7 +54,6 @@
 		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
 		0799919716ECF279003FCE1C /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799919616ECF279003FCE1C /* APIConnection.m */; };
 		079BF12A173EEF4E009FF56D /* Sign In Reminder Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */; };
-		079BF12D173EEF7A009FF56D /* SignInReminderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */; };
 		07B3817F171799B50038E097 /* black-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07B3817E171799B50038E097 /* black-square.jpg */; };
 		07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B6113916F0E8DD00D16115 /* SignInViewController.m */; };
 		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
@@ -137,8 +136,6 @@
 		0799919516ECF279003FCE1C /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		0799919616ECF279003FCE1C /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
 		079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In Reminder Overlay.png"; sourceTree = "<group>"; };
-		079BF12B173EEF7A009FF56D /* SignInReminderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInReminderImageView.h; path = ../SignInReminderImageView.h; sourceTree = "<group>"; };
-		079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInReminderImageView.m; path = ../SignInReminderImageView.m; sourceTree = "<group>"; };
 		07B3817E171799B50038E097 /* black-square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-square.jpg"; sourceTree = "<group>"; };
 		07B6113816F0E8DD00D16115 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		07B6113916F0E8DD00D16115 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
@@ -376,8 +373,6 @@
 				0799919616ECF279003FCE1C /* APIConnection.m */,
 				169485B516FA22A5002E0D30 /* WebViewController.h */,
 				169485B616FA22A5002E0D30 /* WebViewController.m */,
-				079BF12B173EEF7A009FF56D /* SignInReminderImageView.h */,
-				079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */,
 				07EF517716CC514900178D1E /* Supporting Files */,
 			);
 			path = "URL Shortener";
@@ -458,7 +453,7 @@
 			name = "URL ShortenerTests";
 			productName = "URL ShortenerTests";
 			productReference = 07EF519616CC514900178D1E /* URL ShortenerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -582,7 +577,6 @@
 				076E5B371730CCE40038F216 /* GTMOAuth2SignIn.m in Sources */,
 				076E5B381730CCE40038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				076E5B391730CD980038F216 /* GTMOAuth2ViewTouch.xib in Sources */,
-				079BF12D173EEF7A009FF56D /* SignInReminderImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +664,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -765,7 +759,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -783,7 +777,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",

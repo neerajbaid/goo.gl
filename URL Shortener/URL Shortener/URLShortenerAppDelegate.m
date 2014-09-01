@@ -42,23 +42,6 @@
 {
     UINavigationController *UInc = (UINavigationController *)_window.rootViewController;
     UIViewController *UIvc = UInc.topViewController;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([UIvc respondsToSelector:@selector(signInReminder)])
-    {
-        URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;
-        URLsvc.signInReminder.alpha = 0;
-    }
-    if ([userDefaults boolForKey:@"hasSignedIn"] && [UIvc respondsToSelector:@selector(auth)])
-    {
-        NSLog(@"test1");
-        URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;
-        if (!URLsvc.isSignedIn)
-        {
-            URLsvc.signInReminder.alpha = 1;
-            NSLog(@"test2");
-        }
-        
-    }
     if ([UIvc respondsToSelector:@selector(disappear)])
     {
         URLShortenerViewController *URLsvc = (URLShortenerViewController *)UIvc;
@@ -84,17 +67,10 @@
 
 - (void)setBarButtonAppearance
 {
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          [UIColor blackColor], UITextAttributeTextColor,
-                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
+                                                          [UIColor lightGrayColor], NSForegroundColorAttributeName,
                                                           nil]
                                                 forState:UIControlStateNormal];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                          [UIColor grayColor], UITextAttributeTextColor,
-                                                          [UIColor whiteColor], UITextAttributeTextShadowColor,
-                                                          nil]
-                                                forState:UIControlStateHighlighted];
 }
 
 @end
