@@ -70,14 +70,16 @@
     }
 }
 
-- (void)recieveShortenedURL:(NSString *)shortenedURL {
+- (void)apiConnection:(APIConnection *)connection
+        didShortenURL:(NSString *)originalURL
+       toShortenedURL:(NSString *)shortenedURL {
     if (shortenedURL) {
+        self.shortenedURL = shortenedURL;
         NSString *display = @" ";
-        self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:_url];
+        self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:self.url];
         [self.spinner stopAnimating];
         [self fadeOutSpinner];
         [self appear];
-        self.shortenedURL = shortenedURL;
         if (self.shortenedURL) {
             [[UIPasteboard generalPasteboard] setString:_shortenedURL];
             [[Mixpanel sharedInstance] track:@"URL Shortened"];
@@ -161,7 +163,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textField.delegate = self;
-    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
+    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                                                              action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
     [self hide];
     [self.background setImage:[UIImage imageNamed:@"background2 @2x.jpg"]];

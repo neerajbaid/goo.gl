@@ -35,9 +35,9 @@
                 sURL = [jsonArray valueForKey:@"id"];
             }
         }
-        [self.delegate recieveShortenedURL:sURL];
+        [self.delegate apiConnection:self didShortenURL:self.longURL toShortenedURL:sURL];
     } else {
-        [self shortenURL:_longURL];
+        [self shortenURL:self.longURL];
     }
 }
 
