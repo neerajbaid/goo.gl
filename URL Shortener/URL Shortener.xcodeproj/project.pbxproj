@@ -48,7 +48,6 @@
 		076E5B371730CCE40038F216 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		076E5B381730CCE40038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		076E5B391730CD980038F216 /* GTMOAuth2ViewTouch.xib in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */; };
-		078F020716E6580700A39D8C /* background2 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078F020616E6580700A39D8C /* background2 @2x.jpg */; };
 		078F020B16E66F9000A39D8C /* arrow @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078F020A16E66F9000A39D8C /* arrow @2x.jpg */; };
 		07900D4D16CF0DF1002B14CB /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4B16CF0DF1002B14CB /* top bar.png */; };
 		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
@@ -80,6 +79,9 @@
 		07EF519A16CC514900178D1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517216CC514900178D1E /* Foundation.framework */; };
 		07EF51A216CC514900178D1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EF51A016CC514900178D1E /* InfoPlist.strings */; };
 		07EF51A516CC514A00178D1E /* URL_ShortenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */; };
+		07F9AE6C18597A41001BCE8F /* top bar iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6A18597A41001BCE8F /* top bar iOS7.png */; };
+		07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */; };
+		07F9AE7318597BF6001BCE8F /* background2 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */; };
 		169485B716FA22A5002E0D30 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169485B616FA22A5002E0D30 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +132,6 @@
 		076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
 		076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
 		076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
-		078F020616E6580700A39D8C /* background2 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2 @2x.jpg"; sourceTree = "<group>"; };
 		078F020A16E66F9000A39D8C /* arrow @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arrow @2x.jpg"; sourceTree = "<group>"; };
 		07900D4B16CF0DF1002B14CB /* top bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar.png"; sourceTree = "<group>"; };
 		07900D4C16CF0DF1002B14CB /* top bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar@2x.png"; sourceTree = "<group>"; };
@@ -176,6 +177,9 @@
 		07EF51A116CC514900178D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EF51A316CC514A00178D1E /* URL_ShortenerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL_ShortenerTests.h; sourceTree = "<group>"; };
 		07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URL_ShortenerTests.m; sourceTree = "<group>"; };
+		07F9AE6A18597A41001BCE8F /* top bar iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7.png"; sourceTree = "<group>"; };
+		07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7@2x.png"; sourceTree = "<group>"; };
+		07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2 @2x.jpg"; sourceTree = "<group>"; };
 		169485B516FA22A5002E0D30 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		169485B616FA22A5002E0D30 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				0728E34E16DCB6E300B1A45F /* background.jpg */,
-				078F020616E6580700A39D8C /* background2 @2x.jpg */,
+				07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */,
 				074EA2E316E7C96D00FADD1C /* background3 @2x.jpg */,
 				070DE83B16EF827000E36C88 /* background4 @2x.jpg */,
 				070DE83D16EF841A00E36C88 /* background5 @2x.jpg */,
@@ -322,6 +326,8 @@
 				076C57EC16D6E240003E8944 /* Splash Page@2x 4 inch.PNG */,
 				07900D4B16CF0DF1002B14CB /* top bar.png */,
 				07900D4C16CF0DF1002B14CB /* top bar@2x.png */,
+				07F9AE6A18597A41001BCE8F /* top bar iOS7.png */,
+				07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -499,10 +505,11 @@
 				07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */,
 				076C57ED16D6E240003E8944 /* Splash Page@2x 4 inch.PNG in Resources */,
 				076C57F016D6E35A003E8944 /* Default-568h@2x.png in Resources */,
+				07F9AE7318597BF6001BCE8F /* background2 @2x.jpg in Resources */,
 				076C57F216D6E3F7003E8944 /* Default@2x.png in Resources */,
+				07F9AE6C18597A41001BCE8F /* top bar iOS7.png in Resources */,
 				076C57F416D6E400003E8944 /* Default.png in Resources */,
 				0728E34F16DCB6E300B1A45F /* background.jpg in Resources */,
-				078F020716E6580700A39D8C /* background2 @2x.jpg in Resources */,
 				078F020B16E66F9000A39D8C /* arrow @2x.jpg in Resources */,
 				074EA2E416E7C96D00FADD1C /* background3 @2x.jpg in Resources */,
 				070DE83C16EF827000E36C88 /* background4 @2x.jpg in Resources */,
@@ -510,6 +517,7 @@
 				07B6113C16F0E9D400D16115 /* Google logo.png in Resources */,
 				07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */,
 				07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */,
+				07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */,
 				071AEDAB16F5441A00E864FA /* test no border.png in Resources */,
 				071AEDAD16F54EE600E864FA /* Sign In Background small.jpg in Resources */,
 				0746461E16FA4CE000A224C1 /* Icon.png in Resources */,

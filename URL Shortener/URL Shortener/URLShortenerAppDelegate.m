@@ -15,7 +15,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self setBarButtonAppearance];
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] < 6.9)
+        [self setBarButtonAppearance];
+//    [self setBarButtonAppearance];
     [Mixpanel sharedInstanceWithToken:@"90698dd2657dcc2427c6cde3172c148a"];
     [[Mixpanel sharedInstance] track:@"Opened App"];
     return YES;

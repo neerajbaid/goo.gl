@@ -25,7 +25,7 @@
     
     if ([self.delegate isSignedIn])
     {
-        NSLog(@"test1");
+//        NSLog(@"test1");
         [googReq setValue: [NSString stringWithFormat:@"Bearer %@", [[self.delegate auth] accessToken]] forHTTPHeaderField:@"Authorization"];
     }
     
@@ -35,7 +35,7 @@
     [googReq setHTTPBody:longUrlData];
     [googReq setHTTPMethod:@"POST"];
     
-    NSLog(@"test1.2");
+//    NSLog(@"test1.2");
     
     NSURLConnection* connect = [[NSURLConnection alloc] initWithRequest:googReq delegate:self];
     connect = nil;

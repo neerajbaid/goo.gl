@@ -7,6 +7,7 @@
 //
 
 #import "SignInReminderImageView.h"
+#import "Mixpanel.h"
 
 @implementation SignInReminderImageView
 
@@ -16,17 +17,19 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        [[Mixpanel sharedInstance] track:@"Sign In Reminder Appeared"];
         UITapGestureRecognizer *UItgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissImage)];
         [self addGestureRecognizer:UItgr];
-        NSLog(@"test3");
     }
     return self;
 }
 
 - (void)dismissImage:(UIGestureRecognizer *)gestureRecognizer
 {
-    if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
     {
+        NSLog(@"test");
+        [[Mixpanel sharedInstance] track:@"Dismissed Sign In Reminder"];
         [UIView animateWithDuration:0.2 animations:^void
          {
              self.alpha = 0;

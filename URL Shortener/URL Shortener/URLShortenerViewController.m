@@ -231,6 +231,7 @@
 
 - (void)dismissImage
 {
+    [[Mixpanel sharedInstance] track:@"Sign In Reminder Dismissed"];
     [UIView animateWithDuration:0.2 animations:^void
     {
         self.signInReminder.alpha = 0;
@@ -538,7 +539,6 @@
 - (void)viewDidLoad
 {
     NSLog(@"test3");
-    //[self setBarButtonAppearance];
     [super viewDidLoad];
     
     self.textField.delegate = self;
@@ -560,13 +560,16 @@
     NSLog(@"%f", self.view.bounds.size.height);
     
     
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];
     [_urlHasBeenShortened setAlpha:0];
     [_urlDisplayUnderShortenedURL setAlpha:0];
     [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
-    [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
+    if ([[[UIDevice currentDevice] systemVersion] doubleValue] > 6.9)
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar iOS7.png"] forBarMetrics:UIBarMetricsDefault];
+    else
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
+    [_background setImage:[UIImage imageNamed:@"background2 @2x.jpg"]];
     [_testButton setAlpha:0];
     [_shareButton setAlpha:0];
     [_facebookShareButton setAlpha:0];
