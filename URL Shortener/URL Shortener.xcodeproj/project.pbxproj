@@ -464,7 +464,7 @@
 			name = "URL ShortenerTests";
 			productName = "URL ShortenerTests";
 			productReference = 07EF519616CC514900178D1E /* URL ShortenerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -473,6 +473,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = URLShortener;
+				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Neeraj Baid";
 			};
