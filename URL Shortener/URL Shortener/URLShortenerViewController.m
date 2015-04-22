@@ -178,7 +178,12 @@
 }
 
 - (IBAction)shareButton:(id)sender {
-    
+    if (self.shortenedURL) {
+        NSArray *sharingItems = @[self.shortenedURL];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems
+                                                                                         applicationActivities:nil];
+        [self presentViewController:activityController animated:YES completion:nil];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
