@@ -3,7 +3,6 @@
 @protocol URLRecipient <NSObject>
 
 - (void)recieveShortenedURL:(NSString *)shortenedURL;
-- (BOOL)isSignedIn;
 
 @end
 

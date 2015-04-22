@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "APIConnection.h"
-#import <Social/Social.h>
-#import <Accounts/Accounts.h>
-#import <MessageUI/MessageUI.h>
 #import <Security/Security.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
@@ -20,8 +17,5 @@
 - (BOOL)handlePasteboardString;
 - (void)shortenURL:(NSString *)url;
 - (void)disappear;
-
-@property (nonatomic) SLComposeViewController *mySLComposerSheet;
-@property (nonatomic) BOOL isSignedIn;
 
 @end

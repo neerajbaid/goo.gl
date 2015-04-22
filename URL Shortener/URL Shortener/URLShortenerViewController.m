@@ -3,7 +3,7 @@
 #import "WebViewController.h"
 #import "Mixpanel.h"
 
-@interface URLShortenerViewController () <UITextFieldDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
+@interface URLShortenerViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -19,16 +19,11 @@
 @property (strong, nonatomic) APIConnection *connection;
 @property (weak, nonatomic) IBOutlet UIButton *testButton;
 
-@property (weak, nonatomic) IBOutlet UIButton *facebookShareButton;
-@property (weak, nonatomic) IBOutlet UIButton *twitterShareButton;
-@property (weak, nonatomic) IBOutlet UIButton *messagesShareButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
-@property (weak, nonatomic) IBOutlet UIButton *mailShareButton;
 
 @property (strong, nonatomic) NSString *kKeychainItemName;
 @property (strong, nonatomic) NSString *kMyClientID;
 @property (strong, nonatomic) NSString *kMyClientSecret;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *signInBarButtonItem;
 
 @end
 
@@ -49,7 +44,6 @@
 
 - (BOOL)validateUrl:(NSString *)candidate
 {
-    //"http://" is required
     NSURL *temp = [NSURL URLWithString:candidate];
     BOOL doesNotContainGoogle = [candidate rangeOfString:@"goo.gl"].location == NSNotFound;
     if (temp && temp.scheme && doesNotContainGoogle)
@@ -175,178 +169,16 @@
     }
 }
 
-- (void)openWebView:(UIGestureRecognizer *)gestureRecognizer
-{
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
-    {
+- (void)openWebView:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"WebView Preview Button Pressed"];
         [self performSegueWithIdentifier:@"showWebView" sender:self];
     }
 }
 
-- (IBAction)shareButton:(id)sender
-{
-    if (_twitterShareButton.alpha == 0)
-    {
-        [_shareButton setBackgroundImage:[UIImage imageNamed:@"Close Share Button.png"] forState:UIControlStateNormal];
-        [self appearShareButtons];
-    }
-    else if (_twitterShareButton.alpha == 1)
-    {
-        [_shareButton setBackgroundImage:[UIImage imageNamed:@"Share Button.png"] forState:UIControlStateNormal];
-        [self disappearShareButtons];
-    }
-}
-
-- (void)appearShareButtons
-{    
-    [UIView animateWithDuration:.2 animations:^(void)
-     {
-         [_twitterShareButton setAlpha:1];
-         [_facebookShareButton setAlpha:1];
-         [_messagesShareButton setAlpha:1];
-         [_mailShareButton setAlpha:1];
-     }];
-}
-
-- (void)disappearShareButtons
-{    
-    [UIView animateWithDuration:.2 animations:^(void)
-     {
-         [_twitterShareButton setAlpha:0];
-         [_facebookShareButton setAlpha:0];
-         [_messagesShareButton setAlpha:0];
-         [_mailShareButton setAlpha:0];
-     }];
-}
-
-- (IBAction)shareToTwitter:(id)sender
-{  
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
-        [mySLComposerSheet setInitialText:initialText];
-        [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result)
-         {
-             switch (result)
-             {
-                 case SLComposeViewControllerResultCancelled:
-                     break;
-                 case SLComposeViewControllerResultDone:
-                 {
-                     [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Twitter"];
-                     break;
-                 }
-                 default:
-                     break;
-             }
-         }];
-        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
-    }
-
-}
-
-- (IBAction)shareToFacebook:(id)sender
-{    
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-    {
-        SLComposeViewController *mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
-        [mySLComposerSheet setInitialText:initialText];
-        [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result)
-         {
-             switch (result) {
-                 case SLComposeViewControllerResultCancelled:
-                     break;
-                 case SLComposeViewControllerResultDone:
-                 {
-                     [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Facebook"];
-                     break;
-                 }
-                 default:
-                     break;
-             }
-         }];
-        
-        [self presentViewController:mySLComposerSheet animated:YES completion:nil];
-    }
-}
-
-- (IBAction)shareToMessages:(id)sender
-{
-    [self sendMessage];
-}
-
-- (IBAction)shareToMail:(id)sender
-{
-    [self sendMail];
-}
-
-- (void)sendMessage
-{
-    if ([MFMessageComposeViewController canSendText])
-    {
-        MFMessageComposeViewController *myMFMessageController = [[MFMessageComposeViewController alloc] init];
-        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
-        myMFMessageController.body = initialText;
-        myMFMessageController.messageComposeDelegate = self;
-        [self presentViewController:myMFMessageController animated:YES completion:nil];
-    }
-}
-
-- (void)sendMail
-{
-    if ([MFMailComposeViewController canSendMail])
-    {
-        MFMailComposeViewController *myMFMailController = [[MFMailComposeViewController alloc] init];
-        NSString *initialText = [NSString stringWithFormat:@"Check this out!\n%@\n\nShortened using http://goo.gl/54iw0.", _shortenedURL];
-        [myMFMailController setMessageBody:initialText isHTML:FALSE];
-        [myMFMailController setSubject:@"Check it out!"];
-        myMFMailController.mailComposeDelegate = self;
-        [self presentViewController:myMFMailController animated:YES completion:nil];
-    }
-}
-
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-{  
-    [self dismissViewControllerAnimated:YES completion:nil];
-    switch (result)
-    {
-        case MessageComposeResultCancelled:
-            break;
-        case MessageComposeResultFailed:
-            break;
-        case MessageComposeResultSent:
-        {
-            [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Messages"];
-            break;
-        }
-        default:
-            break;
-    }
-}
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-    switch (result)
-    {
-        case MFMailComposeResultCancelled:
-            break;
-        case MFMailComposeResultFailed:
-            break;
-        case MFMailComposeResultSaved:
-            break;
-        case MFMailComposeResultSent:
-        {
-            break;
-            [[Mixpanel sharedInstance] track:@"Shortened Link Shared to Mail"];
-        }
-        default:
-            break;
-    }
+- (IBAction)shareButton:(id)sender {
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -357,7 +189,6 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"test3");
     [super viewDidLoad];
     
     self.textField.delegate = self;
@@ -380,10 +211,6 @@
     [_background setImage:[UIImage imageNamed:@"background2 @2x.jpg"]];
     [_testButton setAlpha:0];
     [_shareButton setAlpha:0];
-    [_facebookShareButton setAlpha:0];
-    [_twitterShareButton setAlpha:0];
-    [_messagesShareButton setAlpha:0];
-    [_mailShareButton setAlpha:0];
     _kKeychainItemName = @"OAuth2 Sample: Google+";
     _kMyClientID = @"87616694201-13uct6p1sdqf8juh97cnu0900bf1ip7n.apps.googleusercontent.com";  // pre-assigned by service
     _kMyClientSecret = @"dMAzn0VNV9G2a7LCgKQ-hoN7";                                             // pre-assigned by service
