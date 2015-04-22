@@ -1,11 +1,3 @@
-//
-//  URLShortenerViewController.h
-//  URL Shortener
-//
-//  Created by Neeraj Baid on 2/13/13.
-//  Copyright (c) 2013 Neeraj Baid. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import "APIConnection.h"
 #import <Security/Security.h>

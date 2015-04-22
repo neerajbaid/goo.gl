@@ -1,11 +1,11 @@
+#import <SVWebViewController/SVModalWebViewController.h>
+
 #import "URLShortenerViewController.h"
 #import "APIConnection.h"
-#import "WebViewController.h"
 #import "Mixpanel.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *shortenedURLLabel;
 @property (weak, nonatomic) IBOutlet UILabel *urlHasBeenShortened;
@@ -21,29 +21,23 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
-@property (strong, nonatomic) NSString *kKeychainItemName;
-@property (strong, nonatomic) NSString *kMyClientID;
-@property (strong, nonatomic) NSString *kMyClientSecret;
-
 @end
 
 @implementation URLShortenerViewController
 
-- (APIConnection *)connection
-{
-    if (!_connection)
+- (APIConnection *)connection {
+    if (!_connection) {
         _connection = [[APIConnection alloc] init];
-    _connection.delegate = self;
+        _connection.delegate = self;
+    }
     return _connection;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
     [self disappear];
 }
 
-- (BOOL)validateUrl:(NSString *)candidate
-{
+- (BOOL)validateUrl:(NSString *)candidate {
     NSURL *temp = [NSURL URLWithString:candidate];
     BOOL doesNotContainGoogle = [candidate rangeOfString:@"goo.gl"].location == NSNotFound;
     if (temp && temp.scheme && doesNotContainGoogle)
@@ -51,8 +45,7 @@
     return FALSE;
 }
 
-- (BOOL)handlePasteboardString
-{
+- (BOOL)handlePasteboardString {
     NSString *string = [UIPasteboard generalPasteboard].string;
     if ([self validateUrl:string]) {
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
@@ -61,119 +54,105 @@
         NSString *text = @"  ";
         text = [text stringByAppendingString:string];
         
-        [_textField setText:text];
+        [self.textField setText:text];
         return YES;
     }
     return NO;
 }
 
-- (void)shortenURL:(NSString *)url
-{
+- (void)shortenURL:(NSString *)url {
     BOOL doesNotContainSpace = [url rangeOfString:@" "].location == NSNotFound;
     BOOL doesNotContainGoogle = [url rangeOfString:@"goo.gl"].location == NSNotFound;
-    if (![url isEqualToString:@""] && doesNotContainSpace && doesNotContainGoogle)
-    {
-        [[self connection] shortenURL:url];
-        _url = url;
+    if (![url isEqualToString:@""] && doesNotContainSpace && doesNotContainGoogle) {
+        [self.connection shortenURL:url];
+        self.url = url;
+        [self.spinner startAnimating];
         [self fadeInSpinner];
-        [_spinner startAnimating];
     }
 }
 
-- (void)recieveShortenedURL:(NSString *)shortenedURL
-{
-    if (shortenedURL != NULL)
-    {
+- (void)recieveShortenedURL:(NSString *)shortenedURL {
+    if (shortenedURL) {
         NSString *display = @" ";
         self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:_url];
-        [_spinner stopAnimating];
+        [self.spinner stopAnimating];
         [self fadeOutSpinner];
         [self appear];
-        _shortenedURL = shortenedURL;
-        if (_shortenedURL)
-        {
+        self.shortenedURL = shortenedURL;
+        if (self.shortenedURL) {
             [[UIPasteboard generalPasteboard] setString:_shortenedURL];
             [[Mixpanel sharedInstance] track:@"URL Shortened"];
         }
-        self.shortenedURLLabel.text = _shortenedURL;
-    }
-    else
+        self.shortenedURLLabel.text = self.shortenedURL;
+    } else {
         [self fadeOutSpinner];
+    }
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [UIView animateWithDuration:.2 animations:^(void)
-     {
-         [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
-     }];
+    [UIView animateWithDuration:.2 animations:^(void) {
+        [self.shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
+    }];
     [self shortenURL:textField.text];
-    return NO;
+    return YES;
 }
 
-- (void)dismissKeyboard
-{
-    [_textField resignFirstResponder];
+- (void)dismissKeyboard {
+    [self.textField resignFirstResponder];
 }
 
-- (void)fadeInSpinner
-{
-    [UIView animateWithDuration:.2 animations:^(void)
-     {
-         [_spinner setAlpha:1];
-     }];
+- (void)fadeInSpinner {
+    [UIView animateWithDuration:.2 animations:^(void) {
+        [self.spinner setAlpha:1];
+    }];
 }
 
-- (void)fadeOutSpinner
-{
-    [UIView animateWithDuration:.2 animations:^(void)
-     {
-         [_spinner setAlpha:0];
-     }];
+- (void)fadeOutSpinner {
+    [UIView animateWithDuration:.2 animations:^(void) {
+        [self.spinner setAlpha:0];
+    }];
 }
 
-- (void)appear
-{
-    [UIView animateWithDuration:.4 animations:^(void)
-     {
-         [_arrow setAlpha:1];
-         [_urlHasBeenShortened setAlpha:1];
-         [_urlDisplayUnderShortenedURL setAlpha:1];
-         [_urlDisplayUnderShortenedURL setBackgroundColor:[UIColor whiteColor]];
-         [_testButton setAlpha:1];
-         [_shareButton setAlpha:1];
-     }];
+- (void)appear {
+    [UIView animateWithDuration:.4 animations:^(void) {
+        [self.arrow setAlpha:1];
+        [self.urlHasBeenShortened setAlpha:1];
+        [self.urlDisplayUnderShortenedURL setAlpha:1];
+        [self.urlDisplayUnderShortenedURL setBackgroundColor:[UIColor whiteColor]];
+        [self.testButton setAlpha:1];
+        [self.shareButton setAlpha:1];
+    }];
 }
 
-- (void)disappear
-{
-    [UIView animateWithDuration:.4 animations:^(void)
-     {
-         [_arrow setAlpha:0];
-         [_urlHasBeenShortened setAlpha:0];
-     }];
-    [_textField setText:@""];
+- (void)disappear {
+    [UIView animateWithDuration:.4 animations:^(void) {
+        [self.arrow setAlpha:0];
+        [self.urlHasBeenShortened setAlpha:0];
+    }];
+    [self.textField setText:@""];
 }
 
 - (IBAction)copyToPasteboard:(id)sender
 {
-    if (_shortenedURL != NULL)
-        [[UIPasteboard generalPasteboard] setString:_shortenedURL];
-    if (_arrow.alpha == 0 && _spinner.alpha == 0 && _urlHasBeenShortened.alpha == 0 && ![_shortenedURLLabel.text isEqualToString:@" "])
-    {
-        [UIView animateWithDuration:.2 animations:^(void)
-         {
-             [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:1];
-         }];
+    if (self.shortenedURL) {
+        [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
+    }
+    if (self.arrow.alpha == 0 &&
+        self.spinner.alpha == 0 &&
+        self.urlHasBeenShortened.alpha == 0 &&
+        ![self.shortenedURLLabel.text isEqualToString:@" "]) {
+        [UIView animateWithDuration:.2 animations:^(void) {
+            [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:1];
+        }];
     }
 }
 
 - (void)openWebView:(UIGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        Mixpanel *mixpanel = [Mixpanel sharedInstance];
-        [mixpanel track:@"WebView Preview Button Pressed"];
-        [self performSegueWithIdentifier:@"showWebView" sender:self];
+        [[Mixpanel sharedInstance] track:@"WebView Preview Button Pressed"];
+        SVModalWebViewController *modalWebView = [[SVModalWebViewController alloc] initWithAddress:self.shortenedURL];
+        [self presentViewController:modalWebView animated:YES completion:nil];
     }
 }
 
@@ -186,42 +165,31 @@
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showWebView"])
-        [segue.destinationViewController setURLToLoad:_shortenedURL];
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.textField.delegate = self;
-    
-    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tapGR];
-    
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
-    
-    [_arrow setAlpha:0];
-    [_spinner setAlpha:0];
-    [_urlHasBeenShortened setAlpha:0];
-    [_urlDisplayUnderShortenedURL setAlpha:0];
-    [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
-    if ([[[UIDevice currentDevice] systemVersion] doubleValue] > 6.9)
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar iOS7.png"] forBarMetrics:UIBarMetricsDefault];
-    else
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top bar.png"] forBarMetrics:UIBarMetricsDefault];
-    [_background setImage:[UIImage imageNamed:@"background2 @2x.jpg"]];
-    [_testButton setAlpha:0];
-    [_shareButton setAlpha:0];
-    _kKeychainItemName = @"OAuth2 Sample: Google+";
-    _kMyClientID = @"87616694201-13uct6p1sdqf8juh97cnu0900bf1ip7n.apps.googleusercontent.com";  // pre-assigned by service
-    _kMyClientSecret = @"dMAzn0VNV9G2a7LCgKQ-hoN7";                                             // pre-assigned by service
+    [self hide];
+    [self.background setImage:[UIImage imageNamed:@"background2 @2x.jpg"]];
     if ([self handlePasteboardString]) {
         [self shortenURL:[UIPasteboard generalPasteboard].string];
     }
+}
+
+- (void)hide {
+    [self.arrow setAlpha:0];
+    [self.spinner setAlpha:0];
+    [self.urlHasBeenShortened setAlpha:0];
+    [self.urlDisplayUnderShortenedURL setAlpha:0];
+    [self.shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
+    [self.testButton setAlpha:0];
+    [self.shareButton setAlpha:0];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
 }
 
 @end

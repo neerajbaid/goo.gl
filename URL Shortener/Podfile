@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'URL Shortener' do
+
+pod 'SVWebViewController'
+pod 'Mixpanel'
+
+end
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0704FC571AE865DF00C953B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC561AE865DF00C953B6 /* LaunchScreen.xib */; };
 		070DE83C16EF827000E36C88 /* background4 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070DE83B16EF827000E36C88 /* background4 @2x.jpg */; };
 		070DE83E16EF841A00E36C88 /* background5 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070DE83D16EF841A00E36C88 /* background5 @2x.jpg */; };
 		071AEDAB16F5441A00E864FA /* test no border.png in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAA16F5441A00E864FA /* test no border.png */; };
@@ -39,14 +40,8 @@
 		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
 		0799919716ECF279003FCE1C /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799919616ECF279003FCE1C /* APIConnection.m */; };
 		079BF12A173EEF4E009FF56D /* Sign In Reminder Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */; };
-		079BF12D173EEF7A009FF56D /* SignInReminderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */; };
 		07B3817F171799B50038E097 /* black-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07B3817E171799B50038E097 /* black-square.jpg */; };
 		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
-		07BFD4E4171C582A00600512 /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		07BFD4E5171C582A00600512 /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4E1171C582A00600512 /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4E3171C582A00600512 /* Mixpanel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4E9171C585100600512 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4EB171C585B00600512 /* CoreTelephony.framework */; };
 		07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D44E16F5149D00A5C5A3 /* Google logo small.png */; };
@@ -62,10 +57,11 @@
 		07F9AE6C18597A41001BCE8F /* top bar iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6A18597A41001BCE8F /* top bar iOS7.png */; };
 		07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */; };
 		07F9AE7318597BF6001BCE8F /* background2 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */; };
-		169485B716FA22A5002E0D30 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169485B616FA22A5002E0D30 /* WebViewController.m */; };
+		EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0704FC561AE865DF00C953B6 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
 		070DE83B16EF827000E36C88 /* background4 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background4 @2x.jpg"; sourceTree = "<group>"; };
 		070DE83D16EF841A00E36C88 /* background5 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background5 @2x.jpg"; sourceTree = "<group>"; };
 		071AEDAA16F5441A00E864FA /* test no border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test no border.png"; sourceTree = "<group>"; };
@@ -99,20 +95,8 @@
 		0799919516ECF279003FCE1C /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		0799919616ECF279003FCE1C /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
 		079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In Reminder Overlay.png"; sourceTree = "<group>"; };
-		079BF12B173EEF7A009FF56D /* SignInReminderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInReminderImageView.h; path = ../SignInReminderImageView.h; sourceTree = "<group>"; };
-		079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInReminderImageView.m; path = ../SignInReminderImageView.m; sourceTree = "<group>"; };
 		07B3817E171799B50038E097 /* black-square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-square.jpg"; sourceTree = "<group>"; };
 		07B6113B16F0E9D400D16115 /* Google logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo.png"; sourceTree = "<group>"; };
-		07BFD4D9171C582A00600512 /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
-		07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
-		07BFD4DB171C582A00600512 /* MPCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONSerializer.h; sourceTree = "<group>"; };
-		07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONSerializer.m; sourceTree = "<group>"; };
-		07BFD4DD171C582A00600512 /* MPCSerializedJSONData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCSerializedJSONData.h; sourceTree = "<group>"; };
-		07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCSerializedJSONData.m; sourceTree = "<group>"; };
-		07BFD4E0171C582A00600512 /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
-		07BFD4E1171C582A00600512 /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
-		07BFD4E2171C582A00600512 /* Mixpanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mixpanel.h; sourceTree = "<group>"; };
-		07BFD4E3171C582A00600512 /* Mixpanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mixpanel.m; sourceTree = "<group>"; };
 		07BFD4E9171C585100600512 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		07BFD4EB171C585B00600512 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		07E0D44E16F5149D00A5C5A3 /* Google logo small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo small.png"; sourceTree = "<group>"; };
@@ -138,8 +122,10 @@
 		07F9AE6A18597A41001BCE8F /* top bar iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7.png"; sourceTree = "<group>"; };
 		07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7@2x.png"; sourceTree = "<group>"; };
 		07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2 @2x.jpg"; sourceTree = "<group>"; };
-		169485B516FA22A5002E0D30 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		169485B616FA22A5002E0D30 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URL Shortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.release.xcconfig"; sourceTree = "<group>"; };
+		4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.debug.xcconfig"; sourceTree = "<group>"; };
+		8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.appstore.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +142,7 @@
 				07EF517116CC514900178D1E /* UIKit.framework in Frameworks */,
 				07EF517316CC514900178D1E /* Foundation.framework in Frameworks */,
 				07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */,
+				EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,47 +160,6 @@
 				073C22EB172303730061A9DC /* Mail Share Button.png */,
 			);
 			name = "Share Buttons";
-			sourceTree = "<group>";
-		};
-		07BFD4D6171C582A00600512 /* Mixpanel */ = {
-			isa = PBXGroup;
-			children = (
-				07BFD4D7171C582A00600512 /* Library */,
-				07BFD4E2171C582A00600512 /* Mixpanel.h */,
-				07BFD4E3171C582A00600512 /* Mixpanel.m */,
-			);
-			path = Mixpanel;
-			sourceTree = "<group>";
-		};
-		07BFD4D7171C582A00600512 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				07BFD4D8171C582A00600512 /* JSON */,
-				07BFD4DF171C582A00600512 /* NSData_Base64 */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		07BFD4D8171C582A00600512 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				07BFD4D9171C582A00600512 /* MPCJSONDataSerializer.h */,
-				07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */,
-				07BFD4DB171C582A00600512 /* MPCJSONSerializer.h */,
-				07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */,
-				07BFD4DD171C582A00600512 /* MPCSerializedJSONData.h */,
-				07BFD4DE171C582A00600512 /* MPCSerializedJSONData.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		07BFD4DF171C582A00600512 /* NSData_Base64 */ = {
-			isa = PBXGroup;
-			children = (
-				07BFD4E0171C582A00600512 /* NSData+MPBase64.h */,
-				07BFD4E1171C582A00600512 /* NSData+MPBase64.m */,
-			);
-			path = NSData_Base64;
 			sourceTree = "<group>";
 		};
 		07E0D45216F53AD100A5C5A3 /* Main Screen */ = {
@@ -268,7 +214,7 @@
 				07EF519D16CC514900178D1E /* URL ShortenerTests */,
 				07EF516F16CC514900178D1E /* Frameworks */,
 				07EF516E16CC514900178D1E /* Products */,
-				07BFD4D6171C582A00600512 /* Mixpanel */,
+				95EDCA551DB4C6E3D98FE2FB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +239,7 @@
 				07EF517216CC514900178D1E /* Foundation.framework */,
 				07EF517416CC514900178D1E /* CoreGraphics.framework */,
 				07EF519716CC514900178D1E /* SenTestingKit.framework */,
+				1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,15 +249,12 @@
 			children = (
 				07EF517F16CC514900178D1E /* URLShortenerAppDelegate.h */,
 				07EF518016CC514900178D1E /* URLShortenerAppDelegate.m */,
+				0704FC561AE865DF00C953B6 /* LaunchScreen.xib */,
 				07EF518816CC514900178D1E /* MainStoryboard_iPhone.storyboard */,
 				07EF518E16CC514900178D1E /* URLShortenerViewController.h */,
 				07EF518F16CC514900178D1E /* URLShortenerViewController.m */,
 				0799919516ECF279003FCE1C /* APIConnection.h */,
 				0799919616ECF279003FCE1C /* APIConnection.m */,
-				169485B516FA22A5002E0D30 /* WebViewController.h */,
-				169485B616FA22A5002E0D30 /* WebViewController.m */,
-				079BF12B173EEF7A009FF56D /* SignInReminderImageView.h */,
-				079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */,
 				07EF517716CC514900178D1E /* Supporting Files */,
 			);
 			path = "URL Shortener";
@@ -354,6 +298,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		95EDCA551DB4C6E3D98FE2FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */,
+				416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */,
+				8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07EF51A816CC514A00178D1E /* Build configuration list for PBXNativeTarget "URL Shortener" */;
 			buildPhases = (
+				11C4A5F9C777DC935B180954 /* Check Pods Manifest.lock */,
 				07EF516916CC514900178D1E /* Sources */,
 				07EF516A16CC514900178D1E /* Frameworks */,
 				07EF516B16CC514900178D1E /* Resources */,
+				9F281E7D35B488FCA7181526 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -424,6 +380,7 @@
 				070DE83E16EF841A00E36C88 /* background5 @2x.jpg in Resources */,
 				07B6113C16F0E9D400D16115 /* Google logo.png in Resources */,
 				07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */,
+				0704FC571AE865DF00C953B6 /* LaunchScreen.xib in Resources */,
 				07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */,
 				07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */,
 				071AEDAB16F5441A00E864FA /* test no border.png in Resources */,
@@ -448,6 +405,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11C4A5F9C777DC935B180954 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F281E7D35B488FCA7181526 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07EF516916CC514900178D1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -457,13 +447,6 @@
 				07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */,
 				07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */,
 				0799919716ECF279003FCE1C /* APIConnection.m in Sources */,
-				169485B716FA22A5002E0D30 /* WebViewController.m in Sources */,
-				07BFD4E4171C582A00600512 /* MPCJSONDataSerializer.m in Sources */,
-				07BFD4E5171C582A00600512 /* MPCJSONSerializer.m in Sources */,
-				07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */,
-				07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */,
-				07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */,
-				079BF12D173EEF7A009FF56D /* SignInReminderImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +510,7 @@
 		};
 		0746460916FA45FE00A224C1 /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
@@ -605,6 +589,7 @@
 		};
 		07EF51A916CC514A00178D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
@@ -623,6 +608,7 @@
 		};
 		07EF51AA16CC514A00178D1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";

@@ -1,0 +1,15 @@
+PODS:
+  - Mixpanel (2.7.3):
+    - Mixpanel/MPCategoryHelpers
+  - Mixpanel/MPCategoryHelpers (2.7.3)
+  - SVWebViewController (1.0)
+
+DEPENDENCIES:
+  - Mixpanel
+  - SVWebViewController
+
+SPEC CHECKSUMS:
+  Mixpanel: 1d387d76800e07e953958c62c97fea27f13632dd
+  SVWebViewController: c36dda7326e81fcae0abf5d02bf7bbf7e41be901
+
+COCOAPODS: 0.34.4

@@ -2,8 +2,7 @@
 
 @implementation APIConnection
 
-- (void)shortenURL:(NSString*)originalURL
-{
+- (void)shortenURL:(NSString*)originalURL {
     _longURL = originalURL;
     NSString *googString = @"https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyDfghUKiLsiRK4NbsZWjWFUcM2GGqYVC-k";
     
