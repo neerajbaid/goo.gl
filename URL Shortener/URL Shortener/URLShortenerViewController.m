@@ -10,7 +10,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *shortenedURLLabel;
 @property (weak, nonatomic) IBOutlet UILabel *urlHasBeenShortened;
 @property (weak, nonatomic) IBOutlet UILabel *urlDisplayUnderShortenedURL;
-@property (weak, nonatomic) IBOutlet UILabel *shortenedLinkHasBeenCopiedToTheClipboard;
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
 @property NSString *url;
@@ -91,9 +90,6 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [UIView animateWithDuration:.2 animations:^(void) {
-        [self.shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
-    }];
     [self shortenURL:textField.text];
     return YES;
 }
@@ -142,9 +138,6 @@
         self.spinner.alpha == 0 &&
         self.urlHasBeenShortened.alpha == 0 &&
         ![self.shortenedURLLabel.text isEqualToString:@" "]) {
-        [UIView animateWithDuration:.2 animations:^(void) {
-            [_shortenedLinkHasBeenCopiedToTheClipboard setAlpha:1];
-        }];
     }
 }
 
@@ -182,7 +175,6 @@
     [self.spinner setAlpha:0];
     [self.urlHasBeenShortened setAlpha:0];
     [self.urlDisplayUnderShortenedURL setAlpha:0];
-    [self.shortenedLinkHasBeenCopiedToTheClipboard setAlpha:0];
     [self.testButton setAlpha:0];
     [self.shareButton setAlpha:0];
 }

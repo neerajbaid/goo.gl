@@ -115,10 +115,6 @@
 		07EF518E16CC514900178D1E /* URLShortenerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerViewController.h; sourceTree = "<group>"; };
 		07EF518F16CC514900178D1E /* URLShortenerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLShortenerViewController.m; sourceTree = "<group>"; };
 		07EF519716CC514900178D1E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		07EF519F16CC514900178D1E /* URL ShortenerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "URL ShortenerTests-Info.plist"; sourceTree = "<group>"; };
-		07EF51A116CC514900178D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		07EF51A316CC514A00178D1E /* URL_ShortenerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URL_ShortenerTests.h; sourceTree = "<group>"; };
-		07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URL_ShortenerTests.m; sourceTree = "<group>"; };
 		07F9AE6A18597A41001BCE8F /* top bar iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7.png"; sourceTree = "<group>"; };
 		07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7@2x.png"; sourceTree = "<group>"; };
 		07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2 @2x.jpg"; sourceTree = "<group>"; };
@@ -211,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				07EF517616CC514900178D1E /* URL Shortener */,
-				07EF519D16CC514900178D1E /* URL ShortenerTests */,
 				07EF516F16CC514900178D1E /* Frameworks */,
 				07EF516E16CC514900178D1E /* Products */,
 				95EDCA551DB4C6E3D98FE2FB /* Pods */,
@@ -275,25 +270,6 @@
 				07EF517916CC514900178D1E /* InfoPlist.strings */,
 				07EF517C16CC514900178D1E /* main.m */,
 				07EF517E16CC514900178D1E /* URL Shortener-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		07EF519D16CC514900178D1E /* URL ShortenerTests */ = {
-			isa = PBXGroup;
-			children = (
-				07EF51A316CC514A00178D1E /* URL_ShortenerTests.h */,
-				07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */,
-				07EF519E16CC514900178D1E /* Supporting Files */,
-			);
-			path = "URL ShortenerTests";
-			sourceTree = "<group>";
-		};
-		07EF519E16CC514900178D1E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				07EF519F16CC514900178D1E /* URL ShortenerTests-Info.plist */,
-				07EF51A016CC514900178D1E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -467,14 +443,6 @@
 				07EF518916CC514900178D1E /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		07EF51A016CC514900178D1E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07EF51A116CC514900178D1E /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

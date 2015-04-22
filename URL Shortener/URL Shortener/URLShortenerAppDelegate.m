@@ -7,6 +7,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Mixpanel sharedInstanceWithToken:@"90698dd2657dcc2427c6cde3172c148a"];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     return YES;
 }
 
