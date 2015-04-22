@@ -1,18 +1,7 @@
-//
-//  URLShortenerViewController.m
-//  URL Shortener
-//
-//  Created by Neeraj Baid on 2/13/13.
-//  Copyright (c) 2013 Neeraj Baid. All rights reserved.
-//
-
 #import "URLShortenerViewController.h"
 #import "APIConnection.h"
 #import "WebViewController.h"
-#import "SignInViewController.h"
 #import "Mixpanel.h"
-#import "GTMOAuth2ViewControllerTouch.h"
-#import "GTMHTTPFetcher.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
@@ -39,97 +28,11 @@
 @property (strong, nonatomic) NSString *kKeychainItemName;
 @property (strong, nonatomic) NSString *kMyClientID;
 @property (strong, nonatomic) NSString *kMyClientSecret;
-@property (strong, nonatomic) GTMHTTPFetcher *fetcher;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *signInBarButtonItem;
-
-//@property (nonatomic) int test; //switcher variable
 
 @end
 
 @implementation URLShortenerViewController
-
-- (GTMHTTPFetcher *)fetcher
-{
-    if (!_fetcher)
-        _fetcher = [[GTMHTTPFetcher alloc] init];
-    return _fetcher;
-}
-
-- (GTMOAuth2Authentication *)auth
-{
-    if (!_auth)
-        _auth = [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:_kKeychainItemName
-                                                                      clientID:_kMyClientID
-                                                                  clientSecret:_kMyClientSecret];
-    return _auth;
-}
-
-- (IBAction)signInOrOut:(id)sender
-{
-    if ([_signInBarButtonItem.title isEqualToString:@"Sign In"])
-        [self signIn];
-    else if ([_signInBarButtonItem.title isEqualToString:@"Sign Out"])
-        [self signOut];
-}
-
-- (void)signIn
-{
-    NSString *scope = @"https://www.googleapis.com/auth/urlshortener"; // scope for url shortener
-    
-    GTMOAuth2ViewControllerTouch *viewController;
-    viewController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:scope
-                                                                 clientID:_kMyClientID
-                                                             clientSecret:_kMyClientSecret
-                                                         keychainItemName:_kKeychainItemName
-                                                                 delegate:self
-                                                         finishedSelector:@selector(viewController:finishedWithAuth:error:)];
-    
-    [[self navigationController] pushViewController:viewController
-                                           animated:YES];
-}
-
-- (void)signOut
-{
-    [GTMOAuth2ViewControllerTouch removeAuthFromKeychainForName:_kKeychainItemName];
-    [GTMOAuth2ViewControllerTouch revokeTokenForGoogleAuthentication:_auth];
-    [_signInBarButtonItem setTitle:@"Sign In"];
-    [[Mixpanel sharedInstance] track:@"Signed Out"];
-    _isSignedIn = NO;
-}
-
-- (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error {
-    if (error != nil)
-    {
-        // Authentication failed
-    }
-    else
-    {
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setBool:YES forKey:@"hasSignedIn"];
-        [UIView animateWithDuration:.2 animations:^void{ _signInReminder.alpha = 0; }];
-        [self handlePasteboardString];
-        [self shortenURL:[UIPasteboard generalPasteboard].string];
-        [_signInBarButtonItem setTitle:@"Sign Out"];
-        _isSignedIn = YES;
-        [[Mixpanel sharedInstance] track:@"Signed In"];
-        [self setAuth:auth];
-        NSMutableURLRequest *myURLRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"test"]];
-        [auth authorizeRequest:myURLRequest delegate:self didFinishSelector:@selector(authentication:request:finishedWithError:)];
-    }
-}
-
-- (void)authentication:(GTMOAuth2Authentication *)auth request:(NSMutableURLRequest *)request finishedWithError:(NSError *)error
-{ 
-    if (error != nil)
-    {
-        NSLog(@"auth failed");
-        // Authorization failed
-    }
-    else
-    {
-        // Authorization succeeded
-    }
-}
 
 - (APIConnection *)connection
 {
@@ -138,14 +41,6 @@
     _connection.delegate = self;
     return _connection;
 }
-
-//connection test method
-/*
-- (IBAction)testConnection:(id)sender
-{
-    [[self connection] shortenUrl:@"test"];
-}
- */
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
@@ -165,8 +60,7 @@
 - (BOOL)handlePasteboardString
 {
     NSString *string = [UIPasteboard generalPasteboard].string;
-    if (_signInReminder.alpha == 0 && [self validateUrl:string])
-    {
+    if ([self validateUrl:string]) {
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"Automatically Copy URL"];
         
@@ -229,71 +123,6 @@
     [_textField resignFirstResponder];
 }
 
-- (void)dismissImage
-{
-    [[Mixpanel sharedInstance] track:@"Sign In Reminder Dismissed"];
-    [UIView animateWithDuration:0.2 animations:^void
-    {
-        self.signInReminder.alpha = 0;
-    }];
-    [self handlePasteboardString];
-    [self shortenURL:[UIPasteboard generalPasteboard].string];
-}
-
-//sizeOfString
-/*
-- (CGRect)sizeOfString:(NSString *)string
-{
-    NSLog(@"sOS");
-//    CGFloat width = [[UIScreen mainScreen] bounds].size.width;
-//    CGFloat scale = [UIScreen mainScreen].scale;
-    CGRect rect;
-//    CGFloat height = self.view.frame.size.height;
-//    if (scale == 1)
-    {
-        CGSize maximumSize = CGSizeMake(264, 21);
-        UIFont *font = [UIFont fontWithName:@"Helvetica" size:10];
-        CGSize size = [string sizeWithFont:font
-                         constrainedToSize:maximumSize
-                             lineBreakMode:self.urlDisplayUnderShortenedURL.lineBreakMode];
-        CGFloat x = (320 - size.width)/2;
-        rect = CGRectMake(x, 383, size.width, size.height);
-    }
-    else
-    {
-        NSLog(@"retina");
-        CGSize maximumSize = CGSizeMake(528, 42);
-        UIFont *font = [UIFont fontWithName:@"Helvetica" size:10];
-        CGSize size = [string sizeWithFont:font
-                         constrainedToSize:maximumSize
-                             lineBreakMode:self.urlDisplayUnderShortenedURL.lineBreakMode];
-        CGFloat x = (640 - size.width)/2;
-        rect = CGRectMake(x, 766, size.width, size.height);
-    }
-//    NSLog(@"%f", rect.size.width);
-//    NSLog(@"%f", rect.size.height);
-    return rect;
-}
- */
-
-//switcher method
-/*
-- (IBAction)switch:(id)sender
-{
-    if (_test == 0)
-    {
-        [_background setImage:[UIImage imageNamed:@"background5 @2x.jpg"]];
-        _test = 1;
-    }
-    else
-    {
-        [_background setImage:[UIImage imageNamed:@"background4 @2x.jpg"]];
-        _test = 0;
-    }
-}
- */
-
-
 - (void)fadeInSpinner
 {
     [UIView animateWithDuration:.2 animations:^(void)
@@ -353,16 +182,6 @@
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"WebView Preview Button Pressed"];
         [self performSegueWithIdentifier:@"showWebView" sender:self];
-    }
-}
-
-- (IBAction)doneSignIn:(UIStoryboardSegue *)segue
-{
-    if ([[segue identifier] isEqualToString:@"PassSignInCredentialsSegue"])
-    {
-        SignInViewController *sVC = [segue sourceViewController];
-        _isSignedIn = [sVC isSignedIn];
-        //do a bunch of changes in the api calling in APIConnection
     }
 }
 
@@ -549,17 +368,6 @@
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(openWebView:)];
     [self.testButton addGestureRecognizer:longPressGR];
     
-    UITapGestureRecognizer *UItgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissImage)];
-    [self.signInReminder addGestureRecognizer:UItgr];
-    
-    if (self.view.bounds.size.height == 548)
-        [_signInReminder setImage:[UIImage imageNamed:@"Sign In Reminder Overlay.png"]];
-    else if (self.view.bounds.size.height == 460)
-        [_signInReminder setImage:[UIImage imageNamed:@"Sign In Reminder Overlay iPhone 4.png"]];
-    
-    NSLog(@"%f", self.view.bounds.size.height);
-    
-    
     [_arrow setAlpha:0];
     [_spinner setAlpha:0];
     [_urlHasBeenShortened setAlpha:0];
@@ -579,32 +387,9 @@
     _kKeychainItemName = @"OAuth2 Sample: Google+";
     _kMyClientID = @"87616694201-13uct6p1sdqf8juh97cnu0900bf1ip7n.apps.googleusercontent.com";  // pre-assigned by service
     _kMyClientSecret = @"dMAzn0VNV9G2a7LCgKQ-hoN7";                                             // pre-assigned by service
-    /*
-    [self validateUrl:@"aaa"];
-    [self validateUrl:@"google.com"];
-    [self validateUrl:@"www.google.com"];
-    [self validateUrl:@"http://google.com"];
-    [self validateUrl:@"http://www.google.com"];
-    [_textField setText:[UIPasteboard generalPasteboard].string];
-     */
-    if ([self handlePasteboardString])
+    if ([self handlePasteboardString]) {
         [self shortenURL:[UIPasteboard generalPasteboard].string];
-}
-
-- (void)awakeFromNib
-{
-    // Get the saved authentication, if any, from the keychain.
-    // Retain the authentication object, which holds the auth tokens
-    //
-    // We can determine later if the auth object contains an access token
-    // by calling its -canAuthorize method
-    [self setAuth:_auth];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    }
 }
 
 @end

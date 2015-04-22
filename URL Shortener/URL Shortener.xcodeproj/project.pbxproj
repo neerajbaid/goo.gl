@@ -34,20 +34,6 @@
 		076C57F216D6E3F7003E8944 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57F116D6E3F7003E8944 /* Default@2x.png */; };
 		076C57F416D6E400003E8944 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57F316D6E400003E8944 /* Default.png */; };
 		076E5B20173038190038F216 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076E5B1F173038190038F216 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		076E5B22173038480038F216 /* GTMOAuth2ViewControllerTouch.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B17173037FE0038F216 /* GTMOAuth2ViewControllerTouch.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B24173038480038F216 /* GTMOAuth2SignIn.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B19173037FE0038F216 /* GTMOAuth2SignIn.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B25173038480038F216 /* GTMOAuth2Authentication.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B1A173037FE0038F216 /* GTMOAuth2Authentication.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B2817303A6F0038F216 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */; };
-		076E5B2C1730CA060038F216 /* GTMHTTPFetcher.h in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2917303E1C0038F216 /* GTMHTTPFetcher.h */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B311730CCD20038F216 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */; };
-		076E5B321730CCD20038F216 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */; };
-		076E5B331730CCD20038F216 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */; };
-		076E5B341730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */; };
-		076E5B351730CCE40038F216 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B361730CCE40038F216 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B371730CCE40038F216 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B381730CCE40038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		076E5B391730CD980038F216 /* GTMOAuth2ViewTouch.xib in Sources */ = {isa = PBXBuildFile; fileRef = 076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */; };
 		078F020B16E66F9000A39D8C /* arrow @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078F020A16E66F9000A39D8C /* arrow @2x.jpg */; };
 		07900D4D16CF0DF1002B14CB /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4B16CF0DF1002B14CB /* top bar.png */; };
 		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
@@ -55,7 +41,6 @@
 		079BF12A173EEF4E009FF56D /* Sign In Reminder Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */; };
 		079BF12D173EEF7A009FF56D /* SignInReminderImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */; };
 		07B3817F171799B50038E097 /* black-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07B3817E171799B50038E097 /* black-square.jpg */; };
-		07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B6113916F0E8DD00D16115 /* SignInViewController.m */; };
 		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
 		07BFD4E4171C582A00600512 /* MPCJSONDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		07BFD4E5171C582A00600512 /* MPCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFD4DC171C582A00600512 /* MPCJSONSerializer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -74,26 +59,11 @@
 		07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518016CC514900178D1E /* URLShortenerAppDelegate.m */; };
 		07EF518A16CC514900178D1E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EF518816CC514900178D1E /* MainStoryboard_iPhone.storyboard */; };
 		07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518F16CC514900178D1E /* URLShortenerViewController.m */; };
-		07EF519816CC514900178D1E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF519716CC514900178D1E /* SenTestingKit.framework */; };
-		07EF519916CC514900178D1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517016CC514900178D1E /* UIKit.framework */; };
-		07EF519A16CC514900178D1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517216CC514900178D1E /* Foundation.framework */; };
-		07EF51A216CC514900178D1E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EF51A016CC514900178D1E /* InfoPlist.strings */; };
-		07EF51A516CC514A00178D1E /* URL_ShortenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF51A416CC514A00178D1E /* URL_ShortenerTests.m */; };
 		07F9AE6C18597A41001BCE8F /* top bar iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6A18597A41001BCE8F /* top bar iOS7.png */; };
 		07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */; };
 		07F9AE7318597BF6001BCE8F /* background2 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */; };
 		169485B716FA22A5002E0D30 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 169485B616FA22A5002E0D30 /* WebViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		07EF519B16CC514900178D1E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07EF516516CC514900178D1E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07EF516C16CC514900178D1E;
-			remoteInfo = "URL Shortener";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		070DE83B16EF827000E36C88 /* background4 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background4 @2x.jpg"; sourceTree = "<group>"; };
@@ -122,16 +92,7 @@
 		076C57EF16D6E35A003E8944 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		076C57F116D6E3F7003E8944 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		076C57F316D6E400003E8944 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		076E5B17173037FE0038F216 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
-		076E5B19173037FE0038F216 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
-		076E5B1A173037FE0038F216 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
 		076E5B1F173038190038F216 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
-		076E5B2917303E1C0038F216 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
-		076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
-		076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
-		076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
-		076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
 		078F020A16E66F9000A39D8C /* arrow @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arrow @2x.jpg"; sourceTree = "<group>"; };
 		07900D4B16CF0DF1002B14CB /* top bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar.png"; sourceTree = "<group>"; };
 		07900D4C16CF0DF1002B14CB /* top bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar@2x.png"; sourceTree = "<group>"; };
@@ -141,8 +102,6 @@
 		079BF12B173EEF7A009FF56D /* SignInReminderImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInReminderImageView.h; path = ../SignInReminderImageView.h; sourceTree = "<group>"; };
 		079BF12C173EEF7A009FF56D /* SignInReminderImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInReminderImageView.m; path = ../SignInReminderImageView.m; sourceTree = "<group>"; };
 		07B3817E171799B50038E097 /* black-square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-square.jpg"; sourceTree = "<group>"; };
-		07B6113816F0E8DD00D16115 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
-		07B6113916F0E8DD00D16115 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		07B6113B16F0E9D400D16115 /* Google logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo.png"; sourceTree = "<group>"; };
 		07BFD4D9171C582A00600512 /* MPCJSONDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCJSONDataSerializer.h; sourceTree = "<group>"; };
 		07BFD4DA171C582A00600512 /* MPCJSONDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCJSONDataSerializer.m; sourceTree = "<group>"; };
@@ -171,7 +130,6 @@
 		07EF518916CC514900178D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		07EF518E16CC514900178D1E /* URLShortenerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerViewController.h; sourceTree = "<group>"; };
 		07EF518F16CC514900178D1E /* URLShortenerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLShortenerViewController.m; sourceTree = "<group>"; };
-		07EF519616CC514900178D1E /* URL ShortenerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "URL ShortenerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EF519716CC514900178D1E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		07EF519F16CC514900178D1E /* URL ShortenerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "URL ShortenerTests-Info.plist"; sourceTree = "<group>"; };
 		07EF51A116CC514900178D1E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -201,16 +159,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07EF519216CC514900178D1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07EF519816CC514900178D1E /* SenTestingKit.framework in Frameworks */,
-				07EF519916CC514900178D1E /* UIKit.framework in Frameworks */,
-				07EF519A16CC514900178D1E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -225,25 +173,6 @@
 				073C22EB172303730061A9DC /* Mail Share Button.png */,
 			);
 			name = "Share Buttons";
-			sourceTree = "<group>";
-		};
-		0766FA401727022400C544B3 /* Google Auth */ = {
-			isa = PBXGroup;
-			children = (
-				07B6113816F0E8DD00D16115 /* SignInViewController.h */,
-				07B6113916F0E8DD00D16115 /* SignInViewController.m */,
-				076E5B17173037FE0038F216 /* GTMOAuth2ViewControllerTouch.h */,
-				076E5B19173037FE0038F216 /* GTMOAuth2SignIn.h */,
-				076E5B1A173037FE0038F216 /* GTMOAuth2Authentication.h */,
-				076E5B2717303A6F0038F216 /* GTMOAuth2ViewTouch.xib */,
-				076E5B2917303E1C0038F216 /* GTMHTTPFetcher.h */,
-				076E5B2D1730CCD20038F216 /* GTMHTTPFetcher.m */,
-				076E5B2E1730CCD20038F216 /* GTMOAuth2Authentication.m */,
-				076E5B2F1730CCD20038F216 /* GTMOAuth2SignIn.m */,
-				076E5B301730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m */,
-			);
-			name = "Google Auth";
-			path = "URL Shortener";
 			sourceTree = "<group>";
 		};
 		07BFD4D6171C582A00600512 /* Mixpanel */ = {
@@ -335,7 +264,6 @@
 		07EF516416CC514900178D1E = {
 			isa = PBXGroup;
 			children = (
-				0766FA401727022400C544B3 /* Google Auth */,
 				07EF517616CC514900178D1E /* URL Shortener */,
 				07EF519D16CC514900178D1E /* URL ShortenerTests */,
 				07EF516F16CC514900178D1E /* Frameworks */,
@@ -348,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				07EF516D16CC514900178D1E /* URL Shortener.app */,
-				07EF519616CC514900178D1E /* URL ShortenerTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -447,25 +374,6 @@
 			productReference = 07EF516D16CC514900178D1E /* URL Shortener.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07EF519516CC514900178D1E /* URL ShortenerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07EF51AB16CC514A00178D1E /* Build configuration list for PBXNativeTarget "URL ShortenerTests" */;
-			buildPhases = (
-				07EF519116CC514900178D1E /* Sources */,
-				07EF519216CC514900178D1E /* Frameworks */,
-				07EF519316CC514900178D1E /* Resources */,
-				07EF519416CC514900178D1E /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				07EF519C16CC514900178D1E /* PBXTargetDependency */,
-			);
-			name = "URL ShortenerTests";
-			productName = "URL ShortenerTests";
-			productReference = 07EF519616CC514900178D1E /* URL ShortenerTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -490,7 +398,6 @@
 			projectRoot = "";
 			targets = (
 				07EF516C16CC514900178D1E /* URL Shortener */,
-				07EF519516CC514900178D1E /* URL ShortenerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -539,32 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07EF519316CC514900178D1E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07EF51A216CC514900178D1E /* InfoPlist.strings in Resources */,
-				076E5B2817303A6F0038F216 /* GTMOAuth2ViewTouch.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		07EF519416CC514900178D1E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07EF516916CC514900178D1E /* Sources */ = {
@@ -575,47 +457,17 @@
 				07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */,
 				07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */,
 				0799919716ECF279003FCE1C /* APIConnection.m in Sources */,
-				07B6113A16F0E8DD00D16115 /* SignInViewController.m in Sources */,
 				169485B716FA22A5002E0D30 /* WebViewController.m in Sources */,
 				07BFD4E4171C582A00600512 /* MPCJSONDataSerializer.m in Sources */,
 				07BFD4E5171C582A00600512 /* MPCJSONSerializer.m in Sources */,
 				07BFD4E6171C582A00600512 /* MPCSerializedJSONData.m in Sources */,
 				07BFD4E7171C582A00600512 /* NSData+MPBase64.m in Sources */,
 				07BFD4E8171C582A00600512 /* Mixpanel.m in Sources */,
-				076E5B2C1730CA060038F216 /* GTMHTTPFetcher.h in Sources */,
-				076E5B22173038480038F216 /* GTMOAuth2ViewControllerTouch.h in Sources */,
-				076E5B24173038480038F216 /* GTMOAuth2SignIn.h in Sources */,
-				076E5B25173038480038F216 /* GTMOAuth2Authentication.h in Sources */,
-				076E5B351730CCE40038F216 /* GTMHTTPFetcher.m in Sources */,
-				076E5B361730CCE40038F216 /* GTMOAuth2Authentication.m in Sources */,
-				076E5B371730CCE40038F216 /* GTMOAuth2SignIn.m in Sources */,
-				076E5B381730CCE40038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-				076E5B391730CD980038F216 /* GTMOAuth2ViewTouch.xib in Sources */,
 				079BF12D173EEF7A009FF56D /* SignInReminderImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07EF519116CC514900178D1E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07EF51A516CC514A00178D1E /* URL_ShortenerTests.m in Sources */,
-				076E5B311730CCD20038F216 /* GTMHTTPFetcher.m in Sources */,
-				076E5B321730CCD20038F216 /* GTMOAuth2Authentication.m in Sources */,
-				076E5B331730CCD20038F216 /* GTMOAuth2SignIn.m in Sources */,
-				076E5B341730CCD20038F216 /* GTMOAuth2ViewControllerTouch.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		07EF519C16CC514900178D1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07EF516C16CC514900178D1E /* URL Shortener */;
-			targetProxy = 07EF519B16CC514900178D1E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		07EF517916CC514900178D1E /* InfoPlist.strings */ = {
@@ -679,7 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -688,23 +540,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = AppStore;
-		};
-		0746460A16FA45FE00A224C1 /* AppStore */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/URL Shortener.app/URL Shortener";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
-				INFOPLIST_FILE = "URL ShortenerTests/URL ShortenerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = AppStore;
 		};
@@ -774,7 +609,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -792,7 +627,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
@@ -802,40 +637,6 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		07EF51AC16CC514A00178D1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/URL Shortener.app/URL Shortener";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
-				INFOPLIST_FILE = "URL ShortenerTests/URL ShortenerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		07EF51AD16CC514A00178D1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/URL Shortener.app/URL Shortener";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
-				INFOPLIST_FILE = "URL ShortenerTests/URL ShortenerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -858,16 +659,6 @@
 				07EF51A916CC514A00178D1E /* Debug */,
 				07EF51AA16CC514A00178D1E /* Release */,
 				0746460916FA45FE00A224C1 /* AppStore */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		07EF51AB16CC514A00178D1E /* Build configuration list for PBXNativeTarget "URL ShortenerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07EF51AC16CC514A00178D1E /* Debug */,
-				07EF51AD16CC514A00178D1E /* Release */,
-				0746460A16FA45FE00A224C1 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
