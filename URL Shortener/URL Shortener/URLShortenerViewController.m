@@ -114,7 +114,7 @@
     [super viewDidLoad];
     self.textField.delegate = self;
     self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"put link here"
-                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]}];
+                                                                           attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                               action:@selector(openWebView:)];
     [self.shortenedURLButton addGestureRecognizer:longPressGR];
