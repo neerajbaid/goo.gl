@@ -56,7 +56,6 @@
        toShortenedURL:(NSString *)shortenedURL {
     if (shortenedURL) {
         self.shortenedURL = shortenedURL;
-        self.urlDisplayUnderShortenedURL.text = [self.url formattedURL];
         [self appear];
         [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
         [SVProgressHUD showSuccessWithStatus:@"Shortened & copied URL!"];
@@ -81,16 +80,20 @@
 - (void)appear {
     [UIView animateWithDuration:.2 animations:^(void) {
         self.arrow.alpha = 1;
-        self.urlDisplayUnderShortenedURL.alpha = 1;
+        self.urlDisplayUnderShortenedURL.alpha = 0;
         self.shortenedURLButton.alpha = 1;
     }];
 }
 
 - (void)disappear {
     [UIView animateWithDuration:.2 animations:^(void) {
-        [self.arrow setAlpha:0];
+        self.arrow.alpha = 0;
+        if (self.shortenedURL && self.url) {
+            self.urlDisplayUnderShortenedURL.text = [self.url formattedURL];
+            self.urlDisplayUnderShortenedURL.alpha = 1;
+        }
     }];
-    [self.textField setText:@""];
+    self.textField.text = nil;
 }
 
 - (void)openWebView:(UIGestureRecognizer *)gestureRecognizer {
