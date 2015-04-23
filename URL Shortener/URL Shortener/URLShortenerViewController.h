@@ -5,9 +5,4 @@
 
 @interface URLShortenerViewController : UIViewController <URLRecipient>
 
-- (BOOL)validateUrl:(NSString *)candidate;
-- (BOOL)handlePasteboardString;
-- (void)shortenURL:(NSString *)url;
-- (void)disappear;
-
 @end

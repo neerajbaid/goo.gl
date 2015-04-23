@@ -3,6 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'URL Shortener' do
 
 pod 'SVWebViewController'
+pod 'SVProgressHUD'
 pod 'Mixpanel'
 
 end

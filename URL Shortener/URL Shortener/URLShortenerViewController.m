@@ -1,19 +1,20 @@
 #import <Mixpanel/Mixpanel.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 #import <SVWebViewController/SVModalWebViewController.h>
 
 #import "APIConnection.h"
+#import "NSString+URLShortener.h"
 #import "UIImage+URLShortener.h"
 #import "URLShortenerViewController.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet UILabel *shortenedURLLabel;
+@property (weak, nonatomic) IBOutlet UIButton *shortenedURLButton;
 @property (weak, nonatomic) IBOutlet UILabel *urlDisplayUnderShortenedURL;
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) NSString *shortenedURL;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) APIConnection *connection;
 
 @end
@@ -32,33 +33,22 @@
     [self disappear];
 }
 
-- (BOOL)validateUrl:(NSString *)candidate {
-    NSURL *temp = [NSURL URLWithString:candidate];
-    BOOL doesNotContainGoogle = [candidate rangeOfString:@"goo.gl"].location == NSNotFound;
-    if (temp && temp.scheme && doesNotContainGoogle)
-        return TRUE;
-    return FALSE;
-}
-
-- (BOOL)handlePasteboardString {
+- (void)handlePasteboardString {
     NSString *string = [UIPasteboard generalPasteboard].string;
-    if ([self validateUrl:string]) {
-        Mixpanel *mixpanel = [Mixpanel sharedInstance];
-        [mixpanel track:@"Automatically Copy URL"];
+    if ([string isValidURL]) {
+        [[Mixpanel sharedInstance] track:@"Automatically Copy URL"];
         self.textField.text = string;
-        return YES;
+        [self shortenURL:string];
     }
-    return NO;
 }
 
 - (void)shortenURL:(NSString *)url {
-    BOOL doesNotContainSpace = [url rangeOfString:@" "].location == NSNotFound;
-    BOOL doesNotContainGoogle = [url rangeOfString:@"goo.gl"].location == NSNotFound;
-    if (![url isEqualToString:@""] && doesNotContainSpace && doesNotContainGoogle) {
+    if ([url isValidURL]) {
         [self.connection shortenURL:url];
         self.url = url;
-        [self.spinner startAnimating];
-        [self fadeInSpinner];
+        [SVProgressHUD show];
+    } else {
+        [SVProgressHUD showErrorWithStatus:@"Invalid URL"];
     }
 }
 
@@ -69,17 +59,19 @@
         self.shortenedURL = shortenedURL;
         NSString *display = @" ";
         self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:self.url];
-        [self.spinner stopAnimating];
-        [self fadeOutSpinner];
         [self appear];
-        if (self.shortenedURL) {
-            [[UIPasteboard generalPasteboard] setString:_shortenedURL];
-            [[Mixpanel sharedInstance] track:@"URL Shortened"];
-        }
-        self.shortenedURLLabel.text = self.shortenedURL;
+        [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
+        [SVProgressHUD showSuccessWithStatus:@"Shortened & copied URL!"];
+        [[Mixpanel sharedInstance] track:@"URL Shortened"];
+        [self.shortenedURLButton setTitle:self.shortenedURL forState:UIControlStateNormal];
     } else {
-        [self fadeOutSpinner];
+        [SVProgressHUD showErrorWithStatus:@"Error"];
     }
+}
+
+- (IBAction)copyShortenedURL:(id)sender {
+    [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
+    [SVProgressHUD showSuccessWithStatus:@"Copied!"];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -88,23 +80,11 @@
     return YES;
 }
 
-- (void)fadeInSpinner {
-    [UIView animateWithDuration:.2 animations:^(void) {
-        [self.spinner setAlpha:1];
-    }];
-}
-
-- (void)fadeOutSpinner {
-    [UIView animateWithDuration:.2 animations:^(void) {
-        [self.spinner setAlpha:0];
-    }];
-}
-
 - (void)appear {
     [UIView animateWithDuration:.2 animations:^(void) {
         self.arrow.alpha = 0.5;
         self.urlDisplayUnderShortenedURL.alpha = 1;
-        self.shortenedURLLabel.alpha = 1;
+        self.shortenedURLButton.alpha = 1;
     }];
 }
 
@@ -128,21 +108,27 @@
     self.textField.delegate = self;
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                               action:@selector(openWebView:)];
+    [self.shortenedURLButton addGestureRecognizer:longPressGR];
     [self hide];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    if ([self handlePasteboardString]) {
-        [self shortenURL:[UIPasteboard generalPasteboard].string];
-    }
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self disappear];
+                                                  }];
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self handlePasteboardString];
+                                                  }];
 }
 
 - (void)hide {
     self.arrow.alpha = 0;
-    self.spinner.alpha = 0;
     self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor whiteColor]];
     self.urlDisplayUnderShortenedURL.alpha = 0;
-    self.shortenedURLLabel.alpha = 0;
+    self.shortenedURLButton.alpha = 0;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

@@ -59,6 +59,7 @@ install_resource()
                     install_resource "Mixpanel/Mixpanel/MPCloseBtn@2x.png"
                     install_resource "Mixpanel/Mixpanel/MPNotification.storyboard"
                     install_resource "Mixpanel/Mixpanel/MPSurvey.storyboard"
+                    install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
                     install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack.png"
                     install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack@2x.png"
                     install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerNext.png"

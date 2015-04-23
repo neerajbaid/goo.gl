@@ -10,6 +10,7 @@
 		0704FC571AE865DF00C953B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC561AE865DF00C953B6 /* LaunchScreen.xib */; };
 		0704FC591AE86ACE00C953B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC581AE86ACE00C953B6 /* Images.xcassets */; };
 		0704FC5F1AE86D6300C953B6 /* UIImage+URLShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */; };
+		0704FC631AE8747A00C953B6 /* NSString+URLShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0704FC621AE8747A00C953B6 /* NSString+URLShortener.m */; };
 		073C22E11720835A0061A9DC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E01720835A0061A9DC /* Social.framework */; };
 		073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E21720835F0061A9DC /* Accounts.framework */; };
 		073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E41720CAEF0061A9DC /* MessageUI.framework */; };
@@ -33,6 +34,8 @@
 		0704FC581AE86ACE00C953B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0704FC5D1AE86D6300C953B6 /* UIImage+URLShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+URLShortener.h"; sourceTree = "<group>"; };
 		0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+URLShortener.m"; sourceTree = "<group>"; };
+		0704FC611AE8747A00C953B6 /* NSString+URLShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLShortener.h"; sourceTree = "<group>"; };
+		0704FC621AE8747A00C953B6 /* NSString+URLShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLShortener.m"; sourceTree = "<group>"; };
 		073C22E01720835A0061A9DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		073C22E21720835F0061A9DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		073C22E41720CAEF0061A9DC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -85,6 +88,8 @@
 		0704FC601AE86D7100C953B6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				0704FC611AE8747A00C953B6 /* NSString+URLShortener.h */,
+				0704FC621AE8747A00C953B6 /* NSString+URLShortener.m */,
 				0704FC5D1AE86D6300C953B6 /* UIImage+URLShortener.h */,
 				0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */,
 			);
@@ -270,6 +275,7 @@
 			files = (
 				0704FC5F1AE86D6300C953B6 /* UIImage+URLShortener.m in Sources */,
 				07EF517D16CC514900178D1E /* main.m in Sources */,
+				0704FC631AE8747A00C953B6 /* NSString+URLShortener.m in Sources */,
 				07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */,
 				07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */,
 				0799919716ECF279003FCE1C /* APIConnection.m in Sources */,
