@@ -36,7 +36,7 @@
     NSString *string = [UIPasteboard generalPasteboard].string;
     if ([string isValidURL]) {
         [[Mixpanel sharedInstance] track:@"Automatically Copy URL"];
-        self.textField.text = string;
+        self.textField.text = [string formattedURL];
         [self shortenURL:string];
     }
 }
@@ -56,13 +56,12 @@
        toShortenedURL:(NSString *)shortenedURL {
     if (shortenedURL) {
         self.shortenedURL = shortenedURL;
-        NSString *display = @" ";
-        self.urlDisplayUnderShortenedURL.text = [display stringByAppendingString:self.url];
+        self.urlDisplayUnderShortenedURL.text = [self.url formattedURL];
         [self appear];
         [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
         [SVProgressHUD showSuccessWithStatus:@"Shortened & copied URL!"];
         [[Mixpanel sharedInstance] track:@"URL Shortened"];
-        [self.shortenedURLButton setTitle:self.shortenedURL forState:UIControlStateNormal];
+        [self.shortenedURLButton setTitle:[self.shortenedURL formattedURL] forState:UIControlStateNormal];
     } else {
         [SVProgressHUD showErrorWithStatus:@"Error"];
     }
@@ -81,7 +80,7 @@
 
 - (void)appear {
     [UIView animateWithDuration:.2 animations:^(void) {
-        self.arrow.alpha = 0.5;
+        self.arrow.alpha = 1;
         self.urlDisplayUnderShortenedURL.alpha = 1;
         self.shortenedURLButton.alpha = 1;
     }];
@@ -111,6 +110,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textField.delegate = self;
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"put link here"
+                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]}];
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                               action:@selector(openWebView:)];
     [self.shortenedURLButton addGestureRecognizer:longPressGR];
@@ -131,7 +132,7 @@
 
 - (void)hide {
     self.arrow.alpha = 0;
-    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor whiteColor]];
+    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor colorWithWhite:0.25 alpha:1]];
     self.urlDisplayUnderShortenedURL.alpha = 0;
     self.shortenedURLButton.alpha = 0;
 }

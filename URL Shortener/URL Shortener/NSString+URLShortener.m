@@ -10,4 +10,13 @@
     return FALSE;
 }
 
+- (NSString *)formattedURL {
+    NSURL *selfURL = [NSURL URLWithString:self];
+    if (selfURL.host) {
+        return [selfURL.absoluteString substringFromIndex:[selfURL.absoluteString rangeOfString:selfURL.host].location];
+    } else {
+        return self;
+    }
+}
+
 @end

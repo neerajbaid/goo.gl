@@ -12,6 +12,7 @@
     [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
     [SVProgressHUD setBackgroundColor:[UIColor blackColor]];
     [SVProgressHUD setFont:[UIFont fontWithName:@"Avenir-Light" size:17]];
+    [[UITextField appearance] setTintColor:[UIColor whiteColor]];
     return YES;
 }
 

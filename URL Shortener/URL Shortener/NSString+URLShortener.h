@@ -3,5 +3,6 @@
 @interface NSString (URLShortener)
 
 - (BOOL)isValidURL;
+- (NSString *)formattedURL;
 
 @end
