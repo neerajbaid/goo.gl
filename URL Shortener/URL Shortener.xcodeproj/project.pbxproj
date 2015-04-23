@@ -8,44 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0704FC571AE865DF00C953B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC561AE865DF00C953B6 /* LaunchScreen.xib */; };
-		070DE83C16EF827000E36C88 /* background4 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070DE83B16EF827000E36C88 /* background4 @2x.jpg */; };
-		070DE83E16EF841A00E36C88 /* background5 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 070DE83D16EF841A00E36C88 /* background5 @2x.jpg */; };
-		071AEDAB16F5441A00E864FA /* test no border.png in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAA16F5441A00E864FA /* test no border.png */; };
-		071AEDAD16F54EE600E864FA /* Sign In Background small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */; };
-		072866D9173EFDE0001CBF2F /* Sign In Reminder Overlay iPhone 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 072866D8173EFDE0001CBF2F /* Sign In Reminder Overlay iPhone 4.png */; };
-		0728E34F16DCB6E300B1A45F /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0728E34E16DCB6E300B1A45F /* background.jpg */; };
-		073C22D917204A700061A9DC /* Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22D817204A700061A9DC /* Share Button.png */; };
-		073C22DB17204DB80061A9DC /* Close Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DA17204DB80061A9DC /* Close Share Button.png */; };
-		073C22DD172051540061A9DC /* Twitter Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DC172051540061A9DC /* Twitter Share Button.png */; };
-		073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22DE172052620061A9DC /* Facebook Share Button.png */; };
+		0704FC591AE86ACE00C953B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC581AE86ACE00C953B6 /* Images.xcassets */; };
+		0704FC5F1AE86D6300C953B6 /* UIImage+URLShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */; };
 		073C22E11720835A0061A9DC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E01720835A0061A9DC /* Social.framework */; };
 		073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E21720835F0061A9DC /* Accounts.framework */; };
 		073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E41720CAEF0061A9DC /* MessageUI.framework */; };
-		073C22EA17219E7C0061A9DC /* Messages Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22E917219E7C0061A9DC /* Messages Share Button.png */; };
-		073C22EC172303730061A9DC /* Mail Share Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22EB172303730061A9DC /* Mail Share Button.png */; };
-		073C22F017233FC40061A9DC /* Text Field Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22EF17233FC40061A9DC /* Text Field Background.png */; };
-		073C22F4172341510061A9DC /* Button Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 073C22F3172341510061A9DC /* Button Background.png */; };
-		0746461E16FA4CE000A224C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461D16FA4CE000A224C1 /* Icon.png */; };
-		0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746461F16FA4CE300A224C1 /* Icon@2x.png */; };
-		0746462216FA4CE900A224C1 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746462116FA4CE900A224C1 /* iPad.png */; };
-		0746462416FA4CEC00A224C1 /* iPad @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0746462316FA4CEC00A224C1 /* iPad @2x.png */; };
-		074EA2E416E7C96D00FADD1C /* background3 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 074EA2E316E7C96D00FADD1C /* background3 @2x.jpg */; };
-		076C57ED16D6E240003E8944 /* Splash Page@2x 4 inch.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 076C57EC16D6E240003E8944 /* Splash Page@2x 4 inch.PNG */; };
-		076C57F016D6E35A003E8944 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57EF16D6E35A003E8944 /* Default-568h@2x.png */; };
-		076C57F216D6E3F7003E8944 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57F116D6E3F7003E8944 /* Default@2x.png */; };
-		076C57F416D6E400003E8944 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 076C57F316D6E400003E8944 /* Default.png */; };
 		076E5B20173038190038F216 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076E5B1F173038190038F216 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		078F020B16E66F9000A39D8C /* arrow @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078F020A16E66F9000A39D8C /* arrow @2x.jpg */; };
-		07900D4D16CF0DF1002B14CB /* top bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4B16CF0DF1002B14CB /* top bar.png */; };
-		07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07900D4C16CF0DF1002B14CB /* top bar@2x.png */; };
 		0799919716ECF279003FCE1C /* APIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799919616ECF279003FCE1C /* APIConnection.m */; };
-		079BF12A173EEF4E009FF56D /* Sign In Reminder Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */; };
-		07B3817F171799B50038E097 /* black-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07B3817E171799B50038E097 /* black-square.jpg */; };
-		07B6113C16F0E9D400D16115 /* Google logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6113B16F0E9D400D16115 /* Google logo.png */; };
 		07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4E9171C585100600512 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4EB171C585B00600512 /* CoreTelephony.framework */; };
-		07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D44E16F5149D00A5C5A3 /* Google logo small.png */; };
-		07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */; };
 		07EF517116CC514900178D1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517016CC514900178D1E /* UIKit.framework */; };
 		07EF517316CC514900178D1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517216CC514900178D1E /* Foundation.framework */; };
 		07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517416CC514900178D1E /* CoreGraphics.framework */; };
@@ -54,53 +25,22 @@
 		07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518016CC514900178D1E /* URLShortenerAppDelegate.m */; };
 		07EF518A16CC514900178D1E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EF518816CC514900178D1E /* MainStoryboard_iPhone.storyboard */; };
 		07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518F16CC514900178D1E /* URLShortenerViewController.m */; };
-		07F9AE6C18597A41001BCE8F /* top bar iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6A18597A41001BCE8F /* top bar iOS7.png */; };
-		07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */; };
-		07F9AE7318597BF6001BCE8F /* background2 @2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */; };
 		EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0704FC561AE865DF00C953B6 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
-		070DE83B16EF827000E36C88 /* background4 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background4 @2x.jpg"; sourceTree = "<group>"; };
-		070DE83D16EF841A00E36C88 /* background5 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background5 @2x.jpg"; sourceTree = "<group>"; };
-		071AEDAA16F5441A00E864FA /* test no border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test no border.png"; sourceTree = "<group>"; };
-		071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sign In Background small.jpg"; sourceTree = "<group>"; };
-		072866D8173EFDE0001CBF2F /* Sign In Reminder Overlay iPhone 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In Reminder Overlay iPhone 4.png"; sourceTree = "<group>"; };
-		0728E34E16DCB6E300B1A45F /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		073C22D817204A700061A9DC /* Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Share Button.png"; sourceTree = "<group>"; };
-		073C22DA17204DB80061A9DC /* Close Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close Share Button.png"; sourceTree = "<group>"; };
-		073C22DC172051540061A9DC /* Twitter Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter Share Button.png"; sourceTree = "<group>"; };
-		073C22DE172052620061A9DC /* Facebook Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Share Button.png"; sourceTree = "<group>"; };
+		0704FC581AE86ACE00C953B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0704FC5D1AE86D6300C953B6 /* UIImage+URLShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+URLShortener.h"; sourceTree = "<group>"; };
+		0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+URLShortener.m"; sourceTree = "<group>"; };
 		073C22E01720835A0061A9DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		073C22E21720835F0061A9DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		073C22E41720CAEF0061A9DC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		073C22E917219E7C0061A9DC /* Messages Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Messages Share Button.png"; sourceTree = "<group>"; };
-		073C22EB172303730061A9DC /* Mail Share Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mail Share Button.png"; sourceTree = "<group>"; };
-		073C22EF17233FC40061A9DC /* Text Field Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Text Field Background.png"; sourceTree = "<group>"; };
-		073C22F3172341510061A9DC /* Button Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button Background.png"; sourceTree = "<group>"; };
-		0746461D16FA4CE000A224C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		0746461F16FA4CE300A224C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
-		0746462116FA4CE900A224C1 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = ../iPad.png; sourceTree = "<group>"; };
-		0746462316FA4CEC00A224C1 /* iPad @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad @2x.png"; path = "../iPad @2x.png"; sourceTree = "<group>"; };
-		074EA2E316E7C96D00FADD1C /* background3 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background3 @2x.jpg"; sourceTree = "<group>"; };
-		076C57EC16D6E240003E8944 /* Splash Page@2x 4 inch.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Page@2x 4 inch.PNG"; sourceTree = "<group>"; };
-		076C57EF16D6E35A003E8944 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		076C57F116D6E3F7003E8944 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		076C57F316D6E400003E8944 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		076E5B1F173038190038F216 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		078F020A16E66F9000A39D8C /* arrow @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arrow @2x.jpg"; sourceTree = "<group>"; };
-		07900D4B16CF0DF1002B14CB /* top bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar.png"; sourceTree = "<group>"; };
-		07900D4C16CF0DF1002B14CB /* top bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar@2x.png"; sourceTree = "<group>"; };
 		0799919516ECF279003FCE1C /* APIConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConnection.h; sourceTree = "<group>"; };
 		0799919616ECF279003FCE1C /* APIConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIConnection.m; sourceTree = "<group>"; };
-		079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sign In Reminder Overlay.png"; sourceTree = "<group>"; };
-		07B3817E171799B50038E097 /* black-square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-square.jpg"; sourceTree = "<group>"; };
-		07B6113B16F0E9D400D16115 /* Google logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo.png"; sourceTree = "<group>"; };
 		07BFD4E9171C585100600512 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		07BFD4EB171C585B00600512 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		07E0D44E16F5149D00A5C5A3 /* Google logo small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google logo small.png"; sourceTree = "<group>"; };
-		07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sign In Background.jpg"; sourceTree = "<group>"; };
 		07EF516D16CC514900178D1E /* URL Shortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URL Shortener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EF517016CC514900178D1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07EF517216CC514900178D1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,9 +55,6 @@
 		07EF518E16CC514900178D1E /* URLShortenerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerViewController.h; sourceTree = "<group>"; };
 		07EF518F16CC514900178D1E /* URLShortenerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLShortenerViewController.m; sourceTree = "<group>"; };
 		07EF519716CC514900178D1E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		07F9AE6A18597A41001BCE8F /* top bar iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7.png"; sourceTree = "<group>"; };
-		07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top bar iOS7@2x.png"; sourceTree = "<group>"; };
-		07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background2 @2x.jpg"; sourceTree = "<group>"; };
 		1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URL Shortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.release.xcconfig"; sourceTree = "<group>"; };
 		4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,62 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		073C22F2172340910061A9DC /* Share Buttons */ = {
+		0704FC601AE86D7100C953B6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				073C22D817204A700061A9DC /* Share Button.png */,
-				073C22DA17204DB80061A9DC /* Close Share Button.png */,
-				073C22DC172051540061A9DC /* Twitter Share Button.png */,
-				073C22DE172052620061A9DC /* Facebook Share Button.png */,
-				073C22E917219E7C0061A9DC /* Messages Share Button.png */,
-				073C22EB172303730061A9DC /* Mail Share Button.png */,
+				0704FC5D1AE86D6300C953B6 /* UIImage+URLShortener.h */,
+				0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */,
 			);
-			name = "Share Buttons";
-			sourceTree = "<group>";
-		};
-		07E0D45216F53AD100A5C5A3 /* Main Screen */ = {
-			isa = PBXGroup;
-			children = (
-				0728E34E16DCB6E300B1A45F /* background.jpg */,
-				07F9AE7218597BF6001BCE8F /* background2 @2x.jpg */,
-				074EA2E316E7C96D00FADD1C /* background3 @2x.jpg */,
-				070DE83B16EF827000E36C88 /* background4 @2x.jpg */,
-				070DE83D16EF841A00E36C88 /* background5 @2x.jpg */,
-				078F020A16E66F9000A39D8C /* arrow @2x.jpg */,
-			);
-			name = "Main Screen";
-			sourceTree = "<group>";
-		};
-		07E0D45316F53B0400A5C5A3 /* Sign In */ = {
-			isa = PBXGroup;
-			children = (
-				07B6113B16F0E9D400D16115 /* Google logo.png */,
-				07E0D44E16F5149D00A5C5A3 /* Google logo small.png */,
-				07E0D45016F53AC000A5C5A3 /* Sign In Background.jpg */,
-				071AEDAC16F54EE600E864FA /* Sign In Background small.jpg */,
-				071AEDAA16F5441A00E864FA /* test no border.png */,
-			);
-			name = "Sign In";
-			sourceTree = "<group>";
-		};
-		07E0D45416F53B0F00A5C5A3 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				07B3817E171799B50038E097 /* black-square.jpg */,
-				0746462316FA4CEC00A224C1 /* iPad @2x.png */,
-				0746462116FA4CE900A224C1 /* iPad.png */,
-				0746461F16FA4CE300A224C1 /* Icon@2x.png */,
-				0746461D16FA4CE000A224C1 /* Icon.png */,
-				076C57F316D6E400003E8944 /* Default.png */,
-				076C57F116D6E3F7003E8944 /* Default@2x.png */,
-				076C57EF16D6E35A003E8944 /* Default-568h@2x.png */,
-				076C57EC16D6E240003E8944 /* Splash Page@2x 4 inch.PNG */,
-				07900D4B16CF0DF1002B14CB /* top bar.png */,
-				07900D4C16CF0DF1002B14CB /* top bar@2x.png */,
-				07F9AE6A18597A41001BCE8F /* top bar iOS7.png */,
-				07F9AE6B18597A41001BCE8F /* top bar iOS7@2x.png */,
-			);
-			name = General;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		07EF516416CC514900178D1E = {
@@ -250,6 +138,8 @@
 				07EF518F16CC514900178D1E /* URLShortenerViewController.m */,
 				0799919516ECF279003FCE1C /* APIConnection.h */,
 				0799919616ECF279003FCE1C /* APIConnection.m */,
+				0704FC581AE86ACE00C953B6 /* Images.xcassets */,
+				0704FC601AE86D7100C953B6 /* Categories */,
 				07EF517716CC514900178D1E /* Supporting Files */,
 			);
 			path = "URL Shortener";
@@ -258,14 +148,6 @@
 		07EF517716CC514900178D1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				072866D8173EFDE0001CBF2F /* Sign In Reminder Overlay iPhone 4.png */,
-				079BF129173EEF4E009FF56D /* Sign In Reminder Overlay.png */,
-				073C22EF17233FC40061A9DC /* Text Field Background.png */,
-				073C22F3172341510061A9DC /* Button Background.png */,
-				073C22F2172340910061A9DC /* Share Buttons */,
-				07E0D45416F53B0F00A5C5A3 /* General */,
-				07E0D45216F53AD100A5C5A3 /* Main Screen */,
-				07E0D45316F53B0400A5C5A3 /* Sign In */,
 				07EF517816CC514900178D1E /* URL Shortener-Info.plist */,
 				07EF517916CC514900178D1E /* InfoPlist.strings */,
 				07EF517C16CC514900178D1E /* main.m */,
@@ -339,43 +221,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0704FC591AE86ACE00C953B6 /* Images.xcassets in Resources */,
 				07EF517B16CC514900178D1E /* InfoPlist.strings in Resources */,
 				07EF518A16CC514900178D1E /* MainStoryboard_iPhone.storyboard in Resources */,
-				07900D4D16CF0DF1002B14CB /* top bar.png in Resources */,
-				07900D4E16CF0DF1002B14CB /* top bar@2x.png in Resources */,
-				076C57ED16D6E240003E8944 /* Splash Page@2x 4 inch.PNG in Resources */,
-				076C57F016D6E35A003E8944 /* Default-568h@2x.png in Resources */,
-				07F9AE7318597BF6001BCE8F /* background2 @2x.jpg in Resources */,
-				076C57F216D6E3F7003E8944 /* Default@2x.png in Resources */,
-				07F9AE6C18597A41001BCE8F /* top bar iOS7.png in Resources */,
-				076C57F416D6E400003E8944 /* Default.png in Resources */,
-				0728E34F16DCB6E300B1A45F /* background.jpg in Resources */,
-				078F020B16E66F9000A39D8C /* arrow @2x.jpg in Resources */,
-				074EA2E416E7C96D00FADD1C /* background3 @2x.jpg in Resources */,
-				070DE83C16EF827000E36C88 /* background4 @2x.jpg in Resources */,
-				070DE83E16EF841A00E36C88 /* background5 @2x.jpg in Resources */,
-				07B6113C16F0E9D400D16115 /* Google logo.png in Resources */,
-				07E0D44F16F5149D00A5C5A3 /* Google logo small.png in Resources */,
 				0704FC571AE865DF00C953B6 /* LaunchScreen.xib in Resources */,
-				07E0D45116F53AC000A5C5A3 /* Sign In Background.jpg in Resources */,
-				07F9AE6D18597A41001BCE8F /* top bar iOS7@2x.png in Resources */,
-				071AEDAB16F5441A00E864FA /* test no border.png in Resources */,
-				071AEDAD16F54EE600E864FA /* Sign In Background small.jpg in Resources */,
-				0746461E16FA4CE000A224C1 /* Icon.png in Resources */,
-				0746462016FA4CE300A224C1 /* Icon@2x.png in Resources */,
-				0746462216FA4CE900A224C1 /* iPad.png in Resources */,
-				0746462416FA4CEC00A224C1 /* iPad @2x.png in Resources */,
-				07B3817F171799B50038E097 /* black-square.jpg in Resources */,
-				073C22D917204A700061A9DC /* Share Button.png in Resources */,
-				073C22DB17204DB80061A9DC /* Close Share Button.png in Resources */,
-				073C22DD172051540061A9DC /* Twitter Share Button.png in Resources */,
-				073C22DF172052620061A9DC /* Facebook Share Button.png in Resources */,
-				073C22EA17219E7C0061A9DC /* Messages Share Button.png in Resources */,
-				073C22EC172303730061A9DC /* Mail Share Button.png in Resources */,
-				073C22F017233FC40061A9DC /* Text Field Background.png in Resources */,
-				073C22F4172341510061A9DC /* Button Background.png in Resources */,
-				079BF12A173EEF4E009FF56D /* Sign In Reminder Overlay.png in Resources */,
-				072866D9173EFDE0001CBF2F /* Sign In Reminder Overlay iPhone 4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0704FC5F1AE86D6300C953B6 /* UIImage+URLShortener.m in Sources */,
 				07EF517D16CC514900178D1E /* main.m in Sources */,
 				07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */,
 				07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */,
@@ -480,6 +330,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
@@ -559,6 +411,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";
@@ -578,6 +432,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shortener/URL Shortener-Prefix.pch";
 				INFOPLIST_FILE = "URL Shortener/URL Shortener-Info.plist";

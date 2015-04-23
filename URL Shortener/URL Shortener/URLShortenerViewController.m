@@ -1,24 +1,20 @@
+#import <Mixpanel/Mixpanel.h>
 #import <SVWebViewController/SVModalWebViewController.h>
 
-#import "URLShortenerViewController.h"
 #import "APIConnection.h"
-#import "Mixpanel.h"
+#import "UIImage+URLShortener.h"
+#import "URLShortenerViewController.h"
 
 @interface URLShortenerViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *shortenedURLLabel;
-@property (weak, nonatomic) IBOutlet UILabel *urlHasBeenShortened;
 @property (weak, nonatomic) IBOutlet UILabel *urlDisplayUnderShortenedURL;
-@property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
-@property NSString *url;
-@property NSString *shortenedURL;
+@property (strong, nonatomic) NSString *url;
+@property (strong, nonatomic) NSString *shortenedURL;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (strong, nonatomic) APIConnection *connection;
-@property (weak, nonatomic) IBOutlet UIButton *testButton;
-
-@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
 
@@ -96,10 +92,6 @@
     return YES;
 }
 
-- (void)dismissKeyboard {
-    [self.textField resignFirstResponder];
-}
-
 - (void)fadeInSpinner {
     [UIView animateWithDuration:.2 animations:^(void) {
         [self.spinner setAlpha:1];
@@ -114,19 +106,14 @@
 
 - (void)appear {
     [UIView animateWithDuration:.4 animations:^(void) {
-        [self.arrow setAlpha:1];
-        [self.urlHasBeenShortened setAlpha:1];
-        [self.urlDisplayUnderShortenedURL setAlpha:1];
-        [self.urlDisplayUnderShortenedURL setBackgroundColor:[UIColor whiteColor]];
-        [self.testButton setAlpha:1];
-        [self.shareButton setAlpha:1];
+        self.arrow.alpha = 0.1;
+        self.urlDisplayUnderShortenedURL.alpha = 1;
     }];
 }
 
 - (void)disappear {
     [UIView animateWithDuration:.4 animations:^(void) {
         [self.arrow setAlpha:0];
-        [self.urlHasBeenShortened setAlpha:0];
     }];
     [self.textField setText:@""];
 }
@@ -138,7 +125,6 @@
     }
     if (self.arrow.alpha == 0 &&
         self.spinner.alpha == 0 &&
-        self.urlHasBeenShortened.alpha == 0 &&
         ![self.shortenedURLLabel.text isEqualToString:@" "]) {
     }
 }
@@ -151,23 +137,12 @@
     }
 }
 
-- (IBAction)shareButton:(id)sender {
-    if (self.shortenedURL) {
-        NSArray *sharingItems = @[self.shortenedURL];
-        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems
-                                                                                         applicationActivities:nil];
-        [self presentViewController:activityController animated:YES completion:nil];
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.textField.delegate = self;
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                               action:@selector(openWebView:)];
-    [self.testButton addGestureRecognizer:longPressGR];
     [self hide];
-    [self.background setImage:[UIImage imageNamed:@"background2 @2x.jpg"]];
     if ([self handlePasteboardString]) {
         [self shortenURL:[UIPasteboard generalPasteboard].string];
     }
@@ -176,10 +151,8 @@
 - (void)hide {
     [self.arrow setAlpha:0];
     [self.spinner setAlpha:0];
-    [self.urlHasBeenShortened setAlpha:0];
+    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor lightGrayColor]];
     [self.urlDisplayUnderShortenedURL setAlpha:0];
-    [self.testButton setAlpha:0];
-    [self.shareButton setAlpha:0];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
