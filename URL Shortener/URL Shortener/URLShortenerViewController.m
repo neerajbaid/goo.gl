@@ -45,11 +45,7 @@
     if ([self validateUrl:string]) {
         Mixpanel *mixpanel = [Mixpanel sharedInstance];
         [mixpanel track:@"Automatically Copy URL"];
-        
-        NSString *text = @"  ";
-        text = [text stringByAppendingString:string];
-        
-        [self.textField setText:text];
+        self.textField.text = string;
         return YES;
     }
     return NO;
@@ -105,28 +101,18 @@
 }
 
 - (void)appear {
-    [UIView animateWithDuration:.4 animations:^(void) {
-        self.arrow.alpha = 0.1;
+    [UIView animateWithDuration:.2 animations:^(void) {
+        self.arrow.alpha = 0.5;
         self.urlDisplayUnderShortenedURL.alpha = 1;
+        self.shortenedURLLabel.alpha = 1;
     }];
 }
 
 - (void)disappear {
-    [UIView animateWithDuration:.4 animations:^(void) {
+    [UIView animateWithDuration:.2 animations:^(void) {
         [self.arrow setAlpha:0];
     }];
     [self.textField setText:@""];
-}
-
-- (IBAction)copyToPasteboard:(id)sender
-{
-    if (self.shortenedURL) {
-        [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
-    }
-    if (self.arrow.alpha == 0 &&
-        self.spinner.alpha == 0 &&
-        ![self.shortenedURLLabel.text isEqualToString:@" "]) {
-    }
 }
 
 - (void)openWebView:(UIGestureRecognizer *)gestureRecognizer {
@@ -143,16 +129,20 @@
     UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                               action:@selector(openWebView:)];
     [self hide];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     if ([self handlePasteboardString]) {
         [self shortenURL:[UIPasteboard generalPasteboard].string];
     }
 }
 
 - (void)hide {
-    [self.arrow setAlpha:0];
-    [self.spinner setAlpha:0];
-    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor lightGrayColor]];
-    [self.urlDisplayUnderShortenedURL setAlpha:0];
+    self.arrow.alpha = 0;
+    self.spinner.alpha = 0;
+    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor whiteColor]];
+    self.urlDisplayUnderShortenedURL.alpha = 0;
+    self.shortenedURLLabel.alpha = 0;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
