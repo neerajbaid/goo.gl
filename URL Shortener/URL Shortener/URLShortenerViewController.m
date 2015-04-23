@@ -1,6 +1,5 @@
 #import <Mixpanel/Mixpanel.h>
 #import <SVProgressHUD/SVProgressHUD.h>
-#import <SVWebViewController/SVModalWebViewController.h>
 
 #import "APIConnection.h"
 #import "NSString+URLShortener.h"
@@ -96,10 +95,16 @@
 }
 
 - (void)openWebView:(UIGestureRecognizer *)gestureRecognizer {
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         [[Mixpanel sharedInstance] track:@"WebView Preview Button Pressed"];
-        SVModalWebViewController *modalWebView = [[SVModalWebViewController alloc] initWithAddress:self.shortenedURL];
-        [self presentViewController:modalWebView animated:YES completion:nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Open in Safari"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action) {
+                                                              [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.shortenedURL]];
+                                                          }]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
