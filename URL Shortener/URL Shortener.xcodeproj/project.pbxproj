@@ -15,8 +15,8 @@
 		073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E21720835F0061A9DC /* Accounts.framework */; };
 		073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E41720CAEF0061A9DC /* MessageUI.framework */; };
 		076E5B20173038190038F216 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076E5B1F173038190038F216 /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		0771578F1AF7FB7600C7D1AA /* USKShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0771578D1AF7FB7600C7D1AA /* USKShortener.m */; };
-		077157901AF7FB7600C7D1AA /* USKShortener.h in Headers */ = {isa = PBXBuildFile; fileRef = 0771578E1AF7FB7600C7D1AA /* USKShortener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077157931AF80A3B00C7D1AA /* USKShortener.h in Headers */ = {isa = PBXBuildFile; fileRef = 077157911AF80A3B00C7D1AA /* USKShortener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		077157941AF80A3B00C7D1AA /* USKShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 077157921AF80A3B00C7D1AA /* USKShortener.m */; };
 		07B53DC91AF7CF4B0002F517 /* URLShortenerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B53DC81AF7CF4B0002F517 /* URLShortenerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07B53DDB1AF7CF4B0002F517 /* URLShortenerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */; };
 		07B53DDC1AF7CF4B0002F517 /* URLShortenerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -104,8 +104,8 @@
 		073C22E21720835F0061A9DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		073C22E41720CAEF0061A9DC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		076E5B1F173038190038F216 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0771578D1AF7FB7600C7D1AA /* USKShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USKShortener.m; sourceTree = "<group>"; };
-		0771578E1AF7FB7600C7D1AA /* USKShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USKShortener.h; sourceTree = "<group>"; };
+		077157911AF80A3B00C7D1AA /* USKShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USKShortener.h; sourceTree = "<group>"; };
+		077157921AF80A3B00C7D1AA /* USKShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USKShortener.m; sourceTree = "<group>"; };
 		07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URLShortenerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B53DC71AF7CF4B0002F517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B53DC81AF7CF4B0002F517 /* URLShortenerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerKit.h; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				07B53DC81AF7CF4B0002F517 /* URLShortenerKit.h */,
-				0771578E1AF7FB7600C7D1AA /* USKShortener.h */,
-				0771578D1AF7FB7600C7D1AA /* USKShortener.m */,
+				077157911AF80A3B00C7D1AA /* USKShortener.h */,
+				077157921AF80A3B00C7D1AA /* USKShortener.m */,
 				07B53DC61AF7CF4B0002F517 /* Supporting Files */,
 			);
 			path = URLShortenerKit;
@@ -352,7 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B53DC91AF7CF4B0002F517 /* URLShortenerKit.h in Headers */,
-				077157901AF7FB7600C7D1AA /* USKShortener.h in Headers */,
+				077157931AF80A3B00C7D1AA /* USKShortener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0771578F1AF7FB7600C7D1AA /* USKShortener.m in Sources */,
+				077157941AF80A3B00C7D1AA /* USKShortener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,7 +821,6 @@
 			baseConfigurationReference = 480E5445C86803B9840F387D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -854,7 +853,6 @@
 			baseConfigurationReference = 11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -885,7 +883,6 @@
 			baseConfigurationReference = 31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
