@@ -27,6 +27,8 @@
 		07B53E1D1AF7EBE20002F517 /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B53E1C1AF7EBE20002F517 /* ActionViewController.m */; };
 		07B53E1F1AF7EBE20002F517 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B53E1E1AF7EBE20002F517 /* MainInterface.storyboard */; };
 		07B53E221AF7EBE20002F517 /* URLShortenerAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07B53E171AF7EBE20002F517 /* URLShortenerAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07B53E291AF7F3A80002F517 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC581AE86ACE00C953B6 /* Images.xcassets */; };
+		07B53E2A1AF7F3AC0002F517 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC581AE86ACE00C953B6 /* Images.xcassets */; };
 		07BFD4EA171C585100600512 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4E9171C585100600512 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		07BFD4EC171C585B00600512 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BFD4EB171C585B00600512 /* CoreTelephony.framework */; };
 		07EF517116CC514900178D1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EF517016CC514900178D1E /* UIKit.framework */; };
@@ -490,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B53DF61AF7D2330002F517 /* MainInterface.storyboard in Resources */,
+				07B53E2A1AF7F3AC0002F517 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B53E1F1AF7EBE20002F517 /* MainInterface.storyboard in Resources */,
+				07B53E291AF7F3A80002F517 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +904,7 @@
 		07B53E231AF7EBE20002F517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -923,12 +928,14 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		07B53E241AF7EBE20002F517 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -950,12 +957,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		07B53E251AF7EBE20002F517 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -977,6 +986,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = AppStore;
 		};
@@ -1116,6 +1126,7 @@
 				07B53E251AF7EBE20002F517 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07EF516816CC514900178D1E /* Build configuration list for PBXProject "URL Shortener" */ = {
 			isa = XCConfigurationList;
