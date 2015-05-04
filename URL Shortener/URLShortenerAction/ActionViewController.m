@@ -48,6 +48,7 @@
 - (void)shortener:(USKShortener *)shortener
     didShortenURL:(NSString *)originalURL
    toShortenedURL:(NSString *)shortenedURL {
+    self.statusLabel.text = @"shortened & copied URL!";
     [[UIPasteboard generalPasteboard] setString:shortenedURL];
     [self done];
 }
