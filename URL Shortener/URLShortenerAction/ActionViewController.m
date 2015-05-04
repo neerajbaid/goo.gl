@@ -1,3 +1,4 @@
+#import <Mixpanel/Mixpanel.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <URLShortenerKit/URLShortenerKit.h>
 
@@ -50,6 +51,7 @@
    toShortenedURL:(NSString *)shortenedURL {
     self.statusLabel.text = @"shortened & copied URL!";
     [[UIPasteboard generalPasteboard] setString:shortenedURL];
+    [[Mixpanel sharedInstance] track:@"URL Shortened" properties:@{@"source":@"action"}];
     [self done];
 }
 
