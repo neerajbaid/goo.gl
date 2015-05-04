@@ -1,12 +1,12 @@
 #import <Mixpanel/Mixpanel.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <URLShortenerKit/URLShortenerKit.h>
 
-#import "APIConnection.h"
 #import "NSString+URLShortener.h"
 #import "UIImage+URLShortener.h"
 #import "URLShortenerViewController.h"
 
-@interface URLShortenerViewController () <UITextFieldDelegate>
+@interface URLShortenerViewController () <UITextFieldDelegate, USKShortenerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIButton *shortenedURLButton;
@@ -14,23 +14,20 @@
 @property (weak, nonatomic) IBOutlet UIImageView *arrow;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) NSString *shortenedURL;
-@property (strong, nonatomic) APIConnection *connection;
+@property (strong, nonatomic) USKShortener *shortener;
 
 @end
 
 @implementation URLShortenerViewController
 
-- (APIConnection *)connection {
-    if (!_connection) {
-        _connection = [[APIConnection alloc] init];
-        _connection.delegate = self;
+- (USKShortener *)shortener {
+    if (!_shortener) {
+        _shortener = [[USKShortener alloc] initWithDelegate:self];
     }
-    return _connection;
+    return _shortener;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [self disappear];
-}
+#pragma mark - Shortening
 
 - (void)handlePasteboardString {
     NSString *string = [UIPasteboard generalPasteboard].string;
@@ -43,26 +40,11 @@
 
 - (void)shortenURL:(NSString *)url {
     if ([url isValidURL]) {
-        [self.connection shortenURL:url];
+        [self.shortener shortenURL:url];
         self.url = url;
         [SVProgressHUD show];
     } else {
         [SVProgressHUD showErrorWithStatus:@"Invalid URL"];
-    }
-}
-
-- (void)apiConnection:(APIConnection *)connection
-        didShortenURL:(NSString *)originalURL
-       toShortenedURL:(NSString *)shortenedURL {
-    if (shortenedURL) {
-        self.shortenedURL = shortenedURL;
-        [self appear];
-        [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
-        [SVProgressHUD showSuccessWithStatus:@"Shortened & copied URL!"];
-        [[Mixpanel sharedInstance] track:@"URL Shortened"];
-        [self.shortenedURLButton setTitle:[self.shortenedURL formattedURL] forState:UIControlStateNormal];
-    } else {
-        [SVProgressHUD showErrorWithStatus:@"Error"];
     }
 }
 
@@ -71,10 +53,53 @@
     [SVProgressHUD showSuccessWithStatus:@"Copied!"];
 }
 
+#pragma mark - UITextFieldDelegate
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     [self shortenURL:textField.text];
     return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [self disappear];
+}
+
+#pragma mark - View
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.textField.delegate = self;
+    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"put link here"
+                                                                           attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                                                              action:@selector(openWebView:)];
+    [self.shortenedURLButton addGestureRecognizer:longPressGR];
+    [self hide];
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self disappear];
+                                                  }];
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      [self handlePasteboardString];
+                                                  }];
+}
+
+- (void)hide {
+    self.arrow.alpha = 0;
+    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor colorWithWhite:0.25 alpha:1]];
+    self.urlDisplayUnderShortenedURL.alpha = 0;
+    self.shortenedURLButton.alpha = 0;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
 }
 
 - (void)appear {
@@ -110,39 +135,25 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.textField.delegate = self;
-    self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"put link here"
-                                                                           attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                              action:@selector(openWebView:)];
-    [self.shortenedURLButton addGestureRecognizer:longPressGR];
-    [self hide];
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification
-                                                      object:nil
-                                                       queue:[NSOperationQueue mainQueue]
-                                                  usingBlock:^(NSNotification *note) {
-                                                      [self disappear];
-                                                  }];
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification
-                                                      object:nil
-                                                       queue:[NSOperationQueue mainQueue]
-                                                  usingBlock:^(NSNotification *note) {
-                                                      [self handlePasteboardString];
-                                                  }];
+#pragma mark - USKShortenerDelegate
+
+- (void)shortener:(USKShortener *)shortener
+    didShortenURL:(NSString *)originalURL
+   toShortenedURL:(NSString *)shortenedURL {
+    if (shortenedURL) {
+        self.shortenedURL = shortenedURL;
+        [self appear];
+        [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
+        [SVProgressHUD showSuccessWithStatus:@"Shortened & copied URL!"];
+        [[Mixpanel sharedInstance] track:@"URL Shortened"];
+        [self.shortenedURLButton setTitle:[self.shortenedURL formattedURL] forState:UIControlStateNormal];
+    } else {
+        [SVProgressHUD showErrorWithStatus:@"Error"];
+    }
 }
 
-- (void)hide {
-    self.arrow.alpha = 0;
-    self.arrow.image = [[UIImage imageNamed:@"arrow"] tintedImageWithColor:[UIColor colorWithWhite:0.25 alpha:1]];
-    self.urlDisplayUnderShortenedURL.alpha = 0;
-    self.shortenedURLButton.alpha = 0;
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    [self.view endEditing:YES];
+- (void)shortener:(USKShortener *)shortener failedToShortenURL:(NSString *)originalURL {
+    [SVProgressHUD showErrorWithStatus:@"Error"];
 }
 
 @end
