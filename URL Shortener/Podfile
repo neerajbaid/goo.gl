@@ -2,5 +2,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 link_with 'URL Shortener', 'URLShortenerWidget'
 
-pod 'SVProgressHUD'
 pod 'Mixpanel'
+pod 'Shimmer'
+pod 'SVProgressHUD'

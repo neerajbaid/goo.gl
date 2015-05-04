@@ -35,7 +35,6 @@
 		07EF518A16CC514900178D1E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EF518816CC514900178D1E /* MainStoryboard_iPhone.storyboard */; };
 		07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518F16CC514900178D1E /* URLShortenerViewController.m */; };
 		0E73129D7C1FE131D93714F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
-		EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */; };
 		F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -160,7 +159,6 @@
 				07EF517316CC514900178D1E /* Foundation.framework in Frameworks */,
 				07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */,
 				07B53DDB1AF7CF4B0002F517 /* URLShortenerKit.framework in Frameworks */,
-				EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */,
 				F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

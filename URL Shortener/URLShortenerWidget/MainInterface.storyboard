@@ -24,6 +24,11 @@
                                     <action selector="shorten:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="BG9-1V-ysa"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="yg6-D5-U83" customClass="FBShimmeringView">
+                                <rect key="frame" x="0.0" y="4" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -33,6 +38,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
                     <connections>
+                        <outlet property="shimmeringView" destination="yg6-D5-U83" id="xCc-s9-7eJ"/>
                         <outlet property="shortenButton" destination="ppy-Wh-fMX" id="bBu-cH-bhN"/>
                     </connections>
                 </viewController>

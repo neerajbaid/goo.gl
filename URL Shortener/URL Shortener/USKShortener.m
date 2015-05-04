@@ -27,7 +27,12 @@
                                    NSDictionary *info = [NSJSONSerialization JSONObjectWithData:data
                                                                                         options:NSJSONReadingAllowFragments
                                                                                           error:nil];
-                                   [self.delegate shortener:self didShortenURL:originalURL toShortenedURL:info[@"id"]];
+                                   NSString *shortenedURL = info[@"id"];
+                                   if (shortenedURL) {
+                                       [self.delegate shortener:self didShortenURL:originalURL toShortenedURL:info[@"id"]];
+                                   } else {
+                                       [self.delegate shortener:self failedToShortenURL:originalURL];
+                                   }
                                } else {
                                    [self.delegate shortener:self failedToShortenURL:originalURL];
                                }
