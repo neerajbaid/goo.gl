@@ -1,9 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'URL Shortener' do
+link_with 'URL Shortener', 'URLShortenerWidget'
 
 pod 'SVProgressHUD'
 pod 'Mixpanel'
-
-end
-

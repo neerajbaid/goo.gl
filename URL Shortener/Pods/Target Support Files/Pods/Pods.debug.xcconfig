@@ -2,6 +2,6 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Mixpanel" "${PODS_ROOT}/Headers/Public/SVProgressHUD"
 LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/Mixpanel/Mixpanel"
 OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Mixpanel" -isystem "${PODS_ROOT}/Headers/Public/SVProgressHUD"
-OTHER_LDFLAGS = -ObjC -l"MPCategoryHelpers" -l"Pods-URL Shortener-Mixpanel" -l"Pods-URL Shortener-SVProgressHUD" -l"icucore" -framework "Accelerate" -framework "CoreGraphics" -framework "CoreTelephony" -framework "Foundation" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LDFLAGS = -ObjC -l"MPCategoryHelpers" -l"Pods-Mixpanel" -l"Pods-SVProgressHUD" -l"icucore" -framework "Accelerate" -framework "CoreGraphics" -framework "CoreTelephony" -framework "Foundation" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

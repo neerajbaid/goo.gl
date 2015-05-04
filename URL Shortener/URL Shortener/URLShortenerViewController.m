@@ -32,7 +32,6 @@
 - (void)handlePasteboardString {
     NSString *string = [UIPasteboard generalPasteboard].string;
     if ([string isValidURL]) {
-        [[Mixpanel sharedInstance] track:@"Automatically Copy URL"];
         self.textField.text = [string formattedURL];
         [self shortenURL:string];
     }
@@ -145,7 +144,7 @@
         [self appear];
         [[UIPasteboard generalPasteboard] setString:self.shortenedURL];
         [SVProgressHUD showSuccessWithStatus:@"Shortened & copied URL!"];
-        [[Mixpanel sharedInstance] track:@"URL Shortened"];
+        [[Mixpanel sharedInstance] track:@"URL Shortened" properties:@{@"source":@"app"}];
         [self.shortenedURLButton setTitle:[self.shortenedURL formattedURL] forState:UIControlStateNormal];
     } else {
         [SVProgressHUD showErrorWithStatus:@"Error"];

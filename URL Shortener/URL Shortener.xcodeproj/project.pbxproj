@@ -34,7 +34,9 @@
 		07EF518116CC514900178D1E /* URLShortenerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518016CC514900178D1E /* URLShortenerAppDelegate.m */; };
 		07EF518A16CC514900178D1E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EF518816CC514900178D1E /* MainStoryboard_iPhone.storyboard */; };
 		07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518F16CC514900178D1E /* URLShortenerViewController.m */; };
+		0E73129D7C1FE131D93714F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
 		EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */; };
+		F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,10 +119,14 @@
 		07EF518E16CC514900178D1E /* URLShortenerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerViewController.h; sourceTree = "<group>"; };
 		07EF518F16CC514900178D1E /* URLShortenerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLShortenerViewController.m; sourceTree = "<group>"; };
 		07EF519716CC514900178D1E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URL Shortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.appstore.xcconfig; path = "Pods/Target Support Files/Pods/Pods.appstore.xcconfig"; sourceTree = "<group>"; };
 		416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.release.xcconfig"; sourceTree = "<group>"; };
+		480E5445C86803B9840F387D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.debug.xcconfig"; sourceTree = "<group>"; };
 		8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.appstore.xcconfig"; sourceTree = "<group>"; };
+		B77ADB8B49FB379D911E522A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B53DEE1AF7D2330002F517 /* NotificationCenter.framework in Frameworks */,
+				0E73129D7C1FE131D93714F3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +161,7 @@
 				07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */,
 				07B53DDB1AF7CF4B0002F517 /* URLShortenerKit.framework in Frameworks */,
 				EC9FCA7E0F85D06E6229A596 /* libPods-URL Shortener.a in Frameworks */,
+				F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +254,7 @@
 				07EF519716CC514900178D1E /* SenTestingKit.framework */,
 				1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */,
 				07B53DED1AF7D2330002F517 /* NotificationCenter.framework */,
+				B77ADB8B49FB379D911E522A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -284,6 +293,9 @@
 				4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */,
 				416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */,
 				8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */,
+				480E5445C86803B9840F387D /* Pods.debug.xcconfig */,
+				11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */,
+				31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -325,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07B53DFA1AF7D2330002F517 /* Build configuration list for PBXNativeTarget "URLShortenerWidget" */;
 			buildPhases = (
+				3A0D947C9948E2B2322D4D51 /* Check Pods Manifest.lock */,
 				07B53DE81AF7D2330002F517 /* Sources */,
 				07B53DE91AF7D2330002F517 /* Frameworks */,
 				07B53DEA1AF7D2330002F517 /* Resources */,
+				219BA7F0EDE29ECCEE028E39 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -444,6 +458,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		219BA7F0EDE29ECCEE028E39 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A0D947C9948E2B2322D4D51 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		9F281E7D35B488FCA7181526 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,7 +500,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -555,7 +599,7 @@
 		};
 		0746460916FA45FE00A224C1 /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */;
+			baseConfigurationReference = 31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -684,6 +728,7 @@
 		};
 		07B53DFB1AF7D2330002F517 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 480E5445C86803B9840F387D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -713,6 +758,7 @@
 		};
 		07B53DFC1AF7D2330002F517 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -740,6 +786,7 @@
 		};
 		07B53DFD1AF7D2330002F517 /* AppStore */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -827,7 +874,7 @@
 		};
 		07EF51A916CC514A00178D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */;
+			baseConfigurationReference = 480E5445C86803B9840F387D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -849,7 +896,7 @@
 		};
 		07EF51AA16CC514A00178D1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */;
+			baseConfigurationReference = 11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -881,6 +928,7 @@
 				07B53DE01AF7CF4B0002F517 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07B53DFA1AF7D2330002F517 /* Build configuration list for PBXNativeTarget "URLShortenerWidget" */ = {
 			isa = XCConfigurationList;
@@ -890,6 +938,7 @@
 				07B53DFD1AF7D2330002F517 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07EF516816CC514900178D1E /* Build configuration list for PBXProject "URL Shortener" */ = {
 			isa = XCConfigurationList;

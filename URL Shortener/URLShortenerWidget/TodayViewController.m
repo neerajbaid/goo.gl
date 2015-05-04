@@ -1,3 +1,4 @@
+#import <Mixpanel/Mixpanel.h>
 #import <NotificationCenter/NotificationCenter.h>
 #import <URLShortenerKit/URLShortenerKit.h>
 
@@ -20,6 +21,7 @@
 }
 
 - (void)viewDidLoad {
+    [Mixpanel sharedInstanceWithToken:@"90698dd2657dcc2427c6cde3172c148a"];
     self.preferredContentSize = CGSizeMake(self.view.frame.size.width, 37);
 }
 
@@ -31,11 +33,11 @@
 
 - (IBAction)shorten:(id)sender {
     NSString *string = [UIPasteboard generalPasteboard].string;
-//    [[Mixpanel sharedInstance] track:@"Automatically Copy URL"];
     [self.shortener shortenURL:string];
 }
 
 - (void)shortener:(USKShortener *)shortener didShortenURL:(NSString *)originalURL toShortenedURL:(NSString *)shortenedURL {
+    [[Mixpanel sharedInstance] track:@"URL Shortened" properties:@{@"source":@"widget"}];
     [[UIPasteboard generalPasteboard] setString:shortenedURL];
     [self.shortenButton setTitle:@"shortened & copied url!"
                         forState:UIControlStateNormal];
@@ -43,7 +45,8 @@
 
 - (void)shortener:(USKShortener *)shortener
 failedToShortenURL:(NSString *)originalURL {
-    
+    [self.shortenButton setTitle:@"shorten failed"
+                        forState:UIControlStateNormal];
 }
 
 @end
