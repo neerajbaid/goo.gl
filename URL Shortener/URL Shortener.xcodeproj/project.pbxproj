@@ -41,6 +41,7 @@
 		07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518F16CC514900178D1E /* URLShortenerViewController.m */; };
 		0E73129D7C1FE131D93714F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
 		9DE2F680D798A6B46A65A141 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
+		D87F225D1FDAE7FC6FDD038D /* libPods-URLShortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 106E7F07376B0F7B3847C225 /* libPods-URLShortener.a */; };
 		F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -123,7 +124,7 @@
 		07B53E1E1AF7EBE20002F517 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		07BFD4E9171C585100600512 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		07BFD4EB171C585B00600512 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		07EF516D16CC514900178D1E /* URL Shortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URL Shortener.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EF516D16CC514900178D1E /* URLShortener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLShortener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EF517016CC514900178D1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07EF517216CC514900178D1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		07EF517416CC514900178D1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +138,7 @@
 		07EF518E16CC514900178D1E /* URLShortenerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerViewController.h; sourceTree = "<group>"; };
 		07EF518F16CC514900178D1E /* URLShortenerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLShortenerViewController.m; sourceTree = "<group>"; };
 		07EF519716CC514900178D1E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		106E7F07376B0F7B3847C225 /* libPods-URLShortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URLShortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URL Shortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.appstore.xcconfig; path = "Pods/Target Support Files/Pods/Pods.appstore.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				07EF517516CC514900178D1E /* CoreGraphics.framework in Frameworks */,
 				07B53DDB1AF7CF4B0002F517 /* URLShortenerKit.framework in Frameworks */,
 				F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */,
+				D87F225D1FDAE7FC6FDD038D /* libPods-URLShortener.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +280,7 @@
 		07EF516E16CC514900178D1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07EF516D16CC514900178D1E /* URL Shortener.app */,
+				07EF516D16CC514900178D1E /* URLShortener.app */,
 				07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */,
 				07B53DEC1AF7D2330002F517 /* URLShortenerWidget.appex */,
 				07B53E171AF7EBE20002F517 /* URLShortenerAction.appex */,
@@ -301,6 +304,7 @@
 				1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */,
 				07B53DED1AF7D2330002F517 /* NotificationCenter.framework */,
 				B77ADB8B49FB379D911E522A /* libPods.a */,
+				106E7F07376B0F7B3847C225 /* libPods-URLShortener.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -417,9 +421,9 @@
 			productReference = 07B53E171AF7EBE20002F517 /* URLShortenerAction.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		07EF516C16CC514900178D1E /* URL Shortener */ = {
+		07EF516C16CC514900178D1E /* URLShortener */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07EF51A816CC514A00178D1E /* Build configuration list for PBXNativeTarget "URL Shortener" */;
+			buildConfigurationList = 07EF51A816CC514A00178D1E /* Build configuration list for PBXNativeTarget "URLShortener" */;
 			buildPhases = (
 				11C4A5F9C777DC935B180954 /* Check Pods Manifest.lock */,
 				07EF516916CC514900178D1E /* Sources */,
@@ -436,9 +440,9 @@
 				07B53DF81AF7D2330002F517 /* PBXTargetDependency */,
 				07B53E211AF7EBE20002F517 /* PBXTargetDependency */,
 			);
-			name = "URL Shortener";
+			name = URLShortener;
 			productName = "URL Shortener";
-			productReference = 07EF516D16CC514900178D1E /* URL Shortener.app */;
+			productReference = 07EF516D16CC514900178D1E /* URLShortener.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -475,7 +479,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07EF516C16CC514900178D1E /* URL Shortener */,
+				07EF516C16CC514900178D1E /* URLShortener */,
 				07B53DC31AF7CF4B0002F517 /* URLShortenerKit */,
 				07B53DEB1AF7D2330002F517 /* URLShortenerWidget */,
 				07B53E161AF7EBE20002F517 /* URLShortenerAction */,
@@ -595,7 +599,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URLShortener/Pods-URLShortener-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3DD90D62DEFD5FDDFEBF510 /* Check Pods Manifest.lock */ = {
@@ -745,6 +749,7 @@
 		07B53DDE1AF7CF4B0002F517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -783,6 +788,7 @@
 		07B53DDF1AF7CF4B0002F517 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -818,6 +824,7 @@
 		07B53DE01AF7CF4B0002F517 /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -1182,7 +1189,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07EF51A816CC514A00178D1E /* Build configuration list for PBXNativeTarget "URL Shortener" */ = {
+		07EF51A816CC514A00178D1E /* Build configuration list for PBXNativeTarget "URLShortener" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07EF51A916CC514A00178D1E /* Debug */,
