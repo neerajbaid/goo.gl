@@ -11,6 +11,8 @@
 		0704FC591AE86ACE00C953B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0704FC581AE86ACE00C953B6 /* Images.xcassets */; };
 		0704FC5F1AE86D6300C953B6 /* UIImage+URLShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */; };
 		0704FC631AE8747A00C953B6 /* NSString+URLShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0704FC621AE8747A00C953B6 /* NSString+URLShortener.m */; };
+		0714A7351AF7F92700FA1D12 /* USKShortener.h in Headers */ = {isa = PBXBuildFile; fileRef = 0714A7331AF7F92700FA1D12 /* USKShortener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0714A7361AF7F92700FA1D12 /* USKShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0714A7341AF7F92700FA1D12 /* USKShortener.m */; };
 		073C22E11720835A0061A9DC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E01720835A0061A9DC /* Social.framework */; };
 		073C22E31720835F0061A9DC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E21720835F0061A9DC /* Accounts.framework */; };
 		073C22E51720CAEF0061A9DC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073C22E41720CAEF0061A9DC /* MessageUI.framework */; };
@@ -18,8 +20,6 @@
 		07B53DC91AF7CF4B0002F517 /* URLShortenerKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B53DC81AF7CF4B0002F517 /* URLShortenerKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07B53DDB1AF7CF4B0002F517 /* URLShortenerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */; };
 		07B53DDC1AF7CF4B0002F517 /* URLShortenerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		07B53DE61AF7D1BD0002F517 /* USKShortener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799919616ECF279003FCE1C /* USKShortener.m */; };
-		07B53DE71AF7D1CB0002F517 /* USKShortener.h in Headers */ = {isa = PBXBuildFile; fileRef = 0799919516ECF279003FCE1C /* USKShortener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07B53DEE1AF7D2330002F517 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B53DED1AF7D2330002F517 /* NotificationCenter.framework */; };
 		07B53DF41AF7D2330002F517 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B53DF31AF7D2330002F517 /* TodayViewController.m */; };
 		07B53DF61AF7D2330002F517 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07B53DF51AF7D2330002F517 /* MainInterface.storyboard */; };
@@ -100,12 +100,12 @@
 		0704FC5E1AE86D6300C953B6 /* UIImage+URLShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+URLShortener.m"; sourceTree = "<group>"; };
 		0704FC611AE8747A00C953B6 /* NSString+URLShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLShortener.h"; sourceTree = "<group>"; };
 		0704FC621AE8747A00C953B6 /* NSString+URLShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLShortener.m"; sourceTree = "<group>"; };
+		0714A7331AF7F92700FA1D12 /* USKShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USKShortener.h; sourceTree = "<group>"; };
+		0714A7341AF7F92700FA1D12 /* USKShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USKShortener.m; sourceTree = "<group>"; };
 		073C22E01720835A0061A9DC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		073C22E21720835F0061A9DC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		073C22E41720CAEF0061A9DC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		076E5B1F173038190038F216 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0799919516ECF279003FCE1C /* USKShortener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USKShortener.h; path = "../URL Shortener/USKShortener.h"; sourceTree = "<group>"; };
-		0799919616ECF279003FCE1C /* USKShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USKShortener.m; path = "../URL Shortener/USKShortener.m"; sourceTree = "<group>"; };
 		07B53DC41AF7CF4B0002F517 /* URLShortenerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URLShortenerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B53DC71AF7CF4B0002F517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B53DC81AF7CF4B0002F517 /* URLShortenerKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLShortenerKit.h; sourceTree = "<group>"; };
@@ -206,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				07B53DC81AF7CF4B0002F517 /* URLShortenerKit.h */,
-				0799919516ECF279003FCE1C /* USKShortener.h */,
-				0799919616ECF279003FCE1C /* USKShortener.m */,
+				0714A7331AF7F92700FA1D12 /* USKShortener.h */,
+				0714A7341AF7F92700FA1D12 /* USKShortener.m */,
 				07B53DC61AF7CF4B0002F517 /* Supporting Files */,
 			);
 			path = URLShortenerKit;
@@ -352,7 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B53DC91AF7CF4B0002F517 /* URLShortenerKit.h in Headers */,
-				07B53DE71AF7D1CB0002F517 /* USKShortener.h in Headers */,
+				0714A7351AF7F92700FA1D12 /* USKShortener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +586,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B53DE61AF7D1BD0002F517 /* USKShortener.m in Sources */,
+				0714A7361AF7F92700FA1D12 /* USKShortener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +738,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
