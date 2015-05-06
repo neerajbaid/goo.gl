@@ -1,10 +1,15 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-link_with 'URLShortenerWidget', 'URLShortenerAction'
+target :URLShortenerWidget do
+  pod 'Mixpanel/AppExtension'
+  pod 'Shimmer'
+end
 
-pod 'Mixpanel'
-pod 'Shimmer'
+target :URLShortenerAction do
+  pod 'Mixpanel/AppExtension'
+end
 
 target :URLShortener do
   pod 'SVProgressHUD'
+  pod 'Mixpanel'
 end

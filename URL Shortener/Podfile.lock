@@ -1,18 +1,22 @@
 PODS:
-  - Mixpanel (2.7.3):
-    - Mixpanel/MPCategoryHelpers (= 2.7.3)
-  - Mixpanel/MPCategoryHelpers (2.7.3)
+  - Mixpanel (2.8.0):
+    - Mixpanel/Mixpanel (= 2.8.0)
+  - Mixpanel/AppExtension (2.8.0)
+  - Mixpanel/Mixpanel (2.8.0):
+    - Mixpanel/MPCategoryHelpers
+  - Mixpanel/MPCategoryHelpers (2.8.0)
   - Shimmer (1.0.2)
   - SVProgressHUD (1.1.3)
 
 DEPENDENCIES:
   - Mixpanel
+  - Mixpanel/AppExtension
   - Shimmer
   - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Mixpanel: 1d387d76800e07e953958c62c97fea27f13632dd
+  Mixpanel: 933b51dd0c7914c80866b3753ef407dce353ebc9
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-COCOAPODS: 0.37.0
+COCOAPODS: 0.37.1

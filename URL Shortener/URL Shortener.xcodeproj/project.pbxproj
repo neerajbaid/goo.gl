@@ -40,7 +40,9 @@
 		07EF518A16CC514900178D1E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EF518816CC514900178D1E /* MainStoryboard_iPhone.storyboard */; };
 		07EF519016CC514900178D1E /* URLShortenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EF518F16CC514900178D1E /* URLShortenerViewController.m */; };
 		0E73129D7C1FE131D93714F3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
+		518F312772C751E2562316BA /* libPods-URLShortenerWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C131FE98F4CC6E556118462 /* libPods-URLShortenerWidget.a */; };
 		9DE2F680D798A6B46A65A141 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
+		C2B7B96DE847F956BA3C3DE8 /* libPods-URLShortenerAction.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7619987DC05F60C89C07AC2 /* libPods-URLShortenerAction.a */; };
 		D87F225D1FDAE7FC6FDD038D /* libPods-URLShortener.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 106E7F07376B0F7B3847C225 /* libPods-URLShortener.a */; };
 		F6D2791366F635C0BFDADE44 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B77ADB8B49FB379D911E522A /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -141,12 +143,23 @@
 		106E7F07376B0F7B3847C225 /* libPods-URLShortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URLShortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1D9FA7358A439026BD128394 /* libPods-URL Shortener.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URL Shortener.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DDA18D2C009C1CDF89CEEC4 /* Pods-URLShortener.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortener.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortener/Pods-URLShortener.appstore.xcconfig"; sourceTree = "<group>"; };
+		26E0BF4F64C601BBC7F2BAAD /* Pods-URLShortenerAction.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortenerAction.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortenerAction/Pods-URLShortenerAction.appstore.xcconfig"; sourceTree = "<group>"; };
 		31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.appstore.xcconfig; path = "Pods/Target Support Files/Pods/Pods.appstore.xcconfig"; sourceTree = "<group>"; };
 		416E6A1C0FC3195660CA893D /* Pods-URL Shortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.release.xcconfig"; sourceTree = "<group>"; };
 		480E5445C86803B9840F387D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4EFBB12DA7053241308FC745 /* Pods-URL Shortener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.debug.xcconfig"; sourceTree = "<group>"; };
+		52F1F23B2288EBB81560DE44 /* Pods-URLShortenerAction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortenerAction.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortenerAction/Pods-URLShortenerAction.debug.xcconfig"; sourceTree = "<group>"; };
+		590E9346FD81EFE4064337AF /* Pods-URLShortenerWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortenerWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortenerWidget/Pods-URLShortenerWidget.release.xcconfig"; sourceTree = "<group>"; };
+		7C131FE98F4CC6E556118462 /* libPods-URLShortenerWidget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URLShortenerWidget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8312F4B342F942D7FF1083B5 /* Pods-URLShortenerAction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortenerAction.release.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortenerAction/Pods-URLShortenerAction.release.xcconfig"; sourceTree = "<group>"; };
 		8E274674A9B947084F827A04 /* Pods-URL Shortener.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URL Shortener.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-URL Shortener/Pods-URL Shortener.appstore.xcconfig"; sourceTree = "<group>"; };
+		8E62FD041B37C1405121E369 /* Pods-URLShortener.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortener.release.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortener/Pods-URLShortener.release.xcconfig"; sourceTree = "<group>"; };
+		A7619987DC05F60C89C07AC2 /* libPods-URLShortenerAction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-URLShortenerAction.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67A2E8B4BBDFA14918F7DDE /* Pods-URLShortenerWidget.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortenerWidget.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortenerWidget/Pods-URLShortenerWidget.appstore.xcconfig"; sourceTree = "<group>"; };
 		B77ADB8B49FB379D911E522A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD9293E2A67B34FD3EED95D /* Pods-URLShortener.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortener.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortener/Pods-URLShortener.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE59F31FE6D237BF300E85E /* Pods-URLShortenerWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLShortenerWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URLShortenerWidget/Pods-URLShortenerWidget.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +176,7 @@
 			files = (
 				07B53DEE1AF7D2330002F517 /* NotificationCenter.framework in Frameworks */,
 				0E73129D7C1FE131D93714F3 /* libPods.a in Frameworks */,
+				518F312772C751E2562316BA /* libPods-URLShortenerWidget.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DE2F680D798A6B46A65A141 /* libPods.a in Frameworks */,
+				C2B7B96DE847F956BA3C3DE8 /* libPods-URLShortenerAction.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +320,8 @@
 				07B53DED1AF7D2330002F517 /* NotificationCenter.framework */,
 				B77ADB8B49FB379D911E522A /* libPods.a */,
 				106E7F07376B0F7B3847C225 /* libPods-URLShortener.a */,
+				A7619987DC05F60C89C07AC2 /* libPods-URLShortenerAction.a */,
+				7C131FE98F4CC6E556118462 /* libPods-URLShortenerWidget.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -346,6 +363,15 @@
 				480E5445C86803B9840F387D /* Pods.debug.xcconfig */,
 				11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */,
 				31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */,
+				EDD9293E2A67B34FD3EED95D /* Pods-URLShortener.debug.xcconfig */,
+				8E62FD041B37C1405121E369 /* Pods-URLShortener.release.xcconfig */,
+				1DDA18D2C009C1CDF89CEEC4 /* Pods-URLShortener.appstore.xcconfig */,
+				52F1F23B2288EBB81560DE44 /* Pods-URLShortenerAction.debug.xcconfig */,
+				8312F4B342F942D7FF1083B5 /* Pods-URLShortenerAction.release.xcconfig */,
+				26E0BF4F64C601BBC7F2BAAD /* Pods-URLShortenerAction.appstore.xcconfig */,
+				EFE59F31FE6D237BF300E85E /* Pods-URLShortenerWidget.debug.xcconfig */,
+				590E9346FD81EFE4064337AF /* Pods-URLShortenerWidget.release.xcconfig */,
+				B67A2E8B4BBDFA14918F7DDE /* Pods-URLShortenerWidget.appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -554,7 +580,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URLShortenerWidget/Pods-URLShortenerWidget-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		377810D49C4667E4963C3790 /* Copy Pods Resources */ = {
@@ -569,7 +595,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URLShortenerAction/Pods-URLShortenerAction-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3A0D947C9948E2B2322D4D51 /* Check Pods Manifest.lock */ = {
@@ -726,7 +752,7 @@
 		};
 		0746460916FA45FE00A224C1 /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */;
+			baseConfigurationReference = 1DDA18D2C009C1CDF89CEEC4 /* Pods-URLShortener.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -859,7 +885,7 @@
 		};
 		07B53DFB1AF7D2330002F517 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 480E5445C86803B9840F387D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = EFE59F31FE6D237BF300E85E /* Pods-URLShortenerWidget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -891,7 +917,7 @@
 		};
 		07B53DFC1AF7D2330002F517 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */;
+			baseConfigurationReference = 590E9346FD81EFE4064337AF /* Pods-URLShortenerWidget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -921,7 +947,7 @@
 		};
 		07B53DFD1AF7D2330002F517 /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */;
+			baseConfigurationReference = B67A2E8B4BBDFA14918F7DDE /* Pods-URLShortenerWidget.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -951,7 +977,7 @@
 		};
 		07B53E231AF7EBE20002F517 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 480E5445C86803B9840F387D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 52F1F23B2288EBB81560DE44 /* Pods-URLShortenerAction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Action;
 				CLANG_ENABLE_MODULES = YES;
@@ -983,7 +1009,7 @@
 		};
 		07B53E241AF7EBE20002F517 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8312F4B342F942D7FF1083B5 /* Pods-URLShortenerAction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Action;
 				CLANG_ENABLE_MODULES = YES;
@@ -1013,7 +1039,7 @@
 		};
 		07B53E251AF7EBE20002F517 /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31AC256641180341D5FDDEDD /* Pods.appstore.xcconfig */;
+			baseConfigurationReference = 26E0BF4F64C601BBC7F2BAAD /* Pods-URLShortenerAction.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Action;
 				CLANG_ENABLE_MODULES = YES;
@@ -1103,7 +1129,7 @@
 		};
 		07EF51A916CC514A00178D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 480E5445C86803B9840F387D /* Pods.debug.xcconfig */;
+			baseConfigurationReference = EDD9293E2A67B34FD3EED95D /* Pods-URLShortener.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1125,7 +1151,7 @@
 		};
 		07EF51AA16CC514A00178D1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11309CC4E09A3D075D87EACD /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8E62FD041B37C1405121E369 /* Pods-URLShortener.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

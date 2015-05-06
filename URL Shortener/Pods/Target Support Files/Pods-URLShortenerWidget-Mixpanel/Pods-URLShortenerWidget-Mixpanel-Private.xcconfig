@@ -1,0 +1,6 @@
+#include "Pods-URLShortenerWidget-Mixpanel.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 ${PODS_URLSHORTENERWIDGET_MIXPANEL_GCC_PREPROCESSOR_DEFINITIONS}
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Mixpanel" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Mixpanel" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/Shimmer"
+OTHER_LDFLAGS = ${PODS_URLSHORTENERWIDGET_MIXPANEL_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
